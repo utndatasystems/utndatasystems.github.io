@@ -1,34 +1,47 @@
-"adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"kipf":
+  - firstname: ["Andreas", "Andreas Kipf"]
+    url: https://scholar.google.de/citations?user=y3IdRusAAAAJ&hl=de&oi=ao
 
-"podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"stoian":
+  - firstname: ["Mihail", "Mihail Stoian"]
+    url: https://scholar.google.de/citations?user=7PEMO6UAAAAJ&hl=de&oi=ao
 
-"rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"renen":
+  - firstname: ["Alexander", "Alex", "Alexander van Renen", "Alexander Renen"]
+    url: https://scholar.google.de/citations?user=lYbdcdcAAAAJ&hl=de&oi=ao
 
-"bach":
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+"zimmerer":
+  - firstname: ["Andreas", "Andreas Zimmerer"]
+    url: https://scholar.google.de/citations?user=jBVA5UsAAAAJ&hl=de&oi=sra
 
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+"dam":
+  - firstname: ["Damien", "Damien Dam"]
+    url: https://www.linkedin.com/in/damien-dam/
 
-"przibram":
-  - firstname: ["Karl"]
-    url: https://link.springer.com/article/10.1007/s00016-019-00242-z
+"waack":
+  - firstname: ["Juliane", "Juliane Waack"]
+    url: https://www.linkedin.com/in/juliane-waack-327171202/
 
-"schrodinger":
-  - firstname: ["Erwin"]
-    url: https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger
+"oukid":
+  - firstname: ["Ismail", "Ismail Oukid"]
+    url: https://scholar.google.de/citations?user=QmwXUf4AAAAJ&hl=de&oi=ao
 
-"lorentz":
-  - firstname: ["Hendrik Antoon"]
-    url: https://en.wikipedia.org/wiki/Hendrik_Lorentz
+"kossmann":
+  - firstname: ["Jan", "Jan Kossmann"]
+    url: https://scholar.google.de/citations?user=nIYiva8AAAAJ&hl=de&oi=sra
 
-"planck":
-  - firstname: ["Max"]
-    url: https://en.wikipedia.org/wiki/Max_Planck
+"kobiolka":
+  - firstname: ["Jan", "Jan Kobiolka"]
+    url: https://scholar.google.de/citations?user=I3zw7aMAAAAJ&hl=de&oi=ao
+
+"grabocka":
+  - firstname: ["Josif", "Josif Grabocka"]
+    url: https://scholar.google.de/citations?user=KRy27XcAAAAJ&hl=de&oi=ao
+
+"liu":
+  - firstname: ["Hanwen", "Hanwen Liu"]
+    url: https://scholar.google.de/citations?user=HDF0su0AAAAJ&hl=de&oi=sra
+
+"kuo":
+  - firstname: ["Ping-Lin", "Ping-Lin Kuo"]
+    url: https://www.linkedin.com/in/ping-lin-billy-kuo/

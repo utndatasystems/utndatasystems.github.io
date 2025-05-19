@@ -1,115 +1,137 @@
 ---
+-- For a list of supported custom BibTeX properties, see https://github.com/alshedivat/al-folio/tree/main?tab=readme-ov-file#publications.
+-- Custom keys are:
+-- abstract, altmetric, arxiv, bibtex_show, blog, code, dimensions, doi, eprint, html, isbn, pdf, pmid, poster, slides, supp, video, website
+--
+-- To generate a preview image from a PDF, use the following command:
+-- ```
+-- brew install imagemagick
+-- brew install ghostscript
+-- magick "input_paper.pdf[0]" -density 150  -quality 85 -resize 1500x1500 -background white -flatten preview.jpg
+-- ```
 ---
 
-@string{aps = {American Physical Society,}}
+@STRING{SIGMOD = {Proceedings of the International Conference on Management of Data (SIGMOD)}}
 
-@book{einstein1920relativity,
-  title={Relativity: the Special and General Theory},
-  author={Einstein, Albert},
-  year={1920},
-  publisher={Methuen & Co Ltd},
-  html={relativity.html}
+
+@inproceedings{Zimmerer2025Pruning,
+  title        = {Pruning in Snowflake: Working Smarter, Not Harder},
+  author       = {Zimmerer, Andreas and Dam, Damien and Kossmann, Jan and Waack, Juliane and Oukid, Ismail and Kipf, Andreas},
+  editor       = {Volker Markl and Joe Hellerstein and Azza Abouzied},
+  booktitle    = {Companion of the 2025 International Conference on Management of Data ({SIGMOD}-Companion '25), June 22--27, 2025, Berlin, Germany},
+  publisher    = {{ACM}},
+  year         = {2025},
+  url          = {https://doi.org/10.1145/3722212.3724447},
+  doi          = {10.1145/3722212.3724447},
+  arxiv        = {2504.11540},
+  pdf          = {https://arxiv.org/pdf/2504.11540},
+  blog         = {https://snowflakepruning.github.io/},
+  bibtex_show  = {true},
+  preview      = {snowflake-pruning.jpg},
 }
 
-@book{einstein1956investigations,
-  bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation},
-  preview={brownian-motion.gif}
+@inproceedings{stoian2024lightweight,
+  title        = {Lightweight Correlation-Aware Table Compression},
+  author       = {Stoian, Mihail and van Renen, Alexander and Kobiolka, Jan and Kuo, Ping-Lin and Grabocka, Josif and Kipf, Andreas},
+  booktitle    = {NeurIPS 2024 Third Table Representation Learning Workshop},
+  year         = {2024},
+  url          = {https://openreview.net/forum?id=z7eIn3aShi},
+  slides       = {https://openreview.net/attachment?id=z7eIn3aShi&name=slides},
+  video        = {https://www.youtube.com/watch?v=B0bUTNIJ1O8},
+  code         = {https://github.com/utndatasystems/virtual},
+  arxiv        = {2410.14066},
+  pdf          = {https://arxiv.org/pdf/2410.14066v3},
+  preview      = {lightweight-correlation-compression.jpg},
+  bibtex_show  = {true},
 }
 
-@article{einstein1950meaning,
-  abbr={AJP},
-  bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers}
+@inproceedings{DBLP:conf/edbt/StoianRKKZGK25,
+  title        = {Virtual: Compressing Data Lake Files},
+  author       = {Mihail Stoian and
+                  Alexander van Renen and
+                  Jan Kobiolka and
+                  Ping{-}Lin Kuo and
+                  Andreas Zimmerer and
+                  Josif Grabocka and
+                  Andreas Kipf},
+  editor       = {Alkis Simitsis and
+                  Bettina Kemme and
+                  Anna Queralt and
+                  Oscar Romero and
+                  Petar Jovanovic},
+  booktitle    = {Proceedings 28th International Conference on Extending Database Technology,
+                  {EDBT} 2025, Barcelona, Spain, March 25-28, 2025},
+  pages        = {1066--1069},
+  publisher    = {OpenProceedings.org},
+  year         = {2025},
+  url          = {https://doi.org/10.48786/edbt.2025.90},
+  doi          = {10.48786/EDBT.2025.90},
+  bibtex_show  = {true},
+  website      = {https://utndatasystems.github.io/virtual/},
+  award_name   = {Best Demo Award},
+  award        = {This demo paper received the **Best Demo Award** at EDBT 2025.},
+  code         = {https://github.com/utndatasystems/virtual},
+  preview      = {virtual.jpg},
+  selected     = {true},
 }
 
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein*†, A. and Podolsky*, B. and Rosen*, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.},
-  location={New Jersey},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  altmetric={248277},
-  dimensions={true},
-  google_scholar_id={qyhmnyLat1gC},
-  video={https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ},
-  additional_info={. *More Information* can be [found here](https://github.com/alshedivat/al-folio/)},
-  annotation={* Example use of superscripts<br>† Albert Einstein},
-  selected={true},
-  inspirehep_id = {3255}
+
+@article{DBLP:journals/pacmmod/StoianK24,
+  author       = {Mihail Stoian and
+                  Andreas Kipf},
+  title        = {DPconv: Super-Polynomially Faster Join Ordering},
+  journal      = {Proc. {ACM} Manag. Data},
+  volume       = {2},
+  number       = {6},
+  pages        = {234:1--234:26},
+  year         = {2024},
+  url          = {https://doi.org/10.1145/3698809},
+  doi          = {10.1145/3698809},
+  biburl       = {https://dblp.org/rec/journals/pacmmod/StoianK24.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org},
+  bibtex_show  = {true},
+  arxiv        = {2409.08013},
+  code         = {https://github.com/utndatasystems/DPconv},
+  award_name   = {Honorable Mention},
+  award        = {This demo paper received a **Honorable Mention** at SIGMOD 2025.},
+  preview      = {dpconv.jpg},
+  selected     = {true},
 }
 
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
+@article{DBLP:journals/pvldb/RenenSK24,
+  author       = {Alexander van Renen and
+                  Mihail Stoian and
+                  Andreas Kipf},
+  title        = {DataLoom: Simplifying Data Loading with LLMs},
+  journal      = {Proc. {VLDB} Endow.},
+  volume       = {17},
+  number       = {12},
+  pages        = {4449--4452},
+  year         = {2024},
+  url          = {https://www.vldb.org/pvldb/vol17/p4449-renen.pdf},
+  doi          = {10.14778/3685800.3685897},
+  biburl       = {https://dblp.org/rec/journals/pvldb/RenenSK24.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org},
+  bibtex_show  = {true},
+  code         = {https://github.com/utndatasystems/data-loom-vldb-demo},
+  video        = {https://github.com/utndatasystems/data-loom-vldb-demo/blob/main/DataLoom.mp4},
+  preview      = {dataloom.jpg},
 }
 
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.},
-  volume={17},
-  pages={549--560},
-  year={1905}
-}
-
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
-}
-
-@Article{einstein1905photoelectriceffect,
-  bibtex_show={true},
-  abbr={Ann. Phys.},
-  title="{{\"U}ber einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt}",
-  author={Albert Einstein},
-  abstract={This is the abstract text.},
-  journal={Ann. Phys.},
-  volume={322},
-  number={6},
-  pages={132--148},
-  year={1905},
-  doi={10.1002/andp.19053220607},
-  award={Albert Einstein receveid the **Nobel Prize in Physics** 1921 *for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect*},
-  award_name={Nobel Prize}
-}
-
-@book{przibram1967letters,
-  bibtex_show={true},
-  title={Letters on wave mechanics},
-  author={Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year={1967},
-  publisher={Vision},
-  preview={wave-mechanics.gif},
-  abbr={Vision}
+@inproceedings{DBLP:conf/vldb/LiuSRK24,
+  author       = {Hanwen Liu and
+                  Mihail Stoian and
+                  Alexander van Renen and
+                  Andreas Kipf},
+  title        = {Corra: Correlation-Aware Column Compression},
+  booktitle    = {Proceedings of Workshops at the 50th International Conference on Very
+                  Large Data Bases, {VLDB} 2024, Guangzhou, China, August 26-30, 2024},
+  publisher    = {VLDB.org},
+  year         = {2024},
+  url          = {https://vldb.org/workshops/2024/proceedings/CloudDB/clouddb-2.pdf},
+  biburl       = {https://dblp.org/rec/conf/vldb/LiuSRK24.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org},
+  bibtex_show  = {true},
+  arxiv        = {2403.17229},
+  preview      = {corra.jpg},
 }

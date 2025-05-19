@@ -1,0 +1,44 @@
+- name: Andreas Kipf
+  image: andreas-kipf.jpg
+  url: https://scholar.google.de/citations?user=y3IdRusAAAAJ&hl=de&oi=ao
+  title: Head of Data Systems Lab
+- name: Alex van Renen
+  image: alexander-van-renen.jpg
+  url: https://dblp.org/pid/219/9679.html
+  title: Postdoctoral Researcher
+- name: Mihail Stoian
+  image: mihail-stoian.jpg
+  url: https://stoianmihail.github.io/
+  title: Doctoral Researcher
+- name: Andreas Zimmerer
+  image: andi-zimmerer.jpg
+  url: https://andi-zimmerer.com/
+  title: Doctoral Researcher
+- name: Varun Pandey
+  image: varun-pandey.jpg
+  url: https://www.linkedin.com/in/varpande/
+  title: Affiliated Researcher
+- name: Luca Heller
+  image: luca-heller.jpg
+  url: https://www.linkedin.com/in/luca-sophia-heller-b8909b250/
+  title: Student Researcher
+- name: Ping-Lin Kuo
+  image: ping-lin-kuo.jpg
+  url: https://www.linkedin.com/in/ping-lin-billy-kuo/
+  title: Student Researcher
+- name: Skander Krid
+  image: skander-krid.jpg
+  url: https://www.linkedin.com/in/skrid/
+  title: Student Researcher
+- name: Moritz Rengert
+  image: moritz-rengert.jpg
+  url: https://www.linkedin.com/in/moritz-rengert-8baaa1203/
+  title: Student Researcher
+- name: Andrea Smith
+  image: andrea-smith.jpg
+  url: https://www.linkedin.com/in/andrea-smith-b93a79ba/
+  title: Administrative Assistant
+- name: Corinna Dannewitz
+  image: corinna-dannewitz.jpg
+  url: https://www.linkedin.com/in/corinna-dannewitz-b258a731a/
+  title: Administrative Assistant

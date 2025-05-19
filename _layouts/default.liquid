@@ -20,6 +20,16 @@
     <!-- Header -->
     {% include header.liquid %}
 
+    {% if page.header_image %}
+      {% assign header_image_path = page.header_image | prepend: 'assets/img/' %}
+      <img
+        src="{{ header_image_path }}"
+        alt="Header image"
+        class="img-fluid"
+        loading="eager"
+      />
+    {% endif %}
+
     <!-- Content -->
     <div class="container mt-5" role="main">
       {% if page.toc and page.toc.sidebar %}

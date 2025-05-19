@@ -1,0 +1,22 @@
+<div class="d-flex flex-row justify-content-center flex-wrap mb-2">
+  {% for profile in site.data.people %}
+    <div class="mb-2 mx-1">
+      <a href="{{ profile.url }}" target="_blank" class="text-decoration-none">
+        <div class="card h-100 p-3" style="width: 10.5rem;">
+          {% if profile.image %}
+            {% assign profile_image_path = profile.image | prepend: 'assets/img/people/' %}
+            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
+            {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3 }}px, (min-width: 576px) 30vw, 95vw{% endcapture %}
+            {% include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=profile.image %}
+          {% endif %}
+          <div class="card-body text-center p-0">
+            <h5 class="card-title fw-bold p-0 m-0 small">{{ profile.name }}</h5>
+            {% if profile.title %}
+              <p class="card-body text-muted p-0 m-0 small">{{ profile.title }}</p>
+            {% endif %}
+          </div>
+        </div>
+      </a>
+    </div>
+  {% endfor %}
+</div>
