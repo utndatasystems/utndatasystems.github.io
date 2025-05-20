@@ -305,6 +305,20 @@ ul.task-list input[type="checkbox"] {
     }
   }
 
+  .navbar-brand.logo {
+    padding-bottom: 0;
+    padding-top: 0;
+    font-size: 1.7rem;
+
+    a {
+      img {
+        height: 1.7rem;
+        margin-bottom: 0.5rem;
+        // margin: 0.5rem;
+      }
+    }
+  }
+
   .navbar-brand.social {
     padding-bottom: 0;
     padding-top: 0;
