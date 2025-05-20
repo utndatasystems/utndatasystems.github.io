@@ -774,6 +774,11 @@ footer.sticky-bottom {
 
       .title {
         font-weight: bolder;
+
+        a {
+          color: var(--black-color) !important;
+          text-decoration: none;
+        }
       }
 
       .author {

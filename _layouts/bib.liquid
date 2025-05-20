@@ -48,7 +48,11 @@
   <!-- Entry bib key -->
   <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
     <!-- Title -->
-    <div class="title">{{ entry.title }}</div>
+    <div class="title">
+      <a href="{% if entry.blog != blank %}{{ entry.blog }}{% elsif entry.website != blank %}{{ entry.website }}{% elsif entry.arxiv != blank %}https://arxiv.org/abs/{{ entry.arxiv }}{% elsif entry.pdf != blank %}{{ entry.pdf }}{% elsif entry.doi != blank %}https://doi.org/{{ entry.doi }}{% endif %}">
+        {{ entry.title }}
+      </a>
+    </div>
     <!-- Author -->
     <div class="author">
       {% assign author_array_size = entry.author_array | size %}
