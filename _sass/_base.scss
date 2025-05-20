@@ -37,7 +37,11 @@ table {
 
 a,
 table.table a {
-  color: var(--global-theme-color);
+  color: var(--global-text-color);
+  text-decoration-color: var(--global-theme-color) !important;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  transition: all 0.2s ease-out;
 
   &:hover {
     color: var(--global-theme-color);
@@ -278,9 +282,7 @@ ul.task-list input[type="checkbox"] {
 
 .navbar.navbar-light {
   a {
-    &:hover {
-      text-decoration: none;
-    }
+    text-decoration: none;
   }
 
   .navbar-brand {
@@ -298,11 +300,8 @@ ul.task-list input[type="checkbox"] {
   .navbar-nav .nav-item.active > .nav-link {
     background-color: inherit;
     font-weight: bolder;
-    color: var(--global-theme-color);
-
-    &:hover {
-      color: var(--global-hover-color);
-    }
+    color: var(--global-text-color);
+    background-color: var(--global-theme-color);
   }
 
   .navbar-brand.logo {
@@ -776,11 +775,11 @@ footer.sticky-bottom {
 
       .author {
         a {
-          border-bottom: 1px dashed var(--global-theme-color);
+          text-decoration: none;
+          border-bottom: 1.5px dashed var(--global-theme-color);
 
           &:hover {
             border-bottom-style: solid;
-            text-decoration: none;
           }
         }
 
@@ -810,14 +809,14 @@ footer.sticky-bottom {
           padding-top: 0.25rem;
           padding-bottom: 0.25rem;
           margin-left: 0;
-
-          &:hover {
-            color: var(--global-theme-color);
-            border-color: var(--global-theme-color);
-          }
+          text-decoration: none;
         }
         a.award.btn {
           border-color: var(--global-highlight-color);
+
+          &:hover {
+            color: var(--global-highlight-color);
+          }
         }
       }
 
