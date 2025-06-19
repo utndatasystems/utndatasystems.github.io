@@ -8,24 +8,22 @@ It makes use of:
  - [Fontawesome@v6.7.1](https://fontawesome.com/icons)
  - [Academicons](https://jpswalsh.github.io/academicons/)
 
-## Running the Site locally
+## Development Setup
 
-**Lab-Specific**
+### Use our `watzmann` Server
 
-Our `watzmann` server has everything set up for local development. The repository is located in `/space/websites/utndatasystems.github.io`.
+Our `watzmann` server has everything set up for local development. The following instructions assume you use VSCode.
 
-Open the project in VSCode. If it asks you to "reopen the project in a devcontainer", click "No" (this would require Docker being set up on Watzmann, which is not the case).
-
-Open the terminal and run:
-```
-bundle exec jekyll serve
-```
-A popup should appear in VSCode asking you to open a forwarded port. Click "Open in Browser". Done.
+1. Connect to `watzmann` in VSCode. Ask Alex if you need access.
+2. The (shared) repository is located at `/space/websites/utndatasystems.github.io`.
+3. VSCode will ask you to "reopen the project in a devcontainer". Click "No" (this would require Docker being set up on Watzmann, which is not the case).
+4. Run `bundle exec jekyll serve` in the terminal.
+5. VSCode will ask you to setup port forwarding. Click "Open in Browser". 
 
 You can use this setup for local development. When you push the changes to `main`, the website will be re-deployed automatically.
 
 
-**General Instructions**
+### General Instructions
 
 Follow the instructions in the `al-folio` repository in [`INSTALL.md`](https://github.com/alshedivat/al-folio/blob/main/INSTALL.md).
 
@@ -34,14 +32,6 @@ Follow the instructions in the `al-folio` repository in [`INSTALL.md`](https://g
 ```
 docker compose pull
 docker compose up
-```
-
-**Alternative for VSCode:**
-
-Or open the project with VSCode and launch the "dev-container".
-If the server is hanging, try the following command inside the dev-container:
-```
-bundle exec jekyll serve
 ```
 
 
