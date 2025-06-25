@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Welcome **Alexander van Renen**, who joins the Data Systems Lab as its first Postdoc!
+We are excited to welcome **Alexander van Renen** to the Data Systems Lab as our first Postdoctoral Researcher!

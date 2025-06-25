@@ -3,7 +3,7 @@ layout: home
 title: Home
 permalink: /
 header_image: lab-group-photo.jpg
-subtitle: Make computer go brrrrrr
+# subtitle: Make computer go brrrrrr
 
 profile:
   align: right

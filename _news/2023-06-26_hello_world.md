@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Hello World! The **Data Systems Lab led by Prof. Andreas Kipf** is officially established at the University of Technology Nuremberg [[announcement](https://www.utn.de/en/2023/06/26/prof-data-systems/)].
+Hello, world! **Andreas Kipf** has been appointed **Professor of Data Systems** at the University of Technology Nuremberg. Read the [announcement](https://www.utn.de/en/2023/06/26/prof-data-systems/).

@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-We are proud to announce that our doctoral researcher **Andi Zimmerer** got accepted to the **[Software Campus](https://softwarecampus.de/en/) program**, an accelerator for leadership talents. The additional funding of 115.000€ will help us to focus on more areas of interest.
+Our doctoral researcher **Andi Zimmerer** has been accepted into the **[Software Campus](https://softwarecampus.de/en/)** program, securing €115,000 in funding to explore new research directions.
