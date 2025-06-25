@@ -11,7 +11,7 @@ ninja.data = [{
     },
   },{id: "nav-publications",
           title: "Publications",
-          description: "All publications from the UTN&#39;s Data Systems Group.",
+          description: "All publications from the Data Systems Lab.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/publications/";
