@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: Publications
-description: All publications from the UTN's Data Systems Group.
+description: All publications from the Data Systems Lab.
 nav: true
 nav_order: 2
 ---
