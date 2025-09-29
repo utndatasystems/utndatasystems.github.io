@@ -34,10 +34,6 @@
   image: carl-david-reese.jpg
   url: https://www.linkedin.com/in/carl-david-reese/
   title: Student Researcher
-- name: Sara Sherif
-  image: sara-saad.jpg
-  url: https://www.linkedin.com/in/sara-sherif-daoud/
-  title: Guest Researcher
 - name: Andrea Smith
   image: andrea-smith.jpg
   url: https://www.linkedin.com/in/andrea-smith-b93a79ba/
@@ -46,3 +42,12 @@
   image: corinna-dannewitz.jpg
   url: https://www.linkedin.com/in/corinna-dannewitz-b258a731a/
   title: Administrative Assistant
+
+- name: Sara Sherif
+  url: https://www.linkedin.com/in/sara-sherif-daoud/
+  title: Guest Researcher
+  alumni: true
+- name: Skander Krid
+  url: https://www.linkedin.com/in/skrid/
+  title: Student Researcher
+  alumni: true
