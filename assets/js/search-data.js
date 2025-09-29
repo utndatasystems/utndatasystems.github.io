@@ -44,6 +44,9 @@ ninja.data = [{
           section: "News",},{id: "news-our-lab-received-an-honorable-mention-at-sigmod-for-the-paper-dpconv-super-polynomially-faster-join-ordering-by-mihail-stoian-and-andreas-kipf",
           title: 'Our lab received an Honorable Mention at SIGMOD for the paper “DPconv: Super-Polynomially...',
           description: "",
+          section: "News",},{id: "news-our-lab-presented-two-paper-at-this-year-s-vldb-in-london-instance-optimized-string-fingerprints-by-mihail-stoian-et-al-and-redbench-a-benchmark-reflecting-real-workloads-by-skander-krid-et-al",
+          title: 'Our lab presented two paper at this year’s VLDB in London: “Instance-Optimized String...',
+          description: "",
           section: "News",},{
         id: 'social-email',
         title: 'email',
