@@ -47,7 +47,27 @@ ninja.data = [{
           section: "News",},{id: "news-our-lab-presented-two-paper-at-this-year-s-vldb-in-london-instance-optimized-string-fingerprints-by-mihail-stoian-et-al-and-redbench-a-benchmark-reflecting-real-workloads-by-skander-krid-et-al",
           title: 'Our lab presented two paper at this year’s VLDB in London: “Instance-Optimized String...',
           description: "",
-          section: "News",},{
+          section: "News",},{id: "projects-dataloom",
+          title: 'DataLoom',
+          description: "Using the Power of AI to Democratize Data Science through Agentic Data Pipelines",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/dataloom/";
+            },},{id: "projects-seehaus",
+          title: 'Seehaus',
+          description: "A Database With Waves",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/seehaus/";
+            },},{id: "projects-spectra",
+          title: 'Spectra',
+          description: "Taking LLM-Based Semantic SQL Operators to the Limit With Our Own Multi-Modal Data Engine",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/spectra/";
+            },},{id: "projects-virtual",
+          title: 'Virtual',
+          description: "Compressing Data Lake Storage Files Using Functional Inter-Column Dependencies",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/virtual/";
+            },},{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
