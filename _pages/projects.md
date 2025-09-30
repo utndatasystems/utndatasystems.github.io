@@ -5,7 +5,7 @@ permalink: /projects/
 description: Past and present research projects of the Data Systems Group at UTN.
 nav: true
 nav_order: 3
-display_categories: [work, fun]
+display_categories: []
 horizontal: false
 ---
 
