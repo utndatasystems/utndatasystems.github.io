@@ -227,11 +227,20 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() {
-      dataLayer.push(arguments);
+      window.dataLayer.push(arguments);
     }
-    gtag('js', new Date());
 
-    gtag('config', '{{ site.google_analytics }}');
+    // Deny all storage by default to prevent cookies
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'analytics_storage': 'denied'
+    });
+
+    gtag("js", new Date());
+    gtag("config", "{{ site.google_analytics }}", {
+        'client_storage': 'none',
+        'anonymize_ip': true
+    });
   </script>
   <script defer src="{{ '/assets/js/google-analytics-setup.js' | relative_url }}"></script>
 {% endif %}
