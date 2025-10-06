@@ -15,5 +15,6 @@ gtag('consent', 'default', {
 gtag("js", new Date());
 gtag("config", "{{ site.google_analytics }}", {
     'client_storage': 'none',
-    'anonymize_ip': true
+    'anonymize_ip': true,
+    'send_page_view': true
 });

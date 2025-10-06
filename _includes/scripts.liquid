@@ -240,11 +240,8 @@
     gtag("config", "{{ site.google_analytics }}", {
         'client_storage': 'none',
         'anonymize_ip': true,
-        'send_page_view': true,
-    debug_mode: true   // <-- ensures events are eligible for DebugView
+        'send_page_view': true
     });
-
-    gtag('consent', 'update', { 'analytics_storage': 'granted' });
   </script>
   <script defer src="{{ '/assets/js/google-analytics-setup.js' | relative_url }}"></script>
 {% endif %}
