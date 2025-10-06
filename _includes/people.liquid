@@ -30,10 +30,7 @@
   {% for profile in site.data.people %}
     {% if profile.alumni == true or profile.tags contains 'alumni' %}
       <li>
-        <strong>
-          <a href="{{ profile.url }}" target="_blank">{{ profile.name }}</a>
-        </strong>
-        {% if profile.title %}, {{ profile.title }}{% endif %}
+        <strong><a href="{{ profile.url }}" target="_blank">{{ profile.name }}</a></strong>{% if profile.title %}, {{ profile.title }}{% endif %}
       </li>
     {% endif %}
   {% endfor %}
