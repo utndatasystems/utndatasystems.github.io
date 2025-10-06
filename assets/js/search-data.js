@@ -47,7 +47,7 @@ ninja.data = [{
           section: "News",},{id: "news-our-lab-will-present-three-paper-at-this-year-s-sigmod-in-berlin-dpconv-super-polynomially-faster-join-ordering-by-mihail-stoian-and-andreas-kipf-pruning-in-snowflake-working-smarter-not-harder-by-andreas-zimmerer-et-al-and-redbench-a-benchmark-reflecting-real-workloads-by-skander-krid-et-al",
           title: 'Our lab will present three paper at this year’s SIGMOD in Berlin: “DPconv:...',
           description: "",
-          section: "News",},{id: "news-our-lab-presented-two-paper-at-this-year-s-vldb-in-london-instance-optimized-string-fingerprints-by-mihail-stoian-et-al-and-redbench-a-benchmark-reflecting-real-workloads-by-skander-krid-et-al",
+          section: "News",},{id: "news-our-lab-presented-two-paper-at-this-year-s-vldb-in-london-instance-optimized-string-fingerprints-and-parachute-single-pass-bi-directional-information-passing-by-mihail-stoian-et-al-and-redbench-a-benchmark-reflecting-real-workloads-by-skander-krid-et-al",
           title: 'Our lab presented two paper at this year’s VLDB in London: “Instance-Optimized String...',
           description: "",
           section: "News",},{id: "projects-dataloom",
