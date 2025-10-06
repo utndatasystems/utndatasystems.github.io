@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-A warm welcome to **Mihail Stoian**, who joins the Data Systems Lab as a Doctoral Researcher!
+A warm welcome to [**Mihail Stoian**](https://stoianmihail.github.io/), who joins the Data Systems Lab as a Doctoral Researcher!

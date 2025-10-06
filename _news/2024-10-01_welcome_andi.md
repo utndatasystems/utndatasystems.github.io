@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-After contributing part-time since the lab's inception, **Andi Zimmerer** is now officially joining us full-time as a doctoral researcher. Welcome aboard, Andi!
+After contributing part-time since the lab's inception, [**Andi Zimmerer**](https://andi-zimmerer.com/) is now officially joining us full-time as a doctoral researcher. Welcome aboard, Andi!
