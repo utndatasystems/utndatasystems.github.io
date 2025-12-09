@@ -65,3 +65,55 @@
 "thurauf":
   - firstname: ["Johannes", "Johannes Thürauf"]
     url: https://scholar.google.de/citations?user=kmz2AFoAAAAJ&hl=de&oi=ao
+
+"lao":
+  - firstname: ["Jiale", "Jiale Lao"]
+    url: https://scholar.google.de/citations?user=PccHINcAAAAJ&hl=de&oi=ao
+
+"ovcharenko":
+  - firstname: ["Olga", "Olga Ovcharenko"]
+    url: https://scholar.google.de/citations?user=JnbLQ6wAAAAJ&hl=de&oi=ao
+
+"cong":
+  - firstname: ["Tianji", "Tianji Cong"]
+    url: https://scholar.google.de/citations?user=3ToRqNMAAAAJ&hl=de&oi=ao
+
+"russo":
+  - firstname: ["Matthew", "Matthew Russo"]
+    url: https://scholar.google.de/citations?user=HYrDojkAAAAJ&hl=de&oi=sra
+
+"vitagliano":
+  - firstname: ["Gerardo", "Gerardo Vitagliano"]
+    url: https://scholar.google.de/citations?user=zYBXv3sAAAAJ&hl=de&oi=ao
+
+"cochez":
+  - firstname: ["Michael", "Michael Cochez"]
+    url: https://scholar.google.de/citations?user=JuZrOtoAAAAJ&hl=de&oi=ao
+
+"ozcan":
+  - firstname: ["Fatma", "Fatma Özcan"]
+    url: https://scholar.google.de/citations?user=JzoifEMAAAAJ&hl=de&oi=ao
+
+"gupta":
+  - firstname: ["Gautam", "Gautam Gupta"]
+    url: https://www.linkedin.com/in/guptagautam/
+
+"hottelier":
+  - firstname: ["Thibaud", "Thibaud Hottelier"]
+    url: https://www.linkedin.com/in/thibaudhottelier/
+
+"jagadish":
+  - firstname: ["H. V.", "H. V. Jagadish"]
+    url: https://scholar.google.de/citations?user=SKVnHakAAAAJ&hl=de&oi=ao
+
+"kissel":
+  - firstname: ["Kris", "Kris Kissel"]
+    url: https://www.linkedin.com/in/kris-kissel-b69b15b0/
+
+"schelter":
+  - firstname: ["Sebastian", "Sebastian Schelter"]
+    url: https://scholar.google.de/citations?user=zCpQUukAAAAJ&hl=de&oi=ao
+
+"trummer":
+  - firstname: ["Immanuel", "Immanuel Trummer"]
+    url: https://scholar.google.de/citations?user=FJ7im7AAAAAJ&hl=de&oi=ao
