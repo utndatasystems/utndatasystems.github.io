@@ -9,12 +9,26 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-publications",
+  },{id: "nav-blog",
+          title: "Blog",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/blog/";
+          },
+        },{id: "nav-publications",
           title: "Publications",
           description: "All publications from the Data Systems Lab.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/publications/";
+          },
+        },{id: "nav-projects",
+          title: "Projects",
+          description: "Past and present research projects of the Data Systems Lab at UTN.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
           },
         },{id: "nav-github-lt-i-class-quot-fa-fa-external-link-small-p-1-quot-aria-hidden-quot-true-quot-gt-lt-i-gt",
           title: "GitHub&lt;i class=&quot;fa fa-external-link small p-1&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;",
@@ -50,26 +64,11 @@ ninja.data = [{
           section: "News",},{id: "news-our-lab-presented-two-paper-at-this-year-s-vldb-in-london-instance-optimized-string-fingerprints-and-parachute-single-pass-bi-directional-information-passing-both-by-mihail-stoian-et-al",
           title: 'Our lab presented two paper at this year’s VLDB in London: “Instance-Optimized String...',
           description: "",
-          section: "News",},{id: "projects-dataloom",
-          title: 'DataLoom',
-          description: "Using the Power of AI to Democratize Data Science through Agentic Data Pipelines",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/dataloom/";
-            },},{id: "projects-seehaus",
-          title: 'Seehaus',
-          description: "A Database With Waves",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/seehaus/";
-            },},{id: "projects-spectra",
+          section: "News",},{id: "projects-spectra",
           title: 'Spectra',
           description: "Taking LLM-Based Semantic SQL Operators to the Limit With Our Own Multi-Modal Data Engine",
           section: "Projects",handler: () => {
               window.location.href = "/projects/spectra/";
-            },},{id: "projects-virtual",
-          title: 'Virtual',
-          description: "Compressing Data Lake Storage Files Using Functional Inter-Column Dependencies",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/virtual/";
             },},{
         id: 'social-email',
         title: 'email',
