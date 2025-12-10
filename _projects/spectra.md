@@ -2,7 +2,7 @@
 layout: page
 title: Spectra
 description: Taking LLM-Based Semantic SQL Operators to the Limit With Our Own Multi-Modal Data Engine
-img: assets/img/projects/spectra3.png
+img: assets/img/projects/spectra_platypus_bg.png
 importance: 3
 category: work
 ---
@@ -18,7 +18,8 @@ By integrating the powerful and flexible data processing capabilities of multi-m
 
 **Spectra** is implemented as a DuckDB extension and enriches DuckDB's declarative SQL interface with additional semantic operators.
 
+{% include figure.liquid loading="eager" path="assets/img/projects/spectra_platypus.png" class="mx-auto d-block col-2" %}
 
 #### Collaborators
 
- - [Dhia Bouassida](): Master's thesis on "Optimizing Semantic Operators in Analytical Query Engines"
+ - [Dhia Bouassida](https://www.linkedin.com/in/dhia-bouassida/): Master's thesis on "Optimizing Semantic Operators in Analytical Query Engines"
