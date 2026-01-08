@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/https:/github.com/utndatasystems";
           },
-        },{id: "news-hello-world-andreas-kipf-has-been-appointed-professor-of-data-systems-at-the-university-of-technology-nuremberg-read-the-announcement",
+        },{id: "post-launching-our-blog-and-wrapping-up-2025",
+        
+          title: "Launching Our Blog And Wrapping Up 2025",
+        
+        description: "I&#39;m super excited to launch our blog! We&#39;ll use this space to share what&#39;s happening in our lab, from research papers and systems to the day-to-day life of our team. To kick things off, let&#39;s look back at 2025.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/recap/";
+          
+        },
+      },{id: "news-hello-world-andreas-kipf-has-been-appointed-professor-of-data-systems-at-the-university-of-technology-nuremberg-read-the-announcement",
           title: 'Hello, world! Andreas Kipf has been appointed Professor of Data Systems at the...',
           description: "",
           section: "News",},{id: "news-a-warm-welcome-to-mihail-stoian-who-joins-the-data-systems-lab-as-a-doctoral-researcher",
