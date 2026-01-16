@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/https:/github.com/utndatasystems";
           },
-        },{id: "post-launching-our-blog-and-wrapping-up-2025",
+        },{id: "post-democratizing-data-science",
+        
+          title: "Democratizing Data Science",
+        
+        description: "Our vision is to build an end-to-end agentic data platform, enabling domain experts to acquire, clean, analyze, and visualize data in a principled manner by combining the benefits of LLMs with decades of database research.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/dataloom/";
+          
+        },
+      },{id: "post-launching-our-blog-and-wrapping-up-2025",
         
           title: "Launching Our Blog And Wrapping Up 2025",
         
