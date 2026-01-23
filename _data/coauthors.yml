@@ -1,18 +1,18 @@
 "kipf":
   - firstname: ["Andreas", "Andreas Kipf"]
-    url: https://scholar.google.de/citations?user=y3IdRusAAAAJ&hl=de&oi=ao
+    url: https://scholar.google.de/citations?user=y3IdRusAAAAJ
 
 "stoian":
   - firstname: ["Mihail", "Mihail Stoian"]
-    url: https://scholar.google.de/citations?user=7PEMO6UAAAAJ&hl=de&oi=ao
+    url: https://scholar.google.de/citations?user=7PEMO6UAAAAJ
 
 "renen":
   - firstname: ["Alexander", "Alex", "Alexander van Renen", "Alexander Renen"]
-    url: https://scholar.google.de/citations?user=lYbdcdcAAAAJ&hl=de&oi=ao
+    url: https://scholar.google.de/citations?user=lYbdcdcAAAAJ
 
 "zimmerer":
   - firstname: ["Andreas", "Andreas Zimmerer"]
-    url: https://scholar.google.de/citations?user=jBVA5UsAAAAJ&hl=de&oi=sra
+    url: https://scholar.google.de/citations?user=jBVA5UsAAAAJ
 
 "dam":
   - firstname: ["Damien", "Damien Dam"]
@@ -24,23 +24,23 @@
 
 "oukid":
   - firstname: ["Ismail", "Ismail Oukid"]
-    url: https://scholar.google.de/citations?user=QmwXUf4AAAAJ&hl=de&oi=ao
+    url: https://scholar.google.de/citations?user=QmwXUf4AAAAJ
 
 "kossmann":
   - firstname: ["Jan", "Jan Kossmann"]
-    url: https://scholar.google.de/citations?user=nIYiva8AAAAJ&hl=de&oi=sra
+    url: https://scholar.google.de/citations?user=nIYiva8AAAAJ
 
 "kobiolka":
   - firstname: ["Jan", "Jan Kobiolka"]
-    url: https://scholar.google.de/citations?user=I3zw7aMAAAAJ&hl=de&oi=ao
+    url: https://scholar.google.de/citations?user=I3zw7aMAAAAJ
 
 "grabocka":
   - firstname: ["Josif", "Josif Grabocka"]
-    url: https://scholar.google.de/citations?user=KRy27XcAAAAJ&hl=de&oi=ao
+    url: https://scholar.google.de/citations?user=KRy27XcAAAAJ
 
 "liu":
   - firstname: ["Hanwen", "Hanwen Liu"]
-    url: https://scholar.google.de/citations?user=HDF0su0AAAAJ&hl=de&oi=sra
+    url: https://scholar.google.de/citations?user=HDF0su0AAAAJ
 
 "kuo":
   - firstname: ["Ping-Lin", "Ping-Lin Kuo"]
@@ -52,47 +52,47 @@
 
 "ngom":
   - firstname: ["Amadou Latyr", "Amadou Latyr Ngom"]
-    url: https://scholar.google.com/citations?user=wIklsf8AAAAJ&hl=en
+    url: https://scholar.google.com/citations?user=wIklsf8AAAAJ
 
 "ding":
   - firstname: ["Jialin", "Jialin Ding"]
-    url: https://scholar.google.com/citations?user=uUiXiMIAAAAJ&hl=en
+    url: https://scholar.google.com/citations?user=uUiXiMIAAAAJ
 
 "kraska":
   - firstname: ["Tim", "Tim Kraska"]
-    url: https://scholar.google.com/citations?user=biuxbRsAAAAJ&hl=en
+    url: https://scholar.google.com/citations?user=biuxbRsAAAAJ
 
 "thurauf":
   - firstname: ["Johannes", "Johannes Thürauf"]
-    url: https://scholar.google.de/citations?user=kmz2AFoAAAAJ&hl=de&oi=ao
+    url: https://scholar.google.de/citations?user=kmz2AFoAAAAJ
 
 "lao":
   - firstname: ["Jiale", "Jiale Lao"]
-    url: https://scholar.google.de/citations?user=PccHINcAAAAJ&hl=de&oi=ao
+    url: https://scholar.google.de/citations?user=PccHINcAAAAJ
 
 "ovcharenko":
   - firstname: ["Olga", "Olga Ovcharenko"]
-    url: https://scholar.google.de/citations?user=JnbLQ6wAAAAJ&hl=de&oi=ao
+    url: https://scholar.google.de/citations?user=JnbLQ6wAAAAJ
 
 "cong":
   - firstname: ["Tianji", "Tianji Cong"]
-    url: https://scholar.google.de/citations?user=3ToRqNMAAAAJ&hl=de&oi=ao
+    url: https://scholar.google.de/citations?user=3ToRqNMAAAAJ
 
 "russo":
   - firstname: ["Matthew", "Matthew Russo"]
-    url: https://scholar.google.de/citations?user=HYrDojkAAAAJ&hl=de&oi=sra
+    url: https://scholar.google.de/citations?user=HYrDojkAAAAJ
 
 "vitagliano":
   - firstname: ["Gerardo", "Gerardo Vitagliano"]
-    url: https://scholar.google.de/citations?user=zYBXv3sAAAAJ&hl=de&oi=ao
+    url: https://scholar.google.de/citations?user=zYBXv3sAAAAJ
 
 "cochez":
   - firstname: ["Michael", "Michael Cochez"]
-    url: https://scholar.google.de/citations?user=JuZrOtoAAAAJ&hl=de&oi=ao
+    url: https://scholar.google.de/citations?user=JuZrOtoAAAAJ
 
 "ozcan":
   - firstname: ["Fatma", "Fatma Özcan"]
-    url: https://scholar.google.de/citations?user=JzoifEMAAAAJ&hl=de&oi=ao
+    url: https://scholar.google.de/citations?user=JzoifEMAAAAJ
 
 "gupta":
   - firstname: ["Gautam", "Gautam Gupta"]
@@ -104,7 +104,7 @@
 
 "jagadish":
   - firstname: ["H. V.", "H. V. Jagadish"]
-    url: https://scholar.google.de/citations?user=SKVnHakAAAAJ&hl=de&oi=ao
+    url: https://scholar.google.de/citations?user=SKVnHakAAAAJ
 
 "kissel":
   - firstname: ["Kris", "Kris Kissel"]
@@ -112,8 +112,96 @@
 
 "schelter":
   - firstname: ["Sebastian", "Sebastian Schelter"]
-    url: https://scholar.google.de/citations?user=zCpQUukAAAAJ&hl=de&oi=ao
+    url: https://scholar.google.de/citations?user=zCpQUukAAAAJ
 
 "trummer":
   - firstname: ["Immanuel", "Immanuel Trummer"]
-    url: https://scholar.google.de/citations?user=FJ7im7AAAAAJ&hl=de&oi=ao
+    url: https://scholar.google.de/citations?user=FJ7im7AAAAAJ
+
+"schmidt":
+  - firstname: ["Tobias", "Tobias Schmidt"]
+    url: https://scholar.google.com/citations?user=ngwyet8AAAAJ
+
+"rengert":
+  - firstname: ["Moritz", "Moritz Rengert"]
+    url: https://www.linkedin.com/in/moritz-rengert-8baaa1203
+
+"pandey":
+  - firstname: ["Varun", "Varun Pandey"]
+    url: https://scholar.google.de/citations?user=xaWWduMAAAAJ
+
+"heller":
+  - firstname: ["Luca", "Luca Heller"]
+    url: https://www.linkedin.com/in/luca-sophia-heller-b8909b250/
+
+"wehrstein":
+  - firstname: ["Johannes", "Johannes Wehrstein"]
+    url: https://scholar.google.de/citations?user=2xFqwwMAAAAJ
+
+"heinrich":
+  - firstname: ["Roman", "Roman Heinrich"]
+    url: https://scholar.google.de/citations?user=tE1QJngAAAAJ
+
+"binnig":
+  - firstname: ["Carsten", "Carsten Binnig"]
+    url: https://scholar.google.de/citations?user=Iqsl_XMAAAAJ
+
+"el-hindi":
+  - firstname: ["Muhammad", "Muhammad El-Hindi"]
+    url: https://scholar.google.de/citations?user=0U6OV0AAAAAJ
+
+"bodner":
+  - firstname: ["Thomas", "Thomas Bodner"]
+    url: https://scholar.google.de/citations?user=QAlniosAAAAJ
+
+"bohm":
+  - firstname: ["Alexander", "Alexander Böhm"]
+    url: https://www.linkedin.com/in/alexanderb42
+
+"bother":
+  - firstname: ["Maximilian", "Maximilian Böther"]
+    url: https://scholar.google.de/citations?user=Z6qj7ygAAAAJ
+
+"klimovic":
+  - firstname: ["Ana", "Ana Klimovic"]
+    url: https://scholar.google.de/citations?user=Z6qj7ygAAAAJ
+
+"durner":
+  - firstname: ["Dominik", "Dominik Durner"]
+    url: https://scholar.google.de/citations?user=wL5c-w4AAAAJ
+
+"grund":
+  - firstname: ["Martin", "Martin Grund"]
+    url: https://scholar.google.de/citations?user=V3gbnNsAAAAJ
+
+"schiefer":
+  - firstname: ["Berni", "Berni Schiefer"]
+    url: https://www.linkedin.com/in/berni-schiefer/
+
+"parchas":
+  - firstname: ["Panos", "Panos Parchas"]
+    url: https://scholar.google.de/citations?user=Oyi6xjoAAAAJ
+
+"giceva":
+  - firstname: ["Jana", "Jana Giceva"]
+    url: https://scholar.google.de/citations?user=O7xc9uEAAAAJ
+
+"ziegler":
+  - firstname: ["Tobias", "Tobias Ziegler"]
+    url: https://scholar.google.de/citations?user=qJ_bkjcAAAAJ
+
+"hentschel":
+  - firstname: ["Martin", "Martin Hentschel"]
+    url: https://dasya.itu.dk/people/martinhentschel/
+
+"unterbrunner":
+  - firstname: ["Philipp", "Philipp Unterbrunner"]
+    url: https://scholar.google.de/citations?user=0qkdsecAAAAJ
+
+"karnagel":
+  - firstname: ["Tomas", "Tomas Karnagel"]
+    url: https://scholar.google.de/citations?user=bEL-yqwAAAAJ
+
+"gildhoff":
+  - firstname: ["Hinnerk", "Hinnerk Gildhoff"]
+    url: https://www.linkedin.com/in/hinnerkgildhoff/
