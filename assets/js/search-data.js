@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/https:/github.com/utndatasystems";
           },
-        },{id: "post-democratizing-data-science",
+        },{id: "post-benchmarking-semantic-query-processing-systems",
+        
+          title: "Benchmarking Semantic Query Processing Systems",
+        
+        description: "Semantic query processing is emerging as a new layer atop relational engines, elevating LLM-backed semantic operators to first-class SQL primitives for multimodal data. We present SemBench, the first benchmark to rigorously evaluate these systems end-to-end, and outline our roadmap towards our own system, Spectra, to make semantic operators affordable at scale.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/sembench/";
+          
+        },
+      },{id: "post-democratizing-data-science",
         
           title: "Democratizing Data Science",
         
