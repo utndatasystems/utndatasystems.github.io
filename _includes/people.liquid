@@ -2,7 +2,7 @@
   {% for profile in site.data.people %}
     {% unless profile.alumni == true or profile.tags contains 'alumni' %}
       <div class="mb-2 mx-1">
-        <a href="{{ profile.url }}" target="_blank" class="text-decoration-none">
+        {% if profile.url %} <a href="{{ profile.url }}" target="_blank" class="text-decoration-none"> {% endif %}
           <div class="card h-100 p-3" style="width: 10.5rem;">
             {% if profile.image %}
               {% assign profile_image_path = profile.image | prepend: 'assets/img/people/' %}
@@ -17,7 +17,7 @@
               {% endif %}
             </div>
           </div>
-        </a>
+          {% if profile.url %}</a>{% endif %}
       </div>
     {% endunless %}
   {% endfor %}

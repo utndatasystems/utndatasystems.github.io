@@ -26,17 +26,16 @@
   image: luca-heller.jpg
   url: https://www.linkedin.com/in/luca-sophia-heller-b8909b250/
   title: Student Researcher
-- name: Ping-Lin Kuo
-  image: ping-lin-kuo.jpg
-  url: https://www.linkedin.com/in/ping-lin-billy-kuo/
-  title: Student Researcher
-- name: Moritz Rengert
-  image: moritz-rengert.jpg
-  url: https://www.linkedin.com/in/moritz-rengert-8baaa1203/
-  title: Student Researcher
 - name: Carl-David Reese
   image: carl-david-reese.jpg
   url: https://www.linkedin.com/in/carl-david-reese/
+  title: Student Researcher
+- name: Claudius Kühn
+  image: placeholder-cow.jpg
+  title: Student Researcher
+- name: Robin Sternberg
+  image: robin-sternberg.jpg
+  url: https://www.linkedin.com/in/robin-sternberg/
   title: Student Researcher
 - name: Andrea Smith
   image: andrea-smith.jpg
@@ -47,6 +46,14 @@
   url: https://www.linkedin.com/in/corinna-dannewitz-b258a731a/
   title: Administrative Assistant
 
+- name: Ping-Lin Kuo
+  url: https://www.linkedin.com/in/ping-lin-billy-kuo/
+  title: Student Researcher
+  alumni: true
+- name: Moritz Rengert
+  url: https://www.linkedin.com/in/moritz-rengert-8baaa1203/
+  title: Student Researcher
+  alumni: true
 - name: Sara Sherif
   url: https://www.linkedin.com/in/sara-sherif-daoud/
   title: Guest Researcher
