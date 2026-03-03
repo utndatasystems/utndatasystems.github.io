@@ -6,12 +6,15 @@ function gtag() {
 // Deny all storage by default to prevent cookies
 gtag('consent', 'default', {
   'ad_storage': 'denied',
-  'analytics_storage': 'denied'
+  'analytics_storage': 'denied',
+  'ad_user_data': 'denied',
+  'ad_personalization': 'denied',
+  'wait_for_update': 500
 });
+gtag("set", "ads_data_redaction", true);
 
 gtag("js", new Date());
 gtag("config", "G-01T0SBSGBC", {
-    'client_storage': 'none',
     'anonymize_ip': true,
     'send_page_view': true
 });
