@@ -224,19 +224,9 @@
   <!-- Analytics -->
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      window.dataLayer.push(arguments);
-    }
-
-    gtag("js", new Date());
-    gtag("config", "{{ site.google_analytics }}", {
-        'anonymize_ip': true,
-        'send_page_view': true
-    });
-  </script>
+  {% include ga-consent-banner.liquid %}
   <script defer src="{{ '/assets/js/google-analytics-setup.js' | relative_url }}"></script>
+  <script defer src="{{ '/assets/js/google-analytics-consent-banner.js' | relative_url }}"></script>
 {% endif %}
 
 {% if site.enable_cronitor_analytics %}
