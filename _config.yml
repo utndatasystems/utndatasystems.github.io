@@ -12,7 +12,7 @@ footer_text: >
 keywords: Research, Data-Systems, Databases, Data-Processing, Systems-Research # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 260302_datasystems_logo_favicon.svg # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
-logo: 260302_datasystems_logo_bw.svg
+logo: 260302_datasystems_logo_color.svg
 logo_url: https://www.utn.de/
 
 url: https://utndatasystems.github.io # the base hostname & protocol for your site

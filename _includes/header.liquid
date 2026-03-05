@@ -1,14 +1,22 @@
 <header>
   <!-- Nav Bar -->
-  <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
+  <nav id="navbar" class="navbar navbar-light navbar-expand-md {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
     <div class="container">
       <!-- Navbar Logo -->
       {% if site.logo %}
         <div class="navbar-brand logo">
           <a href="{{ site.logo_url }}">
+            {% assign utn_logo_path = 'utn_with_text.png' | prepend: 'assets/img/' %}
             {% assign logo_path = site.logo | prepend: 'assets/img/' %}
             <img
+              class="logo-utn"
+              src="{{ utn_logo_path | relative_url }}"
+              alt="UTN logo with text"
+            >
+            <img
+              class="logo-new"
               src="{{ logo_path | relative_url }}"
+              alt="UTN Data Systems logo"
             >
           </a>
         </div>

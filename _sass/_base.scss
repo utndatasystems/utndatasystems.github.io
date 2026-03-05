@@ -310,9 +310,17 @@ ul.task-list input[type="checkbox"] {
     font-size: 1.7rem;
 
     a {
-      display: block;
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
 
-      img {
+      img.logo-utn {
+        display: block;
+        height: 1.7rem;
+        margin: 0;
+      }
+
+      img.logo-new {
         display: block;
         height: 2.3rem;
         margin: 0;
