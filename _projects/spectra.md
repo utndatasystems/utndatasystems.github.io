@@ -22,4 +22,5 @@ By integrating the powerful and flexible data processing capabilities of multi-m
 
 #### Collaborators
 
+ - Claudius Kühn: Student Researcher
  - [Dhia Bouassida](https://www.linkedin.com/in/dhia-bouassida/): Master's thesis on "Optimizing Semantic Operators in Analytical Query Engines"
