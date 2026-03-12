@@ -1,4 +1,10 @@
 <div id="ga-consent-banner" class="ga-consent-banner" role="dialog" aria-label="Cookie consent" aria-live="polite" hidden>
+  <img
+    class="ga-consent-banner__image"
+    src="{{ '/assets/img/cookie-cow.png' | relative_url }}"
+    alt="Cookie cow"
+    loading="lazy"
+  >
   <p class="ga-consent-banner__text">We use analytics cookies to understand site usage.</p>
   <div class="ga-consent-banner__actions">
     <button type="button" class="ga-consent-banner__btn ga-consent-banner__btn--ghost" data-ga-consent-action="deny">Decline</button>
@@ -33,6 +39,14 @@
     margin: 0;
     font-size: 0.9rem;
     line-height: 1.3;
+  }
+
+  .ga-consent-banner__image {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.45rem;
+    object-fit: cover;
+    flex-shrink: 0;
   }
 
   .ga-consent-banner__actions {
@@ -86,6 +100,12 @@
     .ga-consent-banner__actions {
       margin-left: 0;
       justify-content: flex-end;
+    }
+
+    .ga-consent-banner__image {
+      width: 4rem;
+      height: 4rem;
+      align-self: center;
     }
   }
 </style>
