@@ -107,7 +107,7 @@ ninja.data = [{
           title: 'xBound, the first framework for join size lower bounds is now on arXiv!...',
           description: "",
           section: "News",},{id: "news-mihail-stoian-presented-his-paper-on-weighted-combinatorial-problems-at-stacs-symposium-on-theoretical-aspects-of-computer-science-check-out-the-blog-post",
-          title: 'Mihail Stoian presented his paper on weighted combinatorial problems at _STACS: Symposium on...',
+          title: 'Mihail Stoian presented his paper on weighted combinatorial problems at STACS: Symposium on...',
           description: "",
           section: "News",},{id: "projects-spectra",
           title: 'Spectra',
