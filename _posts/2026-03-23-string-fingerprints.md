@@ -1,7 +1,7 @@
 ---
 layout: post
 title: String Fingerprints
-date: 2026-03-24
+date: 2026-03-23
 description: Cloud data warehouses are text-heavy. As the amount of text data to scan increases, queries become slower, therefore query engines require fast pre-filters to accelerate them. We present string fingerprints, a lightweight secondary index structure designed to approximate LIKE predicates, albeit with false positives. Fingerprints can be optimized for specific workloads using mixed-integer optimization and even generalize to unseen table filters.
 related_publications: true
 toc:
