@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/https:/github.com/utndatasystems";
           },
-        },{id: "post-benchmarking-semantic-query-processing-systems",
+        },{id: "post-string-fingerprints",
+        
+          title: "String Fingerprints",
+        
+        description: "Cloud data warehouses are text-heavy. As the amount of text data to scan increases, queries become slower, therefore query engines require fast pre-filters to accelerate them. We present string fingerprints, a lightweight secondary index structure designed to approximate LIKE predicates, albeit with false positives. Fingerprints can be optimized for specific workloads using mixed-integer optimization and even generalize to unseen table filters.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/string-fingerprints/";
+          
+        },
+      },{id: "post-benchmarking-semantic-query-processing-systems",
         
           title: "Benchmarking Semantic Query Processing Systems",
         
