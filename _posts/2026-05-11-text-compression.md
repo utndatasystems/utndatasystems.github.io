@@ -4,6 +4,7 @@ title: Text Compression Through the Looking Glass
 date: 2026-05-11
 description: Cold and unstructured text has long been a storage burden, driving costs for data that is unlikely to ever be accessed again. The rise of accessible large language models (LLMs) has intensified this challenge by dramatically increasing the volume of generated content that still needs to be retained, e.g. for compliance reasons. This post explores a new class of LLM-based compression methods that can significantly reduce the storage footprint of text-heavy data, and explains why LLMs are particularly well-suited to text compression.
 related_publications: true
+og_image: assets/img/posts/text-compression-coding-pipeline.png
 toc:
   sidebar: right
 
