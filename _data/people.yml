@@ -22,10 +22,6 @@
   image: varun-pandey.jpg
   url: https://www.linkedin.com/in/varpande/
   title: Affiliated Researcher
-- name: Luca Heller
-  image: luca-heller.jpg
-  url: https://www.linkedin.com/in/luca-sophia-heller-b8909b250/
-  title: Student Researcher
 - name: Carl-David Reese
   image: carl-david-reese.jpg
   url: https://www.linkedin.com/in/carl-david-reese/
@@ -46,6 +42,10 @@
   url: https://www.linkedin.com/in/corinna-dannewitz-b258a731a/
   title: Administrative Assistant
 
+- name: Luca Heller
+  url: https://www.linkedin.com/in/luca-sophia-heller-b8909b250/
+  title: Student Researcher
+  alumni: true
 - name: Ping-Lin Kuo
   url: https://www.linkedin.com/in/ping-lin-billy-kuo/
   title: Student Researcher
