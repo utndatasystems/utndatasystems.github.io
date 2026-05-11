@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/https:/github.com/utndatasystems";
           },
-        },{id: "post-string-fingerprints",
+        },{id: "post-text-compression-through-the-looking-glass",
+        
+          title: "Text Compression Through the Looking Glass",
+        
+        description: "Cold and unstructured text has long been a storage burden, driving costs for data that is unlikely to ever be accessed again. The rise of accessible large language models (LLMs) has intensified this challenge by dramatically increasing the volume of generated content that still needs to be retained, e.g. for compliance reasons. This post explores a new class of LLM-based compression methods that can significantly reduce the storage footprint of text-heavy data, and explains why LLMs are particularly well-suited to text compression.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/text-compression/";
+          
+        },
+      },{id: "post-string-fingerprints",
         
           title: "String Fingerprints",
         
