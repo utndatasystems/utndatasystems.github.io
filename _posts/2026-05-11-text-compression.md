@@ -120,7 +120,7 @@ In other words, entropy is a measure of surprise. The lower the entropy, the bet
 
 In practice, the precise distribution $p(x)$ with which a data source emits text eludes us most of the time. Instead, we work with an approximate $q(x)$ of said distortion that we learn using a model and measure its performance via the so-called cross-entropy $H(p,q,X)$, a measure of how well our model predicts the real data $q(x)$ (a sample of the true data source). 
 
-$$H(p,q,X) = \sum_{x\in X}p(x)\log_2q(x) = H(p,X)+D_{KL}(p\|q)$$
+$$H(p,q,X) = \sum_{x\in X}p(x)\log_2q(x) = H(p,X)+D_{KL}(p|q)$$
 
 The gap $D_{KL}(p\|q)$ between $q(x)$ and $p(x)$ is where inefficiency originates and where extra bits creep into the compressed code. 
 
