@@ -205,3 +205,19 @@
 "gildhoff":
   - firstname: ["Hinnerk", "Hinnerk Gildhoff"]
     url: https://www.linkedin.com/in/hinnerkgildhoff/
+
+"bang":
+  - firstname: ["Tiemo", "Tiemo Bang"]
+    url: https://scholar.google.de/citations?user=HDK0KRYAAAAJ
+
+"zhao":
+  - firstname: ["Hangdong", "Hangdong Zhao"]
+    url: https://scholar.google.de/citations?user=lBHGk9AAAAAJ
+
+"camacho-rodriguez":
+  - firstname: ["Jesús", "Jesús Camacho-Rodríguez"]
+    url: https://scholar.google.de/citations?user=V6f0Ao4AAAAJ
+
+"tian":
+  - firstname: ["Yuanyuan", "Yuanyuan Tian"]
+    url: https://scholar.google.de/citations?user=_XE_jhQAAAAJ
