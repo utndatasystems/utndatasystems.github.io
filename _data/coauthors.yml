@@ -221,3 +221,15 @@
 "tian":
   - firstname: ["Yuanyuan", "Yuanyuan Tian"]
     url: https://scholar.google.de/citations?user=_XE_jhQAAAAJ
+
+"gerarts":
+  - firstname: ["Mark", "Mark Gerarts"]
+    url: https://scholar.google.de/citations?user=zD7XjScAAAAJ
+
+"ginter":
+  - firstname: ["Pascal", "Pascal Ginter"]
+    url: https://scholar.google.de/citations?user=v-FNQuQAAAAJ
+
+"bussche":
+  - firstname: ["Jan", "Jan Van den", "Jan Van den Bussche"]
+    url: https://scholar.google.de/citations?user=3V8K4wIAAAAJ
