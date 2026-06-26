@@ -14,6 +14,10 @@
   - firstname: ["Andreas", "Andreas Zimmerer"]
     url: https://scholar.google.de/citations?user=jBVA5UsAAAAJ
 
+"neubauer":
+  - firstname: ["Luisa", "Luisa Neubauer"]
+    url: https://www.linkedin.com/in/luisa-neubauer/
+
 "dam":
   - firstname: ["Damien", "Damien Dam"]
     url: https://www.linkedin.com/in/damien-dam/
@@ -233,3 +237,15 @@
 "bussche":
   - firstname: ["Jan", "Jan Van den", "Jan Van den Bussche"]
     url: https://scholar.google.de/citations?user=3V8K4wIAAAAJ
+
+"adams":
+  - firstname: ["David", "David Adams"]
+    url: 
+
+"rueckstieß":
+  - firstname: ["Thomas", "Thomas Rückstieß"]
+    url: 
+
+"borovica-gajic":
+  - firstname: ["Renata", "Renata Borovica-Gajic"]
+    url: https://scholar.google.de/citations?user=HYkhTeYAAAAJ
