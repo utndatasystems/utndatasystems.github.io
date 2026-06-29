@@ -240,11 +240,11 @@
 
 "adams":
   - firstname: ["David", "David Adams"]
-    url: 
+    url: https://www.linkedin.com/in/david-b-adams/
 
-"rueckstieß":
+"ruckstiess":
   - firstname: ["Thomas", "Thomas Rückstieß"]
-    url: 
+    url: https://scholar.google.de/citations?user=dRIgADIAAAAJ
 
 "borovica-gajic":
   - firstname: ["Renata", "Renata Borovica-Gajic"]
@@ -253,3 +253,7 @@
 "kuhn":
   - firstname: ["Claudius", "Claudius Kühn"]
     url: https://www.linkedin.com/in/claudius-k%C3%BChn-609b3b418/
+
+"li":
+  - firstname: ["Yang", "Yang Li"]
+    url: https://scholar.google.de/citations?user=UuMr9b8AAAAJ
