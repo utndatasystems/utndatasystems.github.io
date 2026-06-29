@@ -257,3 +257,11 @@
 "li":
   - firstname: ["Yang", "Yang Li"]
     url: https://scholar.google.de/citations?user=UuMr9b8AAAAJ
+
+"chehaidar":
+  - firstname: ["Hedi", "Hedi Chehaidar"]
+    url: https://www.linkedin.com/in/hedi-chehaidar/
+
+"stargalla":
+  - firstname: ["Moritz", "Moritz Stargalla"]
+    url: https://www.linkedin.com/in/moritz-stargalla/
