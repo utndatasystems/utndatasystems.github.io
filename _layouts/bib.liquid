@@ -66,6 +66,7 @@
         {% assign author_is_self = false %}
         {%- assign author_last_name = author.last | regex_replace: '[*∗†‡§¶‖&^]', '' -%}
         {%- assign author_last_html = author.last | regex_replace: '([*∗†‡§¶‖&^]+)', '<sup>\1</sup>' -%}
+        {%- assign author_prefix_html = author.prefix | default: '' | regex_replace: '([*∗†‡§¶‖&^]+)', '<sup>\1</sup>' -%}
         {% if site.scholar.last_name contains author_last_name %}
           {% if site.scholar.first_name contains author.first %}
             {% assign author_is_self = true %}
@@ -91,16 +92,19 @@
         {%- if author_is_self -%}
           <em>
             {{- author.first }}
+            {% if author.prefix %} {{ author_prefix_html }}{% endif %}
             {{ author_last_html -}}
           </em>
         {%- else -%}
           {%- if coauthor_url -%}
             <a href="{{ coauthor_url }}">
               {{- author.first }}
+              {% if author.prefix %} {{ author_prefix_html }}{% endif %}
               {{ author_last_html -}}
             </a>
           {%- else -%}
             {{- author.first }}
+            {% if author.prefix %} {{ author_prefix_html }}{% endif %}
             {{ author_last_html -}}
           {% endif %}
         {%- endif -%}
@@ -114,7 +118,11 @@
         {%- endif -%}
         {% assign more_authors_show = '' %}
         {%- for author in entry.author_array offset: author_array_limit -%}
-          {% assign more_authors_show = more_authors_show | append: author.first | append: ' ' | append: author.last %}
+          {% assign more_authors_show = more_authors_show | append: author.first %}
+          {% if author.prefix %}
+            {% assign more_authors_show = more_authors_show | append: ' ' | append: author.prefix %}
+          {% endif %}
+          {% assign more_authors_show = more_authors_show | append: ' ' | append: author.last %}
           {% unless forloop.last %}
             {% assign more_authors_show = more_authors_show | append: ', ' %}
           {% endunless %}
