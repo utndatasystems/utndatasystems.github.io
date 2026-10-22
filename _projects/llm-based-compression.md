@@ -28,6 +28,7 @@ We study when storage savings justify compression and decompression costs, how t
 - [Robin Sternberg](https://www.linkedin.com/in/robin-sternberg/) — Student Researcher
 - [Ivan Iachnyk](https://www.linkedin.com/in/ivan-iachnyk-658607312/) — Student Researcher
 
+<!-- cite papers so they show up in references, but keep them hidden -->
 <div class="d-none">
-  {% cite kipf2025llmcompress adams2026fastllmcompression %}
+  {% cite kipf2025llmcompress adams2026fastllmcompression neubauer2026adversarial iachnyk2026synthesizedcompression %}
 </div>
