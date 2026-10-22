@@ -64,7 +64,7 @@ For our example, we propose a new code in which:
  - "z" (the rarest letter) as `111010`
 
 
-{% include figure.liquid loading="eager" path="assets/img/posts/text-compression-letter-frequencies-english.png" class="img-fluid rounded d-block mx-auto my-5" width="80%" %}
+{% include figure.liquid loading="eager" path="assets/img/posts/text-compression-letter-frequencies-english.png" %}
 
 The key takeaway here is that a good compression scheme assigns _short codes_ to frequent symbols and _longer codes_ to rare ones — exploiting the information about patterns at our disposal. Over large amounts of text, this method will reduce the number of bits needed to store it (mind that we have to guarantee that _no code is the prefix of another code_<sup><a href="#footnote1">1</a></sup>).
 
@@ -88,7 +88,7 @@ Lucky us, we nowadays, have excellent language modelling machines (large languag
 
 The neat thing is that as language models improve at modeling human language, they also become better at compression. We can drop our knowledge about how often the letter "y" appears in the English language and — lazy researchers that we are — we outsource this task to a model trained on the task. 
 
-{% include figure.liquid loading="eager" path="assets/img/posts/text-compression-coding-pipeline.png" class="img-fluid rounded d-block mx-auto my-5" width="80%" %}
+{% include figure.liquid loading="eager" path="assets/img/posts/text-compression-coding-pipeline.png" %}
 
 
 The recipe for how it all plays together, is as follows:

@@ -1,6 +1,17 @@
 {% assign img_path = include.path | remove: '.jpg' | remove: '.jpeg' | remove: '.png' | remove: '.tiff' | remove: '.gif' %}
 {% assign parts = include.path | split: '.' %}
 {% assign ext = parts.last %}
+{% assign image_class = include.class %}
+{% assign image_width = include.width | default: '100%' %}
+
+{% if page.layout == 'post' %}
+  {% unless image_class %}
+    {% assign image_class = 'img-fluid rounded d-block mx-auto my-5' %}
+  {% endunless %}
+  {% unless include.width %}
+    {% assign image_width = '80%' %}
+  {% endunless %}
+{% endif %}
 
 <figure
   {% if include.slot %}
@@ -33,14 +44,10 @@
     {% endif %}
     <img
       src="{% if include.url %}{{ include.url }}{% elsif include.cache_bust %}{{ include.path | relative_url | bust_file_cache }}{% else %}{{ include.path | relative_url }}{% endif %}"
-      {% if include.class %}
-        class="{{ include.class }}"
+      {% if image_class %}
+        class="{{ image_class }}"
       {% endif %}
-      {% if include.width %}
-        width="{{ include.width }}"
-      {% else %}
-        width="100%"
-      {% endif %}
+      width="{{ image_width }}"
       {% if include.height %}
         height="{{ include.height }}"
       {% else %}
