@@ -142,14 +142,19 @@ ninja.data = [{
           section: "News",},{id: "news-mihail-stoian-presented-his-paper-on-weighted-combinatorial-problems-at-stacs-symposium-on-theoretical-aspects-of-computer-science-check-out-the-blog-post",
           title: 'Mihail Stoian presented his paper on weighted combinatorial problems at STACS: Symposium on...',
           description: "",
-          section: "News",},{id: "projects-llm-based-compression",
+          section: "News",},{id: "projects-dataloom",
+          title: 'Dataloom',
+          description: "Using the Power of AI to Democratize Data Science through Agentic Data Pipelines.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/dataloom/";
+            },},{id: "projects-llm-based-compression",
           title: 'LLM-Based Compression',
           description: "Making ML-powered compression fast, robust, and practical for data systems.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/llm-based-compression/";
             },},{id: "projects-spectra",
           title: 'Spectra',
-          description: "Taking LLM-Based Semantic SQL Operators to the Limit With Our Own Multi-Modal Data Engine",
+          description: "Taking LLM-Based Semantic SQL Operators to the Limit With Our Own Multi-Modal Data Engine.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/spectra/";
             },},{
