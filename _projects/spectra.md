@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Spectra
-description: Taking LLM-Based Semantic SQL Operators to the Limit With Our Own Multi-Modal Data Engine
+description: Taking LLM-Based Semantic SQL Operators to the Limit With Our Own Multi-Modal Data Engine.
 img: assets/img/projects/spectra_platypus_bg.png
 importance: 3
 category: work
