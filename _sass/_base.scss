@@ -693,6 +693,12 @@ footer.sticky-bottom {
     img {
       width: 100%;
     }
+
+    .project-card-image--spectra-ratio {
+      aspect-ratio: 1024 / 871;
+      background: radial-gradient(circle at center, #e3faff 0%, #bfeef7 58%, #87cfdf 100%);
+      object-fit: contain;
+    }
   }
 
   .col {
@@ -899,6 +905,17 @@ footer.sticky-bottom {
     div.award.hidden.open {
       border-color: var(--global-highlight-color);
     }
+  }
+}
+
+.post {
+  .related-publications-title {
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
+
+  .related-publications {
+    margin-top: 1rem;
   }
 }
 

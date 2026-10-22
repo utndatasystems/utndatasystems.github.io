@@ -19,9 +19,18 @@ layout: default
   </article>
 
   {% if page.related_publications %}
-    <h2>References</h2>
-    <div class="publications">
-      {% bibliography --cited_in_order %}
+    {% assign related_publications_title = page.related_publications_title | default: "References" %}
+    {% if page.related_publications_heading_level == 4 %}
+      <h4 id="{{ related_publications_title | slugify }}" class="related-publications-title">{{ related_publications_title }}</h4>
+    {% else %}
+      <h2 id="{{ related_publications_title | slugify }}" class="related-publications-title">{{ related_publications_title }}</h2>
+    {% endif %}
+    <div class="publications related-publications">
+      {% if page.related_publications_group_by == "none" %}
+        {% bibliography --group_by none --cited_in_order %}
+      {% else %}
+        {% bibliography --cited_in_order %}
+      {% endif %}
     </div>
   {% endif %}
 
