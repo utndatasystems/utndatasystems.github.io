@@ -265,3 +265,11 @@
 "stargalla":
   - firstname: ["Moritz", "Moritz Stargalla"]
     url: https://www.linkedin.com/in/moritz-stargalla/
+
+"marcus":
+  - firstname: ["Ryan", "Ryan Marcus"]
+    url: https://rmarcus.info
+
+"iachnyk":
+  - firstname: ["Ivan", "Ivan Iachnyk"]
+    url: https://www.linkedin.com/in/ivan-iachnyk-658607312/
