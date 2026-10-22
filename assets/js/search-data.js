@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/https:/github.com/utndatasystems";
           },
-        },{id: "post-text-compression-through-the-looking-glass",
+        },{id: "post-the-case-for-single-pass-instance-optimal-join-algorithms-when-storage-is-cheap",
+        
+          title: "The Case for Single-Pass Instance-Optimal Join Algorithms (When Storage Is Cheap)",
+        
+        description: "With the rise of worst-case optimal joins, the database community has witnessed an increasing (re-)interest in optimizing the execution of join queries, both from research and industry, with a special attention to instance-optimal join algorithms, which require multiple passes over the data. In Parachute, we show that it is possible to offload one such pass to data loading time, by statically analyzing between which tables the information flow is blocked and by leveraging precomputed join-induced fingerprint columns on FK-tables.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/parachute/";
+          
+        },
+      },{id: "post-text-compression-through-the-looking-glass",
         
           title: "Text Compression Through the Looking Glass",
         
