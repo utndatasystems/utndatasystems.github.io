@@ -24,7 +24,7 @@ The original idea of string fingerprints came to us last year on a train trip fr
 Now, you don’t want to store a bitmap for all possible letters – this would be too much overhead. Instead, we can cluster the letters into some *bins*, and mark the bins that have the letters contained in the to-be-fingerprinted string. Let’s do our favorite example – how to fingerprint the string "nutella", given the following partitioning of the alphabet:
 
 
-{% include figure.liquid loading="eager" path="assets/img/posts/nutella-1.png" class="img-fluid rounded z-depth-1 d-block mx-auto" width="50%" %}
+{% include figure.liquid loading="eager" path="assets/img/posts/nutella-1.png" width="50%" %}
 
 
 
@@ -32,7 +32,7 @@ You can see that the <span style="color:blue;">blue</span> letters (n, t, e) are
 
 Let’s now fingerprint more strings. To this end, consider the column `spelling` of the following table and its fingerprints in `str_fp`. The first row is "nutella" (we already did it above). Now we come to "unt", which gets the same fingerprint. Finally, "thon" is mapped to `0111`.
 
-{% include figure.liquid loading="eager" path="assets/img/posts/nutella-2.png" class="img-fluid rounded z-depth-1 d-block mx-auto" width="50%" %}
+{% include figure.liquid loading="eager" path="assets/img/posts/nutella-2.png" width="50%" %}
 
 
 Assume now you’re performing a filter {% ihighlight sql %}WHERE spelling LIKE '%utn%'{% endihighlight %}. We simply have to fingerprint the pattern, in this case `1010`, and check which table fingerprints _don’t_ contain it, i.e., there exists at least one bin where the pattern has a 1 while the considered row fingerprint does not. We see that `1010` is _not_ contained in 0111 – there’s a mismatch already at the first bin. This means, the `LIKE` predicate would anyway evaluate to false for this row, so we can skip it.
