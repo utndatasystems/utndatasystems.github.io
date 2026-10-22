@@ -2,7 +2,7 @@
 layout: post
 title: The Case for Single-Pass Instance-Optimal Join Algorithms (When Storage Is Cheap)
 date: 2026-10-22
-description: With the rise of worst-case optimal joins, the database community has witnessed an increasing (re-)interest in optimizing the execution of join queries, both from research and industry, with a special attention to instance-optimal join algorithms, which require multiple passes over the data. In Parachute, we show that it is possible to offload one such pass to data loading time, by statically analyzing between which tables the information flow is blocked and by leveraging precomputed join-induced fingerprint columns on FK-tables.
+description: With the rise of worst-case optimal joins, the database community has witnessed an increasing (re-)interest in optimizing the execution of join queries, both from research and industry, with a special attention to instance-optimal join algorithms, which require multiple passes over the data. In 🪂 Parachute, we show that it's possible to offload one such pass to data loading time by statically analyzing between which tables the information flow is blocked and leveraging precomputed join-induced fingerprint columns on FK-tables.
 related_publications: true
 toc:
   sidebar: right
