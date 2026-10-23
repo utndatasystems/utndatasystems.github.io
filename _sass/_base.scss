@@ -699,6 +699,12 @@ footer.sticky-bottom {
       background: radial-gradient(circle at center, #e3faff 0%, #bfeef7 58%, #87cfdf 100%);
       object-fit: contain;
     }
+
+    .project-card-image--jungle-vignette {
+      aspect-ratio: 1024 / 871;
+      background: radial-gradient(circle at center, #f3f5df 0%, #d7dfad 58%, #a3b56f 100%);
+      object-fit: contain;
+    }
   }
 
   .col {
@@ -909,6 +915,16 @@ footer.sticky-bottom {
 }
 
 .post {
+  .project-mascot-caption {
+    max-width: 36rem;
+    margin: 0.5rem auto 2.5rem;
+    color: var(--global-text-color-light);
+    font-size: 0.95rem;
+    font-style: italic;
+    line-height: 1.5;
+    text-align: center;
+  }
+
   .related-publications-title {
     margin-top: 2rem;
     margin-bottom: 0;
