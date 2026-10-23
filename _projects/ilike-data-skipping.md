@@ -25,6 +25,12 @@ The project studies data skipping for expensive database operations, among them 
 
 <p class="project-mascot-caption">“A parrot is much like an approximate membership structure for substrings: give it sentences, and every so often it gives you a few pieces back.”</p>
 
+#### Collaborators
+
+- [Ryan Marcus](https://rmarcus.info) — Assistant Professor of Computer Science, University of Pennsylvania
+- [Johannes Thürauf](https://scholar.google.com/citations?user=kmz2AFoAAAAJ) — Professor for Discrete Optimization, UTN
+- [Carl-David Reese](https://www.linkedin.com/in/carl-david-reese/) — Student Researcher
+
 <div class="d-none">
   {% cite stoian2026mlskip stoian2025stringfingerprints stoian2025parachute zimmerer2025pruning %}
 </div>
