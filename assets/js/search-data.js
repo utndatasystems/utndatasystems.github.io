@@ -147,6 +147,11 @@ ninja.data = [{
           description: "Using the Power of AI to Democratize Data Science through Agentic Data Pipelines.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/dataloom/";
+            },},{id: "projects-ilike-data-skipping",
+          title: 'ILIKE Data Skipping',
+          description: "Data Skipping for Expensive Operators.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ilike-data-skipping/";
             },},{id: "projects-llm-based-compression",
           title: 'LLM-Based Compression',
           description: "Making ML-powered compression fast, robust, and practical for data systems.",
