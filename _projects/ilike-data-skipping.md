@@ -17,7 +17,7 @@ related_publications_group_by: none
 
 #### Description
 
-**ILIKE Data Skipping** is a research project by the **[Data Systems Lab](https://utndatasystems.github.io/)** at the **[University of Technology Nuremberg (UTN)](https://www.utn.de/)** exploring lightweight metadata and indexing techniques for accelerating expensive operators in analytical database systems.
+**ILIKE Data Skipping** is a research project by the **[Data Systems Lab](https://utndatasystems.github.io/)** at the **[University of Technology Nuremberg (UTN)](https://www.utn.de/)** that explores lightweight metadata and indexing techniques for accelerating expensive operators in analytical database systems.
 
 The project studies data skipping for expensive database operations, among them joins and substring searches, at both the row and partition levels. By identifying data that cannot contribute to a query result, database systems can avoid unnecessary scans and expensive computation while preserving exact query results.
 

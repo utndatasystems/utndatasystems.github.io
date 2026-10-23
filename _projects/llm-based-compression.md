@@ -16,7 +16,7 @@ related_publications_group_by: none
 
 #### Description
 
-**LLM-Based Compression** is a [Data Systems Lab](https://utndatasystems.github.io/) project at the [University of Technology Nuremberg (UTN)](https://www.utn.de/) exploring two lossless approaches: compressing text with LLM predictions and entropy coding, and using coding agents to create codecs for specific datasets.
+**LLM-Based Compression** is a research project by the **[Data Systems Lab](https://utndatasystems.github.io/)** at the **[University of Technology Nuremberg (UTN)](https://www.utn.de/)** that explores two lossless approaches: compressing text with LLM predictions and entropy coding, and using coding agents to create codecs for specific datasets.
 
 We study when storage savings justify compression and decompression costs, how to improve throughput, and how LLM-based compression handles adversarial inputs. Synthesized codecs are verified by reconstructing data byte for byte, then run without model inference while targeting fast decompression and random access.
 
