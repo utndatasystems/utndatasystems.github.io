@@ -99,8 +99,6 @@ This is, without a doubt, our favorite part of the project: examining the genera
 
 Unfortunately, time is one of the few things we still do not know how to compress, and even a blog post about compression has its limits of space. We could happily devote several more pages to the curious tricks our agents devised, but we shall leave most of those stories to the paper {% cite iachnyk2026synthesizedcompression %}. Here, we will indulge in just one.
 
-iachnyk2026synthesizedcompression
-
 Consider the UUID column of `dbtext`. At first glance, it hardly seems a promising place to look for clever compression. The column contained row after row of hexadecimal identifiers, apparently unrelated to one another, with little to suggest that anything interesting might be hiding beneath the surface. Yet the agent, evidently unimpressed by appearances, discovered that these strings were considerably less mysterious than they pretended to be.
 
 As the figure below illustrates, the middle field remained identical across the column, while even parts of the suffix never changed. More surprisingly still, the leading field followed a simple arithmetic progression. Instead of storing every UUID in full, the agent kept the shared starting point and step just once, leaving each row to carry only its step count and the few suffix bits that actually varied. These were packed so tightly that even a changing hexadecimal character could occupy fewer than four bits.
