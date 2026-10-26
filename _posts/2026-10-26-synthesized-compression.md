@@ -97,7 +97,9 @@ Which naturally brings us to another question. We have seen what these codecs ca
 
 This is, without a doubt, our favorite part of the project: examining the generated codecs after the experiments and discovering what the agents actually invented.
 
-Unfortunately, time is one of the few things we still do not know how to compress, and even a blog post about compression has its limits of space. We could happily devote several more pages to the curious tricks our agents devised, but we shall leave most of those stories to the [paper](https://arxiv.org/abs/2610.09913). Here, we will indulge in just one.
+Unfortunately, time is one of the few things we still do not know how to compress, and even a blog post about compression has its limits of space. We could happily devote several more pages to the curious tricks our agents devised, but we shall leave most of those stories to the paper {% cite iachnyk2026synthesizedcompression %}. Here, we will indulge in just one.
+
+iachnyk2026synthesizedcompression
 
 Consider the UUID column of `dbtext`. At first glance, it hardly seems a promising place to look for clever compression. The column contained row after row of hexadecimal identifiers, apparently unrelated to one another, with little to suggest that anything interesting might be hiding beneath the surface. Yet the agent, evidently unimpressed by appearances, discovered that these strings were considerably less mysterious than they pretended to be.
 
