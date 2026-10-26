@@ -55,8 +55,6 @@ A user provides a dataset and a performance goal, which may be absolute ("_achie
 
 {% include figure.liquid loading="eager" path="assets/img/posts/synthesized-compression-2.jpg" %}
 
-<!-- Figure 2. The synthesis workflow: data inspection, codec implementation, and measured feedback, followed by exhaustive validation and storage of the selected decoder with its data. -->
-
 One particularly important lesson from the weeks we spent refining our prompts was to provide reference performance numbers _without revealing_ which algorithms produced them. Naming the algorithm behind those numbers can bias the agent's search toward an existing approach, whereas an anonymous numerical target leaves it free to explore alternatives and encourages it to work until the given result is beaten. (Giving the agent numerical performance targets to beat works particularly well with GPT models!)
 
 ## Does It Beat the Zoo?
@@ -68,8 +66,6 @@ To find out, we gave our agents four rather different datasets to work with: Ope
 A Pareto plot captures the results particularly well. Across all four datasets, the synthesized codecs managed to push beyond the trade-offs offered by traditional algorithms, improving the observed Pareto front at both ends. The fastest ones were faster *and* smaller, while the smallest ones managed to compress even further without sacrificing decompression speed. On OpenStack, for instance, one codec achieved an 87% higher compression factor than `Brotli` while decoding almost twice as fast. On some of these datasets, synthesized codecs did particularly well, even better than we had hoped.
 
 {% include figure.liquid loading="eager" path="assets/img/posts/synthesized-compression-3.jpg" %}
-
-<!-- Figure 3. Compression factor versus block-decompression throughput on four datasets. Dashed lines show traditional Pareto fronts; solid lines include standalone GPT-6 Astra codecs A1–A4. -->
 
 Next came [`dbtext`](https://dl.acm.org/doi/10.14778/3407790.3407851), a collection of 23 columns containing everything from Hamlet and Chinese text to UUIDs, hardly a group of strings with much in common. Yet the agents found their way around this assortment as well (see figure below), with some implementations reusing the same general compression algorithms for multiple columns. One synthesized codec decoded roughly 30% faster than [OnPair+](https://doi.org/10.14778/3836663.3836714) and compressed slightly better, while another surpassed `bzip2`'s compression factor and still decoded more than eight times as fast. Better yet, all these compression factors include the size of the generated codec itself, since, after all, the agents do produce specialized decoders, and that space should be charged accordingly.
 
@@ -87,8 +83,6 @@ As a natural reference for row access, we chose [FSST](https://doi.org/10.14778/
 
 {% include figure.liquid loading="eager" path="assets/img/posts/synthesized-compression-5.jpg" %}
 
-<!-- Figure 5. DBText random access: standalone Astra without (a) and with (b) reference values, and Astra (c) and GLM (d) with external dependencies and reference values. -->
-
 That last trade-off is worth emphasizing. Not every codec the agent discovers will be the right choice for every workload, nor should it be. The beauty of synthesis lies in setting the terms of the bargain ourselves, whether that means faster access, smaller storage, or a compromise between the two, and letting the agent work out how to achieve it.
 
 Which naturally brings us to another question. We have seen what these codecs can do, but what exactly did the agents come up with to make it possible?
@@ -104,8 +98,6 @@ Consider the UUID column of `dbtext`. At first glance, it hardly seems a promisi
 As the figure below illustrates, the middle field remained identical across the column, while even parts of the suffix never changed. More surprisingly still, the leading field followed a simple arithmetic progression. Instead of storing every UUID in full, the agent kept the shared starting point and step just once, leaving each row to carry only its step count and the few suffix bits that actually varied. These were packed so tightly that even a changing hexadecimal character could occupy fewer than four bits.
 
 {% include figure.liquid loading="eager" path="assets/img/posts/synthesized-compression-6.jpg" %}
-
-<!-- Figure 6. UUID structure: an arithmetic prefix, a repeated middle field, and fixed and varying suffix bits. Shared values are stored once, while changing bits are packed per row. -->
 
 Perhaps the deeper lesson of our story is that compression affords coding agents a rare luxury: the freedom to pursue even their strangest ideas without asking us to take the results on faith. A synthesized codec may exploit the most peculiar regularities, bend conventional techniques to its own purposes, or overfit shamelessly, provided that every byte of the original data gets reconstructed. There is something rather appealing about this bargain between invention and certainty, and if we can establish it elsewhere in a DBMS, compression may turn out to be only the beginning.
 
