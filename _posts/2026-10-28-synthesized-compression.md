@@ -43,7 +43,8 @@ The agent examined the logs and recognized a pattern that seems obvious in retro
 
 To be clear, there is nothing fundamentally novel about the individual techniques involved. Template-based log compression has been explored before ([CLP](https://www.usenix.org/conference/osdi21/presentation/rodrigues)), and an experienced engineer could certainly have designed a similar codec. That, however, is not what makes the result interesting. The remarkable part is that *nobody had to design it*. The agent discovered the structure and implemented the codec independently, simply because we allowed it to do something that general-purpose algorithm design ordinarily discourages: *overfit*.
 
-Also, rather conveniently, part of the necessary infrastructure already exists. Modern file formats such as [AnyBlox](https://doi.org/10.14778/3749646.3749672), [Vortex](https://docs.vortex.dev/specs/file-format), and [F3](https://doi.org/10.1145/3749163) can carry executable code alongside the data, a capability originally intended for backwards compatibility that turns out to be remarkably well suited to storing bespoke codecs.
+Also, rather conveniently, part of the necessary infrastructure already exists. Modern file formats such as [AnyBlox](https://doi.org/10.14778/3749646.3749672), [Vortex](https://docs.vortex.dev/specs/file-format), and [F3](https://doi.org/10.1145/3749163) can carry executable code alongside the data, a capability originally intended for backwards compatibility that turns out to be remarkably well suited to storing bespoke codecs. Note that the agent must simultaneously
+minimize both the compressed data size and the codec (which is a sort of [Kolmogorov complexity](https://en.wikipedia.org/wiki/Kolmogorov_complexity)).
 
 ## The Synthesis Loop
 
