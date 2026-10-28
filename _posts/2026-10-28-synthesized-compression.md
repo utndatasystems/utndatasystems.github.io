@@ -35,7 +35,7 @@ The idea of synthesizing a compressor for an individual file is [hardly new](htt
 
 ## An Example
 
-Here is an example of a compression codec that our agent came up with by itself for the [OpenStack](https://github.com/logpai/loghub/tree/master/OpenStack) logs:
+Here is a visualization of a compression codec that our agent came up with by itself for the [OpenStack](https://github.com/logpai/loghub/tree/master/OpenStack) logs:
 
 {% include figure.liquid loading="eager" path="assets/img/posts/openstack-a1-decoder-800.gif" avoid_scaling=true %}
 
