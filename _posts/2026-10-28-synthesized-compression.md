@@ -27,9 +27,7 @@ _styles: |
 author: "<a href=\"https://www.linkedin.com/in/ivan-iachnyk-658607312/\">Ivan Iachnyk</a>, <a href=\"https://stoianmihail.github.io/\">Mihail Stoian</a>"
 ---
 
-
 LZ4, Zstandard, Brotli, bzip2, XZ, zlib, FSST, OnPair, etc. Our community's answer to compression has long been a *zoo*: a remarkably diverse collection of general-purpose algorithms, each occupying its own place along the speed-versus-compression-ratio trade-off, and all designed to compress more or less anything we give them.
-
 
 This is a fine state of affairs, and these codecs are marvels of engineering. Yet a codec that compresses everything reasonably well is, by the same token, rarely optimal for any particular dataset. Your logs are not "any data"; neither are your JSON files or your UUID columns. Every dataset has structure that a general-purpose codec cannot fully exploit. And that is where the idea of dataset-specific codecs comes in.
 
@@ -37,11 +35,11 @@ The idea of synthesizing a compressor for an individual file is [hardly new](htt
 
 ## An Example
 
-Here is an example of a compression codec that our agent came up with by itself:
+Here is an example of a compression codec that our agent came up with by itself for the [OpenStack](https://github.com/logpai/loghub/tree/master/OpenStack) logs:
 
-{% include figure.liquid loading="eager" path="assets/img/posts/synthesized-compression-1.jpg" %}
+{% include figure.liquid loading="eager" path="assets/img/posts/openstack-a1-decoder-800.gif" avoid_scaling=true %}
 
-The agent examined the [OpenStack](https://github.com/logpai/loghub/tree/master/OpenStack) logs and recognized a pattern that seems obvious in retrospect: the lines consist largely of timestamps, instance IDs, and recurring boilerplate. It therefore kept the constant characters in templates, packed the changing digits of timestamps and IDs into four-bit nibbles, and wrote an AVX-512 decoder that expands the nibbles and shuffles them back into place. The resulting codec decodes at 13 GB/s, compared with `LZ4`'s 8 GB/s, while achieving an 11× compression factor instead of 9×, respectively.
+The agent examined the logs and recognized a pattern that seems obvious in retrospect: the lines consist largely of timestamps, instance IDs, and recurring boilerplate. It therefore kept the constant characters in templates, packed the changing digits of timestamps and IDs into four-bit nibbles, and wrote an AVX-512 decoder that expands the nibbles and shuffles them back into place. The resulting codec decodes at 13 GB/s, compared with `LZ4`'s 8 GB/s, while achieving an 11× compression factor instead of 9×, respectively.
 
 To be clear, there is nothing fundamentally novel about the individual techniques involved. Template-based log compression has been explored before ([CLP](https://www.usenix.org/conference/osdi21/presentation/rodrigues)), and an experienced engineer could certainly have designed a similar codec. That, however, is not what makes the result interesting. The remarkable part is that *nobody had to design it*. The agent discovered the structure and implemented the codec independently, simply because we allowed it to do something that general-purpose algorithm design ordinarily discourages: *overfit*.
 
