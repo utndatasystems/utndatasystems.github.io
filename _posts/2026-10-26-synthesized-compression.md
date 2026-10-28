@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Case for Synthesized Data Compression
-date: 2026-10-26
+date: 2026-10-28
 description: Today's compression schemes are generally designed by hand to apply to many different types of data, leading to a zoo of general-purpose algorithms which work well for many datasets, but may not be optimal for any specific dataset. Inspired by recent advancements in agentic coding, we propose synthesizing custom-tailored data compression algorithms on a per-dataset basis. We show that our synthesis agent can expand the compression-factor/decompression-speed Pareto front, outperforming general-purpose methods by nearly 2× in compression factor.
 related_publications: true
 toc:
@@ -31,13 +31,13 @@ author: "<a href=\"https://www.linkedin.com/in/ivan-iachnyk-658607312/\">Ivan Ia
 LZ4, Zstandard, Brotli, bzip2, XZ, zlib, FSST, OnPair, etc. Our community's answer to compression has long been a *zoo*: a remarkably diverse collection of general-purpose algorithms, each occupying its own place along the speed-versus-compression-ratio trade-off, and all designed to compress more or less anything we give them.
 
 
-This is a fine state of affairs, and these codecs are marvels of engineering. Yet a codec that compresses everything reasonably well is, by the same token, rarely optimal for any particular dataset. Your logs are not "any data"; neither are your your JSON files or your UUID columns. Every dataset has structure that a general-purpose codec cannot fully exploit. And that is where the idea of dataset-specific codecs comes in.
+This is a fine state of affairs, and these codecs are marvels of engineering. Yet a codec that compresses everything reasonably well is, by the same token, rarely optimal for any particular dataset. Your logs are not "any data"; neither are your JSON files or your UUID columns. Every dataset has structure that a general-purpose codec cannot fully exploit. And that is where the idea of dataset-specific codecs comes in.
 
 The idea of synthesizing a compressor for an individual file is [hardly new](https://ieeexplore.ieee.org/document/7877101). What has changed, rather dramatically, we should say, is the machinery available to pursue it. Coding models have become more capable and less expensive in a remarkably short time. OpenAI's GPT-6 Astra was our favorite when we wrote the paper, and by the time we sat down to write this post, Claude Opus 5.5 had already arrived, beating previous models on multiple benchmarks yet again. This seemed like a good reason to revisit an old idea: why painstakingly engineer a codec for a specific dataset, whatever kind of data it may contain, when an agent might discover and implement one for us? Better still, compression offers an unusually reliable way to check its correctness. Whatever the agent invents, we can compress the data, decompress it, and compare the result with the original, byte for byte.
 
 ## An Example
 
-Here is an example of a compression codec that our agent came up by itself:
+Here is an example of a compression codec that our agent came up with by itself:
 
 {% include figure.liquid loading="eager" path="assets/img/posts/synthesized-compression-1.jpg" %}
 
@@ -71,7 +71,7 @@ Next came [`dbtext`](https://dl.acm.org/doi/10.14778/3407790.3407851), a collect
 
 {% include figure.liquid loading="eager" path="assets/img/posts/synthesized-compression-4.jpg" %}
 
-This plot also includes the numbers, following the same "protocol", with the open [GLM-5.3-Flash](https://huggingface.co/zai-org/GLM-5.3-Flash) model; we label the variants with G1-G4.
+This plot also includes results for the open [GLM-5.3-Flash](https://huggingface.co/zai-org/GLM-5.3-Flash) model, following the same "protocol"; we label the variants G1-G4.
 
 ## What About Random Access?
 
@@ -87,7 +87,7 @@ That last trade-off is worth emphasizing. Not every codec the agent discovers wi
 
 Which naturally brings us to another question. We have seen what these codecs can do, but what exactly did the agents come up with to make it possible?
 
-## What the Agents Came up With
+## What the Agents Came Up With
 
 This is, without a doubt, our favorite part of the project: examining the generated codecs after the experiments and discovering what the agents actually invented.
 
