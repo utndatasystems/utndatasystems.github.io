@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/https:/github.com/utndatasystems";
           },
-        },{id: "post-the-case-for-single-pass-instance-optimal-join-algorithms-when-storage-is-cheap",
+        },{id: "post-the-case-for-synthesized-data-compression",
+        
+          title: "The Case for Synthesized Data Compression",
+        
+        description: "Today&#39;s compression schemes are generally designed by hand to apply to many different types of data, leading to a zoo of general-purpose algorithms which work well for many datasets, but may not be optimal for any specific dataset. Inspired by recent advancements in agentic coding, we propose synthesizing custom-tailored data compression algorithms on a per-dataset basis. We show that our synthesis agent can expand the compression-factor/decompression-speed Pareto front, outperforming general-purpose methods by nearly 2× in compression factor.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/synthesized-compression/";
+          
+        },
+      },{id: "post-the-case-for-single-pass-instance-optimal-join-algorithms-when-storage-is-cheap",
         
           title: "The Case for Single-Pass Instance-Optimal Join Algorithms (When Storage Is Cheap)",
         
