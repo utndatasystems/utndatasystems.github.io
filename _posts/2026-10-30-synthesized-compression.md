@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Case for Synthesized Data Compression
-date: 2026-10-28
+date: 2026-10-30
 description: Today's compression schemes are generally designed by hand to apply to many different types of data, leading to a zoo of general-purpose algorithms which work well for many datasets, but may not be optimal for any specific dataset. Inspired by recent advancements in agentic coding, we propose synthesizing custom-tailored data compression algorithms on a per-dataset basis. We show that our synthesis agent can expand the compression-factor/decompression-speed Pareto front, outperforming general-purpose methods by nearly 2× in compression factor.
 related_publications: true
 toc:
