@@ -17,6 +17,11 @@ table.table a {
   .navbar-nav .nav-item.active > .nav-link {
     color: var(--global-text-color);
     background-color: var(--global-theme-color);
+
+    &:hover,
+    &:focus {
+      color: var(--global-text-color);
+    }
   }
   .navbar-brand.logo {
     padding-block: 0.1rem;
@@ -55,6 +60,13 @@ table.table a {
     }
     .navbar-nav .dropdown-menu {
       position: absolute;
+    }
+    .dropdown-menu[aria-labelledby="navbarDropdown-teaching"] {
+      width: max-content;
+
+      .dropdown-item {
+        white-space: nowrap;
+      }
     }
     .navbar-nav .nav-link {
       padding-inline: 0.5rem;
