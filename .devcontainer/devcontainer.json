@@ -8,9 +8,20 @@
 
   // Install the versions locked by the project, including Prettier and its Liquid plugin.
   "postCreateCommand": "bundle install && npm ci",
-  "postStartCommand": "bash .devcontainer/start-jekyll.sh",
-  "postAttachCommand": "bash .devcontainer/start-jekyll.sh",
+  "postStartCommand": "bash \"${containerWorkspaceFolder}/.devcontainer/start-jekyll.sh\"",
+  "postAttachCommand": "bash \"${containerWorkspaceFolder}/.devcontainer/start-jekyll.sh\"",
+  "waitFor": "postStartCommand",
   "forwardPorts": [8080, 35729],
+  "portsAttributes": {
+    "8080": {
+      "label": "Jekyll website",
+      "onAutoForward": "openBrowser"
+    },
+    "35729": {
+      "label": "Jekyll LiveReload",
+      "onAutoForward": "silent"
+    }
+  },
 
   "customizations": {
     "vscode": {

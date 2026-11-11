@@ -20,8 +20,7 @@ launcher_pid=$!
 sleep 1
 if ! kill -0 "$launcher_pid" 2>/dev/null; then
     if wait "$launcher_pid"; then
-        echo "Jekyll is already starting or running. Log: $state_dir/server.log"
-        exit 0
+        echo "Jekyll is already starting or running; checking readiness."
     else
         status=$?
         echo "Jekyll startup failed. Log: $state_dir/server.log" >&2
@@ -30,4 +29,20 @@ if ! kill -0 "$launcher_pid" 2>/dev/null; then
     fi
 fi
 
-echo "Jekyll is starting on port 8080. Log: $state_dir/server.log"
+echo "Waiting for Jekyll on port 8080. Log: $state_dir/server.log"
+for ((attempt = 0; attempt < 120; attempt++)); do
+    if curl --noproxy '*' --fail --silent --max-time 2 --output /dev/null http://127.0.0.1:8080/; then
+        echo "Jekyll is ready at http://localhost:8080/"
+        exit 0
+    fi
+    if flock --nonblock "$state_dir/server.lock" true; then
+        echo "Jekyll exited before the website was ready. Log: $state_dir/server.log" >&2
+        tail -n 40 "$state_dir/server.log" >&2
+        exit 1
+    fi
+    sleep 1
+done
+
+echo "Timed out waiting for Jekyll. Log: $state_dir/server.log" >&2
+tail -n 40 "$state_dir/server.log" >&2
+exit 1

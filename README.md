@@ -16,7 +16,12 @@ It makes use of:
 2. Run **Dev Containers: Rebuild and Reopen in Container** from the command palette.
 3. Wait for `bundle install` and `npm ci` to finish during setup.
 4. Jekyll starts automatically whenever the container starts or VS Code attaches.
-5. Open the forwarded port 8080 in your browser once the initial build finishes.
+5. Startup waits until the website responds. VS Code forwards port 8080 and opens
+   the website in your browser.
+
+After changing `.devcontainer` configuration, run **Dev Containers: Rebuild and
+Reopen in Container** once to apply it. Reloading the VS Code window alone keeps
+the existing container's lifecycle configuration.
 
 The startup script uses a per-checkout lock to prevent duplicate servers. It prints
 the server log location in the container startup output. To start it again after

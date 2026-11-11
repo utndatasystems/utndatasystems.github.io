@@ -6,6 +6,7 @@ RUN rm -f /etc/apt/sources.list.d/yarn.list \
     && apt-get update \
     && apt-get install -y --no-install-recommends \
         build-essential \
+        curl \
         imagemagick \
         inotify-tools \
         jupyter-nbconvert \
