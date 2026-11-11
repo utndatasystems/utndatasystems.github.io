@@ -5,6 +5,57 @@ test.beforeEach(async ({ page }) => {
   await page.route("https://**/*", (route) => route.abort());
 });
 
+for (const width of [390, 1280]) {
+  test(`navigation works before page initialization at ${width}px`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 900 });
+    let releaseScripts;
+    const scriptsStalled = new Promise((resolve) => (releaseScripts = resolve));
+    // Keep DOMContentLoaded pending, as slow third-party/deferred scripts would.
+    await page.route("**/*", async (route) => {
+      if (route.request().resourceType() === "script" && !route.request().url().includes("/assets/js/theme.js")) {
+        await scriptsStalled;
+        await route.abort();
+      } else {
+        await route.fallback();
+      }
+    });
+    await page.addInitScript(() => {
+      window.domContentLoaded = false;
+      document.addEventListener("DOMContentLoaded", () => (window.domContentLoaded = true));
+    });
+    try {
+      await page.goto("/", { waitUntil: "commit" });
+      const toggle = page.getByRole("button", { name: "Toggle navigation" });
+      if (width < 768) {
+        await toggle.click();
+        await expect(toggle).toHaveAttribute("aria-expanded", "true");
+      }
+      const teaching = page.locator("#navbarDropdown-teaching");
+      const menu = teaching.locator("..").locator(".dropdown-menu");
+      await teaching.click();
+      await expect(teaching).toHaveAttribute("aria-expanded", "true");
+      await expect(menu).toBeVisible();
+      await expect(menu.getByRole("link", { name: "Data Engineering", exact: true })).toBeVisible();
+      await teaching.click();
+      await expect(menu).toBeHidden();
+      await teaching.click();
+      await page.keyboard.press("Escape");
+      await expect(teaching).toHaveAttribute("aria-expanded", "false");
+      await expect(menu).toBeHidden();
+      if (width < 768) {
+        await expect(toggle).toHaveAttribute("aria-expanded", "false");
+        await toggle.click();
+      }
+      await teaching.click();
+      await page.locator("body").click({ position: { x: 1, y: 500 } });
+      await expect(menu).toBeHidden();
+      expect(await page.evaluate(() => window.domContentLoaded)).toBe(false);
+    } finally {
+      releaseScripts();
+    }
+  });
+}
+
 for (const width of [390, 700, 1280]) {
   test(`navigation and branding at ${width}px`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
