@@ -51,7 +51,7 @@ The pipeline itself is almost embarrassingly simple, and we rather like it that 
 
 A user provides a dataset and a performance goal, which may be absolute ("_achieve the best compression factor possible_") or relative ("_surpass this decompression throughput at a comparable compression factor_"). Within the optimization loop (see figure below), the agent proposes codecs, while a testing environment evaluates their compression factor, throughput, and byte-exactness. Armed with this feedback, the agent revises its approach and repeats the process until either it is satisfied with the result or the user's budget is exhausted. The best surviving codec then undergoes full byte-for-byte validation before being packaged into a container alongside the data.
 
-{% include figure.liquid loading="eager" path="assets/img/posts/synthesized-compression-2.jpg" %}
+{% include figure.liquid loading="eager" path="assets/img/posts/synthesized-compression-2.png" %}
 
 One particularly important lesson from the weeks we spent refining our prompts was to provide reference performance numbers _without revealing_ which algorithms produced them. Naming the algorithm behind those numbers can bias the agent's search toward an existing approach, whereas an anonymous numerical target leaves it free to explore alternatives and encourages it to work until the given result is beaten. (Giving the agent numerical performance targets to beat works particularly well with GPT models!)
 
@@ -63,11 +63,11 @@ To find out, we gave our agents four rather different datasets to work with: Ope
 
 A Pareto plot captures the results particularly well. Across all four datasets, the synthesized codecs managed to push beyond the trade-offs offered by traditional algorithms, improving the observed Pareto front at both ends. The fastest ones were faster _and_ smaller, while the smallest ones managed to compress even further without sacrificing decompression speed. On OpenStack, for instance, one codec achieved an 87% higher compression factor than `Brotli` while decoding almost twice as fast. On some of these datasets, synthesized codecs did particularly well, even better than we had hoped.
 
-{% include figure.liquid loading="eager" path="assets/img/posts/synthesized-compression-3.jpg" %}
+{% include figure.liquid loading="eager" path="assets/img/posts/synthesized-compression-3.png" %}
 
 Next came [`dbtext`](https://dl.acm.org/doi/10.14778/3407790.3407851), a collection of 23 columns containing everything from Hamlet and Chinese text to UUIDs, hardly a group of strings with much in common. Yet the agents found their way around this assortment as well (see figure below), with some implementations reusing the same general compression algorithms for multiple columns. One synthesized codec decoded roughly 30% faster than [OnPair+](https://doi.org/10.14778/3836663.3836714) and compressed slightly better, while another surpassed `bzip2`'s compression factor and still decoded more than eight times as fast. Better yet, all these compression factors include the size of the generated codec itself, since, after all, the agents do produce specialized decoders, and that space should be charged accordingly.
 
-{% include figure.liquid loading="eager" path="assets/img/posts/synthesized-compression-4.jpg" %}
+{% include figure.liquid loading="eager" path="assets/img/posts/synthesized-compression-4.png" %}
 
 This plot also includes results for the open [GLM-5.3-Flash](https://huggingface.co/zai-org/GLM-5.3-Flash) model, following the same "protocol"; we label the variants G1-G4.
 
@@ -79,7 +79,7 @@ Thus, it is no longer enough for the codec to reconstruct the complete dataset. 
 
 As a natural reference for row access, we chose [FSST](https://doi.org/10.14778/3407790.3407851) because its interface natively supports batch compression and decoding individual strings, and gave the agents only its performance numbers to beat. We also added [OnPair+](https://doi.org/10.14778/3836663.3836714), another string compressor, as a further baseline for evaluating the results. Among the designs the agents produced, the fastest codec retrieved selected rows almost twice as quickly as `FSST` while occupying roughly a third less space. Other designs favored compression instead, including one that achieved a 94% higher compression factor than `FSST` while still retrieving rows faster. And the most compact design went further still, reducing the stored package to just 10.25 MB, though its decoder was noticeably slower.
 
-{% include figure.liquid loading="eager" path="assets/img/posts/synthesized-compression-5.jpg" %}
+{% include figure.liquid loading="eager" path="assets/img/posts/synthesized-compression-5.png" %}
 
 That last trade-off is worth emphasizing. Not every codec the agent discovers will be the right choice for every workload, nor should it be. The beauty of synthesis lies in setting the terms of the bargain ourselves, whether that means faster access, smaller storage, or a compromise between the two, and letting the agent work out how to achieve it.
 
@@ -95,7 +95,7 @@ Consider the UUID column of `dbtext`. At first glance, it hardly seems a promisi
 
 As the figure below illustrates, the middle field remained identical across the column, while even parts of the suffix never changed. More surprisingly still, the leading field followed a simple arithmetic progression. Instead of storing every UUID in full, the agent kept the shared starting point and step just once, leaving each row to carry only its step count and the few suffix bits that actually varied. These were packed so tightly that even a changing hexadecimal character could occupy fewer than four bits.
 
-{% include figure.liquid loading="eager" path="assets/img/posts/synthesized-compression-6.jpg" %}
+{% include figure.liquid loading="eager" path="assets/img/posts/synthesized-compression-6.png" %}
 
 Perhaps the deeper lesson of our story is that compression affords coding agents a rare luxury: the freedom to pursue even their strangest ideas without asking us to take the results on faith. A synthesized codec may exploit the most peculiar regularities, bend conventional techniques to its own purposes, or overfit shamelessly, provided that every byte of the original data gets reconstructed. There is something rather appealing about this bargain between invention and certainty, and if we can establish it elsewhere in a DBMS, compression may turn out to be only the beginning.
 

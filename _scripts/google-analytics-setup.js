@@ -15,9 +15,3 @@ gtag('consent', 'default', {
   'wait_for_update': 500
 });
 gtag("set", "ads_data_redaction", true);
-
-gtag("js", new Date());
-gtag("config", "{{ site.google_analytics }}", {
-    'anonymize_ip': true,
-    'send_page_view': true
-});

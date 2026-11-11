@@ -17,6 +17,8 @@ on:
       - "**.yml"
       - "Gemfile"
       - "Gemfile.lock"
+      - "package.json"
+      - "package-lock.json"
       - "!.github/workflows/axe.yml"
       - "!.github/workflows/broken-links.yml"
       - "!.github/workflows/deploy-docker-tag.yml"
@@ -46,6 +48,8 @@ on:
       - "**.yml"
       - "Gemfile"
       - "Gemfile.lock"
+      - "package.json"
+      - "package-lock.json"
       - "!.github/workflows/axe.yml"
       - "!.github/workflows/broken-links.yml"
       - "!.github/workflows/deploy-docker-tag.yml"
@@ -76,6 +80,15 @@ jobs:
         with:
           ruby-version: "3.3"
           bundler-cache: true
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+      - name: Check migration
+        run: |
+          bundle exec al-folio upgrade audit
+          bundle exec al-folio upgrade overrides audit --fail-on-stale
       - name: Setup Python 🐍
         uses: actions/setup-python@v5
         with:
@@ -96,10 +109,12 @@ jobs:
           bundle exec jekyll build
           # Prevent GitHub Pages from running a second Jekyll/Liquid pass on generated HTML.
           touch _site/.nojekyll
-      - name: Purge unused CSS 🧹
+      - name: Check generated site
         run: |
-          npm install -g purgecss
-          purgecss -c purgecss.config.js
+          npm ci
+          npm run lint:style-contract
+          npx playwright install --with-deps chromium
+          npm run test:site
       - name: Deploy 🚀
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4

@@ -1,0 +1,8 @@
+{% if site.enable_google_analytics and site.analytics.google %}
+  <script src="{{ '/assets/js/google-analytics-setup.js' | relative_url }}"></script>
+{% endif %}
+{% al_analytics_scripts %}
+{% if site.enable_google_analytics and site.analytics.google %}
+  {% include ga-consent-banner.liquid %}
+  <script defer src="{{ '/assets/js/google-analytics-consent-banner.js' | relative_url }}"></script>
+{% endif %}
