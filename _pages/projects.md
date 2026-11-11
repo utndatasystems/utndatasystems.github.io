@@ -3,8 +3,7 @@ layout: page
 title: Projects
 permalink: /projects/
 description: Past and present research projects of the Data Systems Lab at UTN.
-nav: true
-nav_order: 3
+nav: false
 display_categories: []
 horizontal: false
 ---

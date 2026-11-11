@@ -21,25 +21,7 @@
           </a>
         </div>
       {% endif %}
-      {% if page.permalink != '/' %}
-        <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
-          {% if site.title == 'blank' %}
-            {% if site.first_name %}
-              <span class="font-weight-bold">
-                {{- site.first_name -}}
-              </span>
-            {% endif %}
-            {% if site.middle_name %}
-              {{- site.middle_name -}}
-            {% endif %}
-            {% if site.last_name %}
-              {{- site.last_name -}}
-            {% endif %}
-          {% else %}
-            {{- site.title -}}
-          {% endif %}
-        </a>
-      {% elsif site.enable_navbar_social %}
+      {% if page.permalink == '/' and site.enable_navbar_social %}
         <!-- Social Icons -->
         <div class="navbar-brand social">{% include social.liquid %}</div>
       {% endif %}
@@ -90,7 +72,7 @@
                   <a
                     class="nav-link dropdown-toggle"
                     href="#"
-                    id="navbarDropdown"
+                    id="navbarDropdown-{{ p.title | slugify }}"
                     role="button"
                     data-toggle="dropdown"
                     aria-haspopup="true"
@@ -101,7 +83,7 @@
                       <span class="sr-only">(current)</span>
                     {% endif %}
                   </a>
-                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown-{{ p.title | slugify }}">
                     {% for child in p.children %}
                       {% if child.title == 'divider' %}
                         <div class="dropdown-divider"></div>
