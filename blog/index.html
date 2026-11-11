@@ -10,9 +10,371 @@
         "description": "",
         "headline": "Blog",
         
+        "sameAs": ["https://github.com/utndatasystems","https://bsky.app/profile/utndatasystems.bsky.social"],
+        
         "name": " ",
         "@context": "https://schema.org"
     }
-  </script> <link rel="stylesheet" href="/assets/css/bootstrap.min.css?a4b3f509e79c54a512b890d73235ef04"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="/assets/css/academicons.min.css?f0b7046b84e425c55f3463ac249818f5"> <link defer rel="stylesheet" href="/assets/css/scholar-icons.css?62b2ac103a88034e6882a5be5f3e2772"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="/assets/img/260302_datasystems_logo_favicon.svg?4d290569fa79a97fcb4987278332406f"> <link rel="stylesheet" href="/assets/css/main.css?d41d8cd98f00b204e9800998ecf8427e"> <link rel="canonical" href="https://utndatasystems.github.io/blog/"> <script src="/assets/js/theme.js?a81d82887dd692e91686b43de4542f18"></script> </head> <body class="fixed-top-nav sticky-bottom-footer"> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-md fixed-top" role="navigation"> <div class="container"> <div class="navbar-brand logo"> <a href="https://www.utn.de/" rel="external nofollow noopener" target="_blank"> <img class="logo-utn" src="/assets/img/utn_with_text.png" alt="UTN logo with text"> <img class="logo-new" src="/assets/img/260302_datasystems_logo_color.svg" alt="UTN Data Systems logo"> </a> </div> <a class="navbar-brand title font-weight-lighter" href="/"> UTN Data Systems </a> <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse text-right" id="navbarNav"> <ul class="navbar-nav ml-auto flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">Home </a> </li> <li class="nav-item active"> <a class="nav-link" href="/blog/">Blog <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">Publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/projects/">Projects </a> </li> <li class="nav-item "> <a class="nav-link" href="https://github.com/utndatasystems" rel="external nofollow noopener" target="_blank">GitHub<i class="fa fa-external-link small p-1" aria-hidden="true"></i> </a> </li> <li class="nav-item"> <button id="search-toggle" title="Search" onclick="openSearchModal()"> <span class="nav-link">ctrl k <i class="ti ti-search"></i></span> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <ul class="post-list"> <li> <h3> <a class="post-title" href="/blog/2026/synthesized-compression/">The Case for Synthesized Data Compression</a> </h3> <p>Today's compression schemes are generally designed by hand to apply to many different types of data, leading to a zoo of general-purpose algorithms which work well for many datasets, but may not be optimal for any specific dataset. Inspired by recent advancements in agentic coding, we propose synthesizing custom-tailored data compression algorithms on a per-dataset basis. We show that our synthesis agent can expand the compression-factor/decompression-speed Pareto front, outperforming general-purpose methods by nearly 2× in compression factor.</p> <p class="post-meta"> 12 min read   ·   October 30, 2026 </p> <p class="post-tags"> <a href="/blog/2026"> <i class="fa-solid fa-calendar fa-sm"></i> 2026 </a> </p> </li> <li> <h3> <a class="post-title" href="/blog/2026/parachute/">The Case for Single-Pass Instance-Optimal Join Algorithms (When Storage Is Cheap)</a> </h3> <p>With the rise of worst-case optimal joins, the database community has witnessed an increasing (re-)interest in optimizing the execution of join queries, both from research and industry, with a special attention to instance-optimal join algorithms, which require multiple passes over the data. In 🪂 Parachute, we show that it's possible to offload one such pass to data loading time by statically analyzing between which tables the information flow is blocked and leveraging precomputed join-induced fingerprint columns on FK-tables.</p> <p class="post-meta"> 7 min read   ·   October 22, 2026 </p> <p class="post-tags"> <a href="/blog/2026"> <i class="fa-solid fa-calendar fa-sm"></i> 2026 </a> </p> </li> <li> <h3> <a class="post-title" href="/blog/2026/text-compression/">Text Compression Through the Looking Glass</a> </h3> <p>Cold and unstructured text has long been a storage burden, driving costs for data that is unlikely to ever be accessed again. The rise of accessible large language models (LLMs) has intensified this challenge by dramatically increasing the volume of generated content that still needs to be retained, e.g. for compliance reasons. This post explores a new class of LLM-based compression methods that can significantly reduce the storage footprint of text-heavy data, and explains why LLMs are particularly well-suited to text compression.</p> <p class="post-meta"> 12 min read   ·   May 11, 2026 </p> <p class="post-tags"> <a href="/blog/2026"> <i class="fa-solid fa-calendar fa-sm"></i> 2026 </a> </p> </li> <li> <h3> <a class="post-title" href="/blog/2026/string-fingerprints/">String Fingerprints</a> </h3> <p>Cloud data warehouses are text-heavy. As the amount of text data to scan increases, queries become slower, therefore query engines require fast pre-filters to accelerate them. We present string fingerprints, a lightweight secondary index structure designed to approximate LIKE predicates, albeit with false positives. Fingerprints can be optimized for specific workloads using mixed-integer optimization and even generalize to unseen table filters.</p> <p class="post-meta"> 5 min read   ·   March 23, 2026 </p> <p class="post-tags"> <a href="/blog/2026"> <i class="fa-solid fa-calendar fa-sm"></i> 2026 </a> </p> </li> <li> <h3> <a class="post-title" href="/blog/2026/sembench/">Benchmarking Semantic Query Processing Systems</a> </h3> <p>Semantic query processing is emerging as a new layer atop relational engines, elevating LLM-backed semantic operators to first-class SQL primitives for multimodal data. We present SemBench, the first benchmark to rigorously evaluate these systems end-to-end, and outline our roadmap towards our own system, Spectra, to make semantic operators affordable at scale.</p> <p class="post-meta"> 13 min read   ·   February 16, 2026 </p> <p class="post-tags"> <a href="/blog/2026"> <i class="fa-solid fa-calendar fa-sm"></i> 2026 </a> </p> </li> </ul> <nav aria-label="Blog page navigation"> <ul class="pagination pagination-lg justify-content-center"> <li class="page-item disabled"> <a class="page-link" href="" tabindex="-1" aria-disabled="">&lt;</a> </li> <li class="page-item active"> <a class="page-link" href="/blog/" title="Blog">1</a> </li> <li class="page-item "> <a class="page-link" href="/blog/page/2/" title="Blog - page 2">2</a> </li> <li class="page-item "> <a class="page-link" href="/blog/page/2/">&gt;</a> </li> </ul> </nav> </div> </div> <footer class="sticky-bottom mt-5" role="contentinfo"> <div class="container"> © Copyright 2026. <a href="https://utndatasystems.github.io/impressum.html">Impressum</a>. Last updated: October 30, 2026. </div> </footer> <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> <script src="/assets/js/bootstrap.bundle.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?a0db7e5d5c70cc3252b3138b0c91dcaf" type="text/javascript"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/js/zoom.js?85ddb88934d28b74e78031fd54cf8308"></script> <script src="/assets/js/no_defer.js?28badf56e9b42a3f619b7f0123d900bc"></script> <script defer src="/assets/js/common.js?e0514a05c5c95ac1a93a8dfd5249b92e"></script> <script defer src="/assets/js/copy_code.js?c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/js/mathjax-setup.js?a5bb4e6a542c546dd929b24b8b236dfd"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script async src="https://www.googletagmanager.com/gtag/js?id=G-01T0SBSGBC"></script> <div id="ga-consent-banner" class="ga-consent-banner" role="dialog" aria-label="Cookie consent" aria-live="polite" hidden> <img class="ga-consent-banner__image" src="/assets/img/cookie-cow.png" alt="Cookie cow" loading="lazy"> <p class="ga-consent-banner__text">We use analytics cookies to understand site usage.</p> <div class="ga-consent-banner__actions"> <button type="button" class="ga-consent-banner__btn ga-consent-banner__btn--ghost" data-ga-consent-action="deny">Decline</button> <button type="button" class="ga-consent-banner__btn ga-consent-banner__btn--primary" data-ga-consent-action="accept"> Accept </button> </div> </div> <style>.ga-consent-banner{position:fixed;right:1rem;bottom:1rem;z-index:1080;display:flex;gap:.75rem;align-items:center;max-width:28rem;padding:.75rem .9rem;border:1px solid rgba(0,0,0,0.12);border-radius:.6rem;background:#fff;color:#212529;box-shadow:0 8px 24px rgba(0,0,0,0.12)}.ga-consent-banner[hidden]{display:none}.ga-consent-banner__text{margin:0;font-size:.9rem;line-height:1.3}.ga-consent-banner__image{width:3rem;height:3rem;border-radius:.45rem;object-fit:cover;flex-shrink:0}.ga-consent-banner__actions{display:flex;gap:.45rem;margin-left:auto}.ga-consent-banner__btn{border:1px solid transparent;border-radius:.45rem;padding:.35rem .65rem;font-size:.85rem;line-height:1.2;cursor:pointer;white-space:nowrap;transition:background-color 120ms ease,border-color 120ms ease}.ga-consent-banner__btn--ghost{border-color:rgba(0,0,0,0.2);background:#fff;color:#212529}.ga-consent-banner__btn--ghost:hover{background:#f8f9fa}.ga-consent-banner__btn--primary{border-color:#212529;background:#212529;color:#fff}.ga-consent-banner__btn--primary:hover{background:#343a40;border-color:#343a40}@media(max-width:640px){.ga-consent-banner{left:.75rem;right:.75rem;bottom:.75rem;max-width:none;flex-direction:column;align-items:stretch}.ga-consent-banner__actions{margin-left:0;justify-content:flex-end}.ga-consent-banner__image{width:4rem;height:4rem;align-self:center}}</style> <script defer src="/assets/js/google-analytics-setup.js"></script> <script defer src="/assets/js/google-analytics-consent-banner.js"></script> <script defer src="/assets/js/progress-bar.js?2f30e0e6801ea8f5036fa66e1ab0a71a" type="text/javascript"></script> <script src="/assets/js/vanilla-back-to-top.min.js?f40d453793ff4f64e238e420181a1d17"></script> <script>
+  </script> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link rel="stylesheet" href="/assets/css/bootstrap-compat.css?v=aa8aa1241f76708eaa8c8fad88fe7955"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="/assets/img/260302_datasystems_logo_favicon.svg?v=4d290569fa79a97fcb4987278332406f"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://utndatasystems.github.io/blog/"> </head> <body class="fixed-top-nav sticky-bottom-footer"> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-md fixed-top" role="navigation"> <div class="container"> <div class="navbar-brand logo"> <a href="https://www.utn.de/" rel="external nofollow noopener" target="_blank"> <img class="logo-utn" src="/assets/img/utn_with_text.png" alt="UTN logo with text"> <img class="logo-new" src="/assets/img/260302_datasystems_logo_color.svg" alt="UTN Data Systems logo"> </a> </div> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">Home </a> </li> <li class="nav-item active"> <a class="nav-link" href="/blog/">Blog <span class="sr-only">(current)</span> </a> </li> <li class="nav-item dropdown "> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-research" role="button" data-nav-dropdown-toggle="true" aria-haspopup="true" aria-expanded="false">Research </a> <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown-research"> <a class="dropdown-item " href="/publications/">Publications</a> <a class="dropdown-item " href="/projects/">Projects</a> </div> </li> <li class="nav-item dropdown "> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-teaching" role="button" data-nav-dropdown-toggle="true" aria-haspopup="true" aria-expanded="false">Teaching </a> <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown-teaching"> <a class="dropdown-item " href="/teaching/data-engineering/">Data Engineering</a> <a class="dropdown-item " href="/teaching/cloud-databases/">Cloud Databases</a> <a class="dropdown-item " href="/teaching/advanced-programming-1/">Advanced Programming 1</a> <a class="dropdown-item " href="/teaching/advanced-programming-2/">Advanced Programming 2</a> <a class="dropdown-item " href="/teaching/lit-projects/">LiT Projects</a> <div class="dropdown-divider"></div> <a class="dropdown-item " href="/teaching/thesis-supervision/">Thesis Supervision</a> </div> </li> <li class="nav-item "> <a class="nav-link" href="https://github.com/utndatasystems" rel="external nofollow noopener" target="_blank">GitHub<i class="fa fa-external-link small p-1" aria-hidden="true"></i> </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <ul class="post-list"> <li> <h3> <a class="post-title" href="/blog/2026/synthesized-compression/">The Case for Synthesized Data Compression</a> </h3> <p>Today's compression schemes are generally designed by hand to apply to many different types of data, leading to a zoo of general-purpose algorithms which work well for many datasets, but may not be optimal for any specific dataset. Inspired by recent advancements in agentic coding, we propose synthesizing custom-tailored data compression algorithms on a per-dataset basis. We show that our synthesis agent can expand the compression-factor/decompression-speed Pareto front, outperforming general-purpose methods by nearly 2× in compression factor.</p> <p class="post-meta"> 12 min read   ·   October 30, 2026 </p> <p class="post-tags"> <a href="/blog/2026"> <i class="fa-solid fa-calendar fa-sm"></i> 2026 </a> </p> </li> <li> <h3> <a class="post-title" href="/blog/2026/parachute/">The Case for Single-Pass Instance-Optimal Join Algorithms (When Storage Is Cheap)</a> </h3> <p>With the rise of worst-case optimal joins, the database community has witnessed an increasing (re-)interest in optimizing the execution of join queries, both from research and industry, with a special attention to instance-optimal join algorithms, which require multiple passes over the data. In 🪂 Parachute, we show that it's possible to offload one such pass to data loading time by statically analyzing between which tables the information flow is blocked and leveraging precomputed join-induced fingerprint columns on FK-tables.</p> <p class="post-meta"> 7 min read   ·   October 22, 2026 </p> <p class="post-tags"> <a href="/blog/2026"> <i class="fa-solid fa-calendar fa-sm"></i> 2026 </a> </p> </li> <li> <h3> <a class="post-title" href="/blog/2026/text-compression/">Text Compression Through the Looking Glass</a> </h3> <p>Cold and unstructured text has long been a storage burden, driving costs for data that is unlikely to ever be accessed again. The rise of accessible large language models (LLMs) has intensified this challenge by dramatically increasing the volume of generated content that still needs to be retained, e.g. for compliance reasons. This post explores a new class of LLM-based compression methods that can significantly reduce the storage footprint of text-heavy data, and explains why LLMs are particularly well-suited to text compression.</p> <p class="post-meta"> 12 min read   ·   May 11, 2026 </p> <p class="post-tags"> <a href="/blog/2026"> <i class="fa-solid fa-calendar fa-sm"></i> 2026 </a> </p> </li> <li> <h3> <a class="post-title" href="/blog/2026/string-fingerprints/">String Fingerprints</a> </h3> <p>Cloud data warehouses are text-heavy. As the amount of text data to scan increases, queries become slower, therefore query engines require fast pre-filters to accelerate them. We present string fingerprints, a lightweight secondary index structure designed to approximate LIKE predicates, albeit with false positives. Fingerprints can be optimized for specific workloads using mixed-integer optimization and even generalize to unseen table filters.</p> <p class="post-meta"> 5 min read   ·   March 23, 2026 </p> <p class="post-tags"> <a href="/blog/2026"> <i class="fa-solid fa-calendar fa-sm"></i> 2026 </a> </p> </li> <li> <h3> <a class="post-title" href="/blog/2026/sembench/">Benchmarking Semantic Query Processing Systems</a> </h3> <p>Semantic query processing is emerging as a new layer atop relational engines, elevating LLM-backed semantic operators to first-class SQL primitives for multimodal data. We present SemBench, the first benchmark to rigorously evaluate these systems end-to-end, and outline our roadmap towards our own system, Spectra, to make semantic operators affordable at scale.</p> <p class="post-meta"> 13 min read   ·   February 16, 2026 </p> <p class="post-tags"> <a href="/blog/2026"> <i class="fa-solid fa-calendar fa-sm"></i> 2026 </a> </p> </li> </ul> <nav aria-label="Blog page navigation"> <ul class="af-pagination"> <li class="af-page-item disabled"> <a class="af-page-link" href="" tabindex="-1" aria-disabled="">&lt;</a> </li> <li class="af-page-item active"> <a class="af-page-link" href="/blog/" title="Blog">1</a> </li> <li class="af-page-item "> <a class="af-page-link" href="/blog/page/2/" title="Blog - page 2">2</a> </li> <li class="af-page-item "> <a class="af-page-link" href="/blog/page/2/">&gt;</a> </li> </ul> </nav> </div> </div> <footer class="sticky-bottom mt-5" role="contentinfo"> <div class="container"> © Copyright 2026 . <a href="https://utndatasystems.github.io/impressum.html">Impressum</a>. Last updated: November 11, 2026. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: true
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script src="/assets/js/bootstrap-compat.js?v=b5579a3408e7c44d505c6a9755578409"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script src="/assets/js/google-analytics-setup.js"></script> <script async src="https://www.googletagmanager.com/gtag/js?id=G-01T0SBSGBC"></script> <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    window.dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-01T0SBSGBC");
+</script> <div id="ga-consent-banner" class="ga-consent-banner" role="dialog" aria-label="Cookie consent" aria-live="polite" hidden> <img class="ga-consent-banner__image" src="/assets/img/cookie-cow.png" alt="Cookie cow" loading="lazy"> <p class="ga-consent-banner__text">We use analytics cookies to understand site usage.</p> <div class="ga-consent-banner__actions"> <button type="button" class="ga-consent-banner__btn ga-consent-banner__btn--ghost" data-ga-consent-action="deny">Decline</button> <button type="button" class="ga-consent-banner__btn ga-consent-banner__btn--primary" data-ga-consent-action="accept">Accept</button> </div> </div> <style>
+  .ga-consent-banner {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 1080;
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    max-width: 28rem;
+    padding: 0.75rem 0.9rem;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 0.6rem;
+    background: #ffffff;
+    color: #212529;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  .ga-consent-banner[hidden] {
+    display: none;
+  }
+
+  .ga-consent-banner__text {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
+
+  .ga-consent-banner__image {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.45rem;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .ga-consent-banner__actions {
+    display: flex;
+    gap: 0.45rem;
+    margin-left: auto;
+  }
+
+  .ga-consent-banner__btn {
+    border: 1px solid transparent;
+    border-radius: 0.45rem;
+    padding: 0.35rem 0.65rem;
+    font-size: 0.85rem;
+    line-height: 1.2;
+    cursor: pointer;
+    white-space: nowrap;
+    transition:
+      background-color 120ms ease,
+      border-color 120ms ease;
+  }
+
+  .ga-consent-banner__btn--ghost {
+    border-color: rgba(0, 0, 0, 0.2);
+    background: #ffffff;
+    color: #212529;
+  }
+
+  .ga-consent-banner__btn--ghost:hover {
+    background: #f8f9fa;
+  }
+
+  .ga-consent-banner__btn--primary {
+    border-color: #212529;
+    background: #212529;
+    color: #ffffff;
+  }
+
+  .ga-consent-banner__btn--primary:hover {
+    background: #343a40;
+    border-color: #343a40;
+  }
+
+  @media (max-width: 640px) {
+    .ga-consent-banner {
+      left: 0.75rem;
+      right: 0.75rem;
+      bottom: 0.75rem;
+      max-width: none;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .ga-consent-banner__actions {
+      margin-left: 0;
+      justify-content: flex-end;
+    }
+
+    .ga-consent-banner__image {
+      width: 4rem;
+      height: 4rem;
+      align-self: center;
+    }
+  }
+</style> <script defer src="/assets/js/google-analytics-consent-banner.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
     addBackToTop();
-  </script> <script type="module" src="/assets/js/search/ninja-keys.min.js?a3446f084dcaecc5f75aa1757d087dcf"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/js/search-setup.js?6c304f7b1992d4b60f7a07956e52f04a"></script> <script src="/assets/js/search-data.js"></script> <script src="/assets/js/shortcut-key.js?6f508d74becd347268a7f822bca7309d"></script> </body> </html>
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-home",
+    title: "Home",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-blog",
+          title: "Blog",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/blog/";
+          },
+        },{id: "dropdown-publications",
+              title: "Publications",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/publications/";
+              },
+            },{id: "dropdown-projects",
+              title: "Projects",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/projects/";
+              },
+            },{id: "dropdown-data-engineering",
+              title: "Data Engineering",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/teaching/data-engineering/";
+              },
+            },{id: "dropdown-cloud-databases",
+              title: "Cloud Databases",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/teaching/cloud-databases/";
+              },
+            },{id: "dropdown-advanced-programming-1",
+              title: "Advanced Programming 1",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/teaching/advanced-programming-1/";
+              },
+            },{id: "dropdown-advanced-programming-2",
+              title: "Advanced Programming 2",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/teaching/advanced-programming-2/";
+              },
+            },{id: "dropdown-lit-projects",
+              title: "LiT Projects",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/teaching/lit-projects/";
+              },
+            },{id: "dropdown-thesis-supervision",
+              title: "Thesis Supervision",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/teaching/thesis-supervision/";
+              },
+            },{id: "nav-github-lt-i-class-quot-fa-fa-external-link-small-p-1-quot-aria-hidden-quot-true-quot-gt-lt-i-gt",
+          title: "GitHub&lt;i class=&quot;fa fa-external-link small p-1&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/https:/github.com/utndatasystems";
+          },
+        },{id: "post-the-case-for-synthesized-data-compression",
+        
+          title: "The Case for Synthesized Data Compression",
+        
+        description: "Today&#39;s compression schemes are generally designed by hand to apply to many different types of data, leading to a zoo of general-purpose algorithms which work well for many datasets, but may not be optimal for any specific dataset. Inspired by recent advancements in agentic coding, we propose synthesizing custom-tailored data compression algorithms on a per-dataset basis. We show that our synthesis agent can expand the compression-factor/decompression-speed Pareto front, outperforming general-purpose methods by nearly 2× in compression factor.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/synthesized-compression/";
+          
+        },
+      },{id: "post-the-case-for-single-pass-instance-optimal-join-algorithms-when-storage-is-cheap",
+        
+          title: "The Case for Single-Pass Instance-Optimal Join Algorithms (When Storage Is Cheap)",
+        
+        description: "With the rise of worst-case optimal joins, the database community has witnessed an increasing (re-)interest in optimizing the execution of join queries, both from research and industry, with a special attention to instance-optimal join algorithms, which require multiple passes over the data. In 🪂 Parachute, we show that it&#39;s possible to offload one such pass to data loading time by statically analyzing between which tables the information flow is blocked and leveraging precomputed join-induced fingerprint columns on FK-tables.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/parachute/";
+          
+        },
+      },{id: "post-text-compression-through-the-looking-glass",
+        
+          title: "Text Compression Through the Looking Glass",
+        
+        description: "Cold and unstructured text has long been a storage burden, driving costs for data that is unlikely to ever be accessed again. The rise of accessible large language models (LLMs) has intensified this challenge by dramatically increasing the volume of generated content that still needs to be retained, e.g. for compliance reasons. This post explores a new class of LLM-based compression methods that can significantly reduce the storage footprint of text-heavy data, and explains why LLMs are particularly well-suited to text compression.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/text-compression/";
+          
+        },
+      },{id: "post-string-fingerprints",
+        
+          title: "String Fingerprints",
+        
+        description: "Cloud data warehouses are text-heavy. As the amount of text data to scan increases, queries become slower, therefore query engines require fast pre-filters to accelerate them. We present string fingerprints, a lightweight secondary index structure designed to approximate LIKE predicates, albeit with false positives. Fingerprints can be optimized for specific workloads using mixed-integer optimization and even generalize to unseen table filters.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/string-fingerprints/";
+          
+        },
+      },{id: "post-benchmarking-semantic-query-processing-systems",
+        
+          title: "Benchmarking Semantic Query Processing Systems",
+        
+        description: "Semantic query processing is emerging as a new layer atop relational engines, elevating LLM-backed semantic operators to first-class SQL primitives for multimodal data. We present SemBench, the first benchmark to rigorously evaluate these systems end-to-end, and outline our roadmap towards our own system, Spectra, to make semantic operators affordable at scale.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/sembench/";
+          
+        },
+      },{id: "post-democratizing-data-science",
+        
+          title: "Democratizing Data Science",
+        
+        description: "Our vision is to build an end-to-end agentic data platform, enabling domain experts to acquire, clean, analyze, and visualize data in a principled manner by combining the benefits of LLMs with decades of database research.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/dataloom/";
+          
+        },
+      },{id: "post-launching-our-blog-and-wrapping-up-2025",
+        
+          title: "Launching Our Blog And Wrapping Up 2025",
+        
+        description: "I&#39;m super excited to launch our blog! We&#39;ll use this space to share what&#39;s happening in our lab, from research papers and systems to the day-to-day life of our team. To kick things off, let&#39;s look back at 2025.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/recap/";
+          
+        },
+      },{id: "news-hello-world-andreas-kipf-has-been-appointed-professor-of-data-systems-at-the-university-of-technology-nuremberg-read-the-announcement",
+          title: 'Hello, world! Andreas Kipf has been appointed Professor of Data Systems at the...',
+          description: "",
+          section: "News",},{id: "news-a-warm-welcome-to-mihail-stoian-who-joins-the-data-systems-lab-as-a-doctoral-researcher",
+          title: 'A warm welcome to Mihail Stoian, who joins the Data Systems Lab as...',
+          description: "",
+          section: "News",},{id: "news-we-are-excited-to-welcome-alexander-van-renen-to-the-data-systems-lab-as-our-first-postdoctoral-researcher",
+          title: 'We are excited to welcome Alexander van Renen to the Data Systems Lab...',
+          description: "",
+          section: "News",},{id: "news-our-doctoral-researcher-andi-zimmerer-has-been-accepted-into-the-software-campus-program-securing-115-000-in-funding-to-explore-new-research-directions",
+          title: 'Our doctoral researcher Andi Zimmerer has been accepted into the Software Campus program,...',
+          description: "",
+          section: "News",},{id: "news-after-contributing-part-time-since-the-lab-s-inception-andi-zimmerer-is-now-officially-joining-us-full-time-as-a-doctoral-researcher-welcome-aboard-andi",
+          title: 'After contributing part-time since the lab’s inception, Andi Zimmerer is now officially joining...',
+          description: "",
+          section: "News",},{id: "news-our-paper-virtual-compressing-data-lake-files-by-mihail-stoian-et-al-received-a-best-demo-award-at-edbt-in-barcelona",
+          title: 'Our paper “Virtual: Compressing Data Lake Files” by Mihail Stoian et al. received...',
+          description: "",
+          section: "News",},{id: "news-our-lab-will-present-three-paper-at-this-year-s-sigmod-in-berlin-dpconv-super-polynomially-faster-join-ordering-by-mihail-stoian-and-andreas-kipf-pruning-in-snowflake-working-smarter-not-harder-by-andreas-zimmerer-et-al-and-redbench-a-benchmark-reflecting-real-workloads-by-skander-krid-et-al",
+          title: 'Our lab will present three paper at this year’s SIGMOD in Berlin: “DPconv:...',
+          description: "",
+          section: "News",},{id: "news-our-lab-received-an-honorable-mention-at-sigmod-for-the-paper-dpconv-super-polynomially-faster-join-ordering-by-mihail-stoian-and-andreas-kipf",
+          title: 'Our lab received an Honorable Mention at SIGMOD for the paper “DPconv: Super-Polynomially...',
+          description: "",
+          section: "News",},{id: "news-our-lab-presented-two-paper-at-this-year-s-vldb-in-london-instance-optimized-string-fingerprints-and-parachute-single-pass-bi-directional-information-passing-both-by-mihail-stoian-et-al",
+          title: 'Our lab presented two paper at this year’s VLDB in London: “Instance-Optimized String...',
+          description: "",
+          section: "News",},{id: "news-we-launched-our-blog-today-go-check-out-our-first-post",
+          title: 'We launched our blog today. Go check out our first post!',
+          description: "",
+          section: "News",},{id: "news-luisa-neubauer-joins-our-team-as-a-doctoral-researcher-welcome-luisa",
+          title: 'Luisa Neubauer joins our team as a doctoral researcher. Welcome, Luisa!',
+          description: "",
+          section: "News",},{id: "news-xbound-the-first-framework-for-join-size-lower-bounds-is-now-on-arxiv-this-is-a-collaboration-with-microsoft-gsl",
+          title: 'xBound, the first framework for join size lower bounds is now on arXiv!...',
+          description: "",
+          section: "News",},{id: "news-mihail-stoian-presented-his-paper-on-weighted-combinatorial-problems-at-stacs-symposium-on-theoretical-aspects-of-computer-science-check-out-the-blog-post",
+          title: 'Mihail Stoian presented his paper on weighted combinatorial problems at STACS: Symposium on...',
+          description: "",
+          section: "News",},{id: "projects-dataloom",
+          title: 'Dataloom',
+          description: "Using the Power of AI to Democratize Data Science through Agentic Data Pipelines.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/dataloom/";
+            },},{id: "projects-ilike-data-skipping",
+          title: 'ILIKE Data Skipping',
+          description: "Data Skipping for Expensive Operators.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ilike-data-skipping/";
+            },},{id: "projects-llm-based-compression",
+          title: 'LLM-Based Compression',
+          description: "Making ML-powered compression fast, robust, and practical for data systems.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/llm-based-compression/";
+            },},{id: "projects-spectra",
+          title: 'Spectra',
+          description: "Taking LLM-Based Semantic SQL Operators to the Limit With Our Own Multi-Modal Data Engine.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/spectra/";
+            },},{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%64%61%74%61-%73%79%73%74%65%6D%73@%75%74%6E.%64%65", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/utndatasystems", "_blank");
+        },
+      },{
+        id: 'social-bluesky',
+        title: 'Bluesky',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://bsky.app/profile/utndatasystems.bsky.social", "_blank");
+        },
+      },{
+        id: 'social-rss',
+        title: 'RSS Feed',
+        section: 'Socials',
+        handler: () => {
+          window.open("/feed.xml", "_blank");
+        },
+      },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>
