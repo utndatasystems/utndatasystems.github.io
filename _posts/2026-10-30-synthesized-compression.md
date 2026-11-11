@@ -5,29 +5,28 @@ date: 2026-10-30
 description: Today's compression schemes are generally designed by hand to apply to many different types of data, leading to a zoo of general-purpose algorithms which work well for many datasets, but may not be optimal for any specific dataset. Inspired by recent advancements in agentic coding, we propose synthesizing custom-tailored data compression algorithms on a per-dataset basis. We show that our synthesis agent can expand the compression-factor/decompression-speed Pareto front, outperforming general-purpose methods by nearly 2× in compression factor.
 related_publications: true
 toc:
- sidebar: right
+  sidebar: right
 _styles: |
- .astra-label {
-   font-weight: 450;
- }
- .astra-a1 {
-   color: #0072b2;
- }
- .astra-a2 {
-   color: #d55e00;
- }
- .astra-a3 {
-   color: #009e73;
- }
- .astra-a4 {
-   color: #cc79a7;
- }
+  .astra-label {
+    font-weight: 450;
+  }
+  .astra-a1 {
+    color: #0072b2;
+  }
+  .astra-a2 {
+    color: #d55e00;
+  }
+  .astra-a3 {
+    color: #009e73;
+  }
+  .astra-a4 {
+    color: #cc79a7;
+  }
 
-
-author: "<a href=\"https://www.linkedin.com/in/ivan-iachnyk-658607312/\">Ivan Iachnyk</a>, <a href=\"https://stoianmihail.github.io/\">Mihail Stoian</a>"
+author: '<a href="https://www.linkedin.com/in/ivan-iachnyk-658607312/">Ivan Iachnyk</a>, <a href="https://stoianmihail.github.io/">Mihail Stoian</a>'
 ---
 
-LZ4, Zstandard, Brotli, bzip2, XZ, zlib, FSST, OnPair, etc. Our community's answer to compression has long been a *zoo*: a remarkably diverse collection of general-purpose algorithms, each occupying its own place along the speed-versus-compression-ratio trade-off, and all designed to compress more or less anything we give them.
+LZ4, Zstandard, Brotli, bzip2, XZ, zlib, FSST, OnPair, etc. Our community's answer to compression has long been a _zoo_: a remarkably diverse collection of general-purpose algorithms, each occupying its own place along the speed-versus-compression-ratio trade-off, and all designed to compress more or less anything we give them.
 
 This is a fine state of affairs, and these codecs are marvels of engineering. Yet a codec that compresses everything reasonably well is, by the same token, rarely optimal for any particular dataset. Your logs are not "any data"; neither are your JSON files or your UUID columns. Every dataset has structure that a general-purpose codec cannot fully exploit. And that is where the idea of dataset-specific codecs comes in.
 
@@ -41,7 +40,7 @@ Here is a visualization of a compression codec that our agent came up with by it
 
 The agent examined the logs and recognized a pattern that seems obvious in retrospect: the lines consist largely of timestamps, instance IDs, and recurring boilerplate. It therefore kept the constant characters in templates, packed the changing digits of timestamps and IDs into four-bit nibbles, and wrote an AVX-512 decoder that expands the nibbles and shuffles them back into place. The resulting codec decodes at 13 GB/s, compared with `LZ4`'s 8 GB/s, while achieving an 11× compression factor instead of 9×, respectively.
 
-To be clear, there is nothing fundamentally novel about the individual techniques involved. Template-based log compression has been explored before ([CLP](https://www.usenix.org/conference/osdi21/presentation/rodrigues)), and an experienced engineer could certainly have designed a similar codec. That, however, is not what makes the result interesting. The remarkable part is that *nobody had to design it*. The agent discovered the structure and implemented the codec independently, simply because we allowed it to do something that general-purpose algorithm design ordinarily discourages: *overfit*.
+To be clear, there is nothing fundamentally novel about the individual techniques involved. Template-based log compression has been explored before ([CLP](https://www.usenix.org/conference/osdi21/presentation/rodrigues)), and an experienced engineer could certainly have designed a similar codec. That, however, is not what makes the result interesting. The remarkable part is that _nobody had to design it_. The agent discovered the structure and implemented the codec independently, simply because we allowed it to do something that general-purpose algorithm design ordinarily discourages: _overfit_.
 
 Also, rather conveniently, part of the necessary infrastructure already exists. Modern file formats such as [AnyBlox](https://doi.org/10.14778/3749646.3749672), [Vortex](https://docs.vortex.dev/specs/file-format), and [F3](https://doi.org/10.1145/3749163) can carry executable code alongside the data, a capability originally intended for backwards compatibility that turns out to be remarkably well suited to storing bespoke codecs. Note that the agent must simultaneously
 minimize both the compressed data size and the codec (which is a sort of [Kolmogorov complexity](https://en.wikipedia.org/wiki/Kolmogorov_complexity)).
@@ -62,7 +61,7 @@ All of this sounds promising, but there is an inconvenient question left: Can an
 
 To find out, we gave our agents four rather different datasets to work with: OpenStack logs, Python source code from [PyTorrent](https://arxiv.org/abs/2110.01710), [Yelp](https://business.yelp.com/data/resources/open-dataset/) reviews, and [SQLStorm](https://doi.org/10.14778/3749646.3749683)'s TPC-DS queries. For each dataset, we gave the agents four distinct challenges, labeled <span class="astra-label astra-a1">A1</span> through <span class="astra-label astra-a4">A4</span> in the figure below. <span class="astra-label astra-a1">A1</span> chased the fastest decompression possible, while <span class="astra-label astra-a2">A2</span> tried to squeeze the data down as far as it would go. For <span class="astra-label astra-a3">A3</span>, the agent was told to aim for a moderate compression factor and then push for speed, whereas <span class="astra-label astra-a4">A4</span> reversed the priorities, settling for moderate decompression speed in pursuit of tighter compression.
 
-A Pareto plot captures the results particularly well. Across all four datasets, the synthesized codecs managed to push beyond the trade-offs offered by traditional algorithms, improving the observed Pareto front at both ends. The fastest ones were faster *and* smaller, while the smallest ones managed to compress even further without sacrificing decompression speed. On OpenStack, for instance, one codec achieved an 87% higher compression factor than `Brotli` while decoding almost twice as fast. On some of these datasets, synthesized codecs did particularly well, even better than we had hoped.
+A Pareto plot captures the results particularly well. Across all four datasets, the synthesized codecs managed to push beyond the trade-offs offered by traditional algorithms, improving the observed Pareto front at both ends. The fastest ones were faster _and_ smaller, while the smallest ones managed to compress even further without sacrificing decompression speed. On OpenStack, for instance, one codec achieved an 87% higher compression factor than `Brotli` while decoding almost twice as fast. On some of these datasets, synthesized codecs did particularly well, even better than we had hoped.
 
 {% include figure.liquid loading="eager" path="assets/img/posts/synthesized-compression-3.jpg" %}
 
@@ -100,6 +99,6 @@ As the figure below illustrates, the middle field remained identical across the 
 
 Perhaps the deeper lesson of our story is that compression affords coding agents a rare luxury: the freedom to pursue even their strangest ideas without asking us to take the results on faith. A synthesized codec may exploit the most peculiar regularities, bend conventional techniques to its own purposes, or overfit shamelessly, provided that every byte of the original data gets reconstructed. There is something rather appealing about this bargain between invention and certainty, and if we can establish it elsewhere in a DBMS, compression may turn out to be only the beginning.
 
-*Our story continues. There is more to unpack.*
+_Our story continues. There is more to unpack._
 
 Our code, along with the codecs synthesized by the agents, is open source: [https://github.com/utndatasystems/synthesized-data-compression](https://github.com/utndatasystems/synthesized-data-compression).

@@ -3,11 +3,11 @@
 # -----------------------------------------------------------------------------
 
 title: UTN Data Systems # the website title (if blank, full name will be used instead)
-first_name: 
-middle_name: 
-last_name: 
+first_name:
+middle_name:
+last_name:
 contact_note: >
-description: > 
+description: >
 footer_text: >
 keywords: Research, Data-Systems, Databases, Data-Processing, Systems-Research # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
@@ -16,7 +16,7 @@ logo: 260302_datasystems_logo_color.svg
 logo_url: https://www.utn.de/
 
 url: https://utndatasystems.github.io # the base hostname & protocol for your site
-baseurl:  # the subpath of your site, e.g. /blog/. Leave blank for root
+baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
 last_updated: true # set to true if you want to display last updated in the footer
 impressum_path: /impressum.html # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 back_to_top: true # set to false to disable the back to top button
@@ -86,7 +86,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 blog_name: # blog_name will be displayed in your blog page. Leave empty to omit title.
-blog_description: 
+blog_description:
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 

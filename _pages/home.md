@@ -22,5 +22,4 @@ people:
   enabled: true
 ---
 
-
 The Data Systems Lab explores applications of AI to build next-gen data systems that are efficient and easy to use.

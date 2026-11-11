@@ -42,9 +42,7 @@ layout: default
 
     <!-- People -->
     {% if page.people and page.people.enabled %}
-      <h2>
-        People
-      </h2>
+      <h2>People</h2>
       {% include people.liquid %}
     {% endif %}
 
@@ -66,9 +64,7 @@ layout: default
 
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
-      <h2>
-        Announcements
-      </h2>
+      <h2>Announcements</h2>
       {% include news.liquid limit=true %}
     {% endif %}
 

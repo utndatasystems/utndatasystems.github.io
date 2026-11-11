@@ -8,9 +8,7 @@
   <p class="ga-consent-banner__text">We use analytics cookies to understand site usage.</p>
   <div class="ga-consent-banner__actions">
     <button type="button" class="ga-consent-banner__btn ga-consent-banner__btn--ghost" data-ga-consent-action="deny">Decline</button>
-    <button type="button" class="ga-consent-banner__btn ga-consent-banner__btn--primary" data-ga-consent-action="accept">
-      Accept
-    </button>
+    <button type="button" class="ga-consent-banner__btn ga-consent-banner__btn--primary" data-ga-consent-action="accept">Accept</button>
   </div>
 </div>
 <style>
@@ -63,7 +61,9 @@
     line-height: 1.2;
     cursor: pointer;
     white-space: nowrap;
-    transition: background-color 120ms ease, border-color 120ms ease;
+    transition:
+      background-color 120ms ease,
+      border-color 120ms ease;
   }
 
   .ga-consent-banner__btn--ghost {

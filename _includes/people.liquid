@@ -3,26 +3,25 @@
     {% unless profile.alumni == true or profile.tags contains 'alumni' %}
       <div class="mb-2 mx-1">
         {% if profile.url %} <a href="{{ profile.url }}" target="_blank" class="text-decoration-none"> {% endif %}
-          <div class="card h-100 p-3" style="width: 10.5rem;">
-            {% if profile.image %}
-              {% assign profile_image_path = profile.image | prepend: 'assets/img/people/' %}
-              {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-              {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3 }}px, (min-width: 576px) 30vw, 95vw{% endcapture %}
-              {% include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=profile.image %}
+        <div class="card h-100 p-3" style="width: 10.5rem;">
+          {% if profile.image %}
+            {% assign profile_image_path = profile.image | prepend: 'assets/img/people/' %}
+            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
+            {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3 }}px, (min-width: 576px) 30vw, 95vw{% endcapture %}
+            {% include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=profile.image %}
+          {% endif %}
+          <div class="card-body text-center p-0">
+            <h5 class="card-title fw-bold p-0 m-0 small">{{ profile.name }}</h5>
+            {% if profile.title %}
+              <p class="card-body text-muted p-0 m-0 small">{{ profile.title }}</p>
             {% endif %}
-            <div class="card-body text-center p-0">
-              <h5 class="card-title fw-bold p-0 m-0 small">{{ profile.name }}</h5>
-              {% if profile.title %}
-                <p class="card-body text-muted p-0 m-0 small">{{ profile.title }}</p>
-              {% endif %}
-            </div>
           </div>
-          {% if profile.url %}</a>{% endif %}
+        </div>
+        {% if profile.url %}</a>{% endif %}
       </div>
     {% endunless %}
   {% endfor %}
 </div>
-
 
 <!-- Alumni List -->
 <h3 class="mt-4 mb-2">Alumni</h3>
@@ -30,7 +29,10 @@
   {% for profile in site.data.people %}
     {% if profile.alumni == true or profile.tags contains 'alumni' %}
       <li>
-        <strong><a href="{{ profile.url }}" target="_blank">{{ profile.name }}</a></strong>{% if profile.title %}, {{ profile.title }}{% endif %}
+        <strong
+          ><a href="{{ profile.url }}" target="_blank">{{ profile.name }}</a></strong
+        >
+        {%- if profile.title %}, {{ profile.title }}{% endif %}
       </li>
     {% endif %}
   {% endfor %}

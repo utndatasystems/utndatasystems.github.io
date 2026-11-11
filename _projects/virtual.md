@@ -9,7 +9,6 @@ related_publications: true
 published: false
 ---
 
-
 {% cite stoian2025virtual %}
 
 {% include repository/repo.liquid repository='utndatasystems/virtual' %}

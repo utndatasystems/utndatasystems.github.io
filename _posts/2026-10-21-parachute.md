@@ -7,10 +7,10 @@ related_publications: true
 toc:
   sidebar: right
 
-author: "<a href=\"https://stoianmihail.github.io/\">Mihail Stoian</a>"
+author: '<a href="https://stoianmihail.github.io/">Mihail Stoian</a>'
 ---
 
-With the rise of [worst-case optimal joins](https://arxiv.org/abs/1203.1952) in 2012, the database community has witnessed an increasing (re-)interest in optimizing the execution of join queries, both from research ([Umbra](https://dl.acm.org/doi/abs/10.14778/3407790.3407797), [Predicate Transfer](https://arxiv.org/abs/2307.15255), [Robust Predicate Transfer](https://arxiv.org/abs/2502.15181), [Yannakakis+](https://dl.acm.org/doi/10.1145/3725423), [Lookup & Expand](https://db.in.tum.de/people/sites/birler/papers/diamond.pdf), [RPT++](https://dl.acm.org/doi/abs/10.14778/3797919.3797934)) and industry systems (e.g., [SQL Server](https://www.vldb.org/cidrdb/papers/2026/p29-zhao.pdf)'s dissection). These algorithms are commonly referred to as instance-optimal algorithms. The field itself is not new, having originated with [Yannakakis’ algorithm](https://dl.acm.org/doi/10.5555/1286831.1286840) in 1981. 
+With the rise of [worst-case optimal joins](https://arxiv.org/abs/1203.1952) in 2012, the database community has witnessed an increasing (re-)interest in optimizing the execution of join queries, both from research ([Umbra](https://dl.acm.org/doi/abs/10.14778/3407790.3407797), [Predicate Transfer](https://arxiv.org/abs/2307.15255), [Robust Predicate Transfer](https://arxiv.org/abs/2502.15181), [Yannakakis+](https://dl.acm.org/doi/10.1145/3725423), [Lookup & Expand](https://db.in.tum.de/people/sites/birler/papers/diamond.pdf), [RPT++](https://dl.acm.org/doi/abs/10.14778/3797919.3797934)) and industry systems (e.g., [SQL Server](https://www.vldb.org/cidrdb/papers/2026/p29-zhao.pdf)'s dissection). These algorithms are commonly referred to as instance-optimal algorithms. The field itself is not new, having originated with [Yannakakis’ algorithm](https://dl.acm.org/doi/10.5555/1286831.1286840) in 1981.
 
 ## Why Yannakakis’ Was Not Enough
 
@@ -28,7 +28,7 @@ Let’s see how Parachute works at query execution time. Assume our system suppo
 
 ## Fingerprints
 
-How to build the fingerprint columns? In the current version, these are built during a pre-processing step, e.g., at data loading time. The next figure visualizes this step. Given the FK-table cast_info  we consider the non-key column year from table title. We attach the fingerprint column corresponding to year by performing the join with title and storing a lightweight representation (lossy) representation of the column. To this end, we use a histogram – for instance, the year value 2025 is mapped to histogram bin 3. That’s why both tuples with `cast_info.movie_id` = 789 have the value of 3 in the attached fingerprint column. 
+How to build the fingerprint columns? In the current version, these are built during a pre-processing step, e.g., at data loading time. The next figure visualizes this step. Given the FK-table cast_info we consider the non-key column year from table title. We attach the fingerprint column corresponding to year by performing the join with title and storing a lightweight representation (lossy) representation of the column. To this end, we use a histogram – for instance, the year value 2025 is mapped to histogram bin 3. That’s why both tuples with `cast_info.movie_id` = 789 have the value of 3 in the attached fingerprint column.
 
 {% include figure.liquid loading="eager" path="assets/img/posts/parachute-2.jpg" %}
 
