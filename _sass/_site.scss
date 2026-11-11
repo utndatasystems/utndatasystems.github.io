@@ -1,0 +1,179 @@
+:root {
+  --global-code-bg-color: #f6f3ef;
+}
+// UTN Data Systems customizations layered over the versioned theme.
+a,
+table.table a {
+  color: var(--global-text-color);
+  text-decoration: underline;
+  text-decoration-color: var(--global-theme-color) !important;
+  text-decoration-thickness: 2px;
+  transition: color 0.2s ease-out;
+}
+.navbar.navbar-light {
+  a {
+    text-decoration: none;
+  }
+  .navbar-nav .nav-item.active > .nav-link {
+    color: var(--global-text-color);
+    background-color: var(--global-theme-color);
+  }
+  .navbar-brand.logo {
+    padding-block: 0.1rem;
+    font-size: 1.7rem;
+    a {
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+    }
+    img {
+      display: block;
+      margin: 0;
+    }
+    img.logo-utn {
+      height: 1.7rem;
+    }
+    img.logo-new {
+      height: 2.3rem;
+    }
+  }
+}
+// Keep the site's original tablet breakpoint for its two logos and menu.
+@media (min-width: 768px) {
+  .navbar-expand-md {
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    > .container {
+      flex-wrap: nowrap;
+    }
+    .navbar-collapse {
+      flex-basis: auto;
+      visibility: visible;
+    }
+    .navbar-nav {
+      flex-direction: row;
+    }
+    .navbar-nav .dropdown-menu {
+      position: absolute;
+    }
+    .navbar-nav .nav-link {
+      padding-inline: 0.5rem;
+    }
+    .navbar-toggler {
+      display: none;
+    }
+  }
+}
+@media (max-width: 767.98px) {
+  .navbar-expand-md {
+    .navbar-collapse-main {
+      text-align: left;
+    }
+    .navbar-menu-list {
+      margin-left: 0;
+      align-items: flex-start;
+      width: 100%;
+    }
+    .nav-item.dropdown {
+      width: 100%;
+    }
+    .dropdown-menu {
+      position: static;
+      width: 100%;
+      min-width: 100%;
+      box-shadow: none;
+    }
+    .dropdown-item {
+      white-space: normal;
+      text-align: left;
+    }
+  }
+}
+.social .contact-icons {
+  font-size: 2rem;
+}
+.projects .project-card-image--spectra-ratio {
+  aspect-ratio: 1024 / 871;
+  background: radial-gradient(circle at center, #e3faff 0%, #bfeef7 58%, #87cfdf 100%);
+  object-fit: contain;
+}
+.projects .project-card-image--jungle-vignette {
+  aspect-ratio: 1024 / 871;
+  background: radial-gradient(circle at center, #f3f5df 0%, #d7dfad 58%, #a3b56f 100%);
+  object-fit: contain;
+}
+.publications ol.bibliography li {
+  @media (max-width: 576px) {
+    .preview {
+      display: none;
+    }
+  }
+  .title a {
+    color: var(--global-text-color) !important;
+    text-decoration: none;
+  }
+  .author a {
+    text-decoration: none;
+    border-bottom: 1.5px dashed var(--global-theme-color);
+  }
+  .links a.btn {
+    text-decoration: none;
+  }
+}
+.post {
+  .project-mascot-caption {
+    max-width: 36rem;
+    margin: 0.5rem auto 2.5rem;
+    color: var(--global-text-color-light);
+    font-size: 0.95rem;
+    font-style: italic;
+    line-height: 1.5;
+    text-align: center;
+  }
+  .related-publications-title {
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
+  .related-publications {
+    margin-top: 1rem;
+  }
+}
+pre,
+code {
+  color: var(--global-text-color);
+}
+
+.publication-annotation {
+  display: inline-block;
+}
+.publication-annotation summary {
+  cursor: pointer;
+}
+
+// Tailwind's important collapse rule lives in base. Match that layer so the
+// desktop menu can override it at the lab's 768px breakpoint.
+@layer base {
+  @media (min-width: 768px) {
+    .navbar-expand-md .navbar-collapse {
+      display: flex !important;
+    }
+  }
+}
+
+// The upstream card title is sized for project headings; people use compact cards.
+a.text-decoration-none {
+  text-decoration: none;
+}
+.people .card .small {
+  font-size: 0.875rem;
+}
+.people .card .card-title {
+  font-size: 0.875rem;
+}
+
+.people .card {
+  padding: 1rem;
+}
+.people .card-body {
+  padding: 0;
+}

@@ -2,18 +2,15 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/jekyll
 {
   "name": "Jekyll",
-  "image": "mcr.microsoft.com/devcontainers/jekyll",
-
-  // Features to add to the dev container. More info: https://containers.dev/features.
-  "features": {
-    "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
-      "packages": "build-essential,imagemagick,inotify-tools,jupyter-nbconvert,procps,ruby-full,zlib1g-dev"
-    },
-    "ghcr.io/devcontainers-contrib/features/prettier:1": {}
+  "build": {
+    "dockerfile": "Dockerfile"
   },
 
-  // Optionally: run jekyll serve automatically on container entering using the Docker entrypoint
-  "postAttachCommand": "./bin/entry_point.sh",
+  // Install the versions locked by the project, including Prettier and its Liquid plugin.
+  "postCreateCommand": "bundle install && npm ci",
+  "postStartCommand": "bash .devcontainer/start-jekyll.sh",
+  "postAttachCommand": "bash .devcontainer/start-jekyll.sh",
+  "forwardPorts": [8080, 35729],
 
   "customizations": {
     "vscode": {

@@ -25,6 +25,35 @@ back_to_top: true # set to false to disable the back to top button
 # Theme
 # -----------------------------------------------------------------------------
 
+# al-folio v1 runtime contract. Local layouts, includes, and Sass files remain
+# supported as explicit site overrides while the theme runtime is provided by
+# the versioned al-folio plugin gems.
+al_folio:
+  api_version: 1
+  style_engine: tailwind
+  tailwind:
+    version: 4.1.18
+    preflight: false
+    css_entry: assets/tailwind/app.css
+  distill:
+    engine: distillpub-template
+    source: al-org-dev/distill-template#al-folio
+    allow_remote_loader: false
+  features:
+    cv:
+      enabled: true
+    distill:
+      enabled: true
+  compat:
+    bootstrap:
+      enabled: true
+      support_window: v1.0-v1.2
+      deprecates_in: v1.3
+      removed_in: v2.0
+  upgrade:
+    channel: stable
+    auto_apply_safe_fixes: false
+
 # repo color theme
 repo_theme_light: default # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
 repo_theme_dark: dark # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
@@ -72,10 +101,12 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 
 # For Google Analytics, see https://support.google.com/analytics/answer/10447272?hl=en&ref_topic=14088998&sjid=5129943941510317771-SA#zippy=%2Cgoogle-sites
 # and follow the instructions for Google Sites. You will need to create a Google Analytics property and copy the Google tag ID.
-google_analytics: G-01T0SBSGBC # your Google Analytics measurement ID (format: G-XXXXXXXXXX)
-cronitor_analytics: # cronitor RUM analytics site ID (format: XXXXXXXXX)
-pirsch_analytics: # your Pirsch analytics site ID (length 32 characters)
-openpanel_analytics: # your Openpanel analytics client ID (format: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX)
+analytics:
+  google: G-01T0SBSGBC # your Google Analytics measurement ID (format: G-XXXXXXXXXX)
+  cronitor: # cronitor RUM analytics site ID (format: XXXXXXXXX)
+  pirsch: # your Pirsch analytics client ID (length 32 characters)
+  openpanel: # your OpenPanel client ID (format: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX)
+  cloudflare: # your Cloudflare Web Analytics beacon token (32 hex characters)
 
 # For Google Search Console, see https://support.google.com/webmasters/answer/9008080?hl=en#meta_tag_verification&zippy=%2Chtml-tag
 google_site_verification: # your google-site-verification ID (Google Search Console)
@@ -163,8 +194,10 @@ kramdown:
       start_line: 1
 
 # Includes & excludes
-include: ["_pages", "_scripts", "_posts"]
+include: ["_pages", "_scripts"]
 exclude:
+  - al-folio-upgrade-report.md
+  - test/
   - bin/
   - Dockerfile
   - docker-compose.yml
@@ -182,24 +215,52 @@ keep_files:
   - CNAME
   - .nojekyll
 
+# Use al_folio_core as the theme runtime; local files can still override theme files.
+theme: al_folio_core
+
 # Plug-ins
 plugins:
+  - jekyll-3rd-party-libraries
   - jekyll-archives-v2
+  - jekyll-cache-bust
   - jekyll-email-protect
   - jekyll-feed
   - jekyll-get-json
   - jekyll-imagemagick
+  - jekyll-jupyter-notebook
   - jekyll-link-attributes
   - jekyll-minifier
   - jekyll-paginate-v2
   - jekyll-regex-replace
   - jekyll/scholar
   - jekyll-sitemap
+  - jekyll-socials
   - jekyll-tabs
   - jekyll-terser
   - jekyll-toc
   - jekyll-twitter-plugin
   - jemoji
+
+  # al-folio plugins
+  - al_folio_core
+  - al_icons
+  - al_folio_cv
+  - al_folio_distill
+  - al_folio_upgrade
+  - al_folio_bootstrap_compat
+  - al_cookie
+  - al_analytics
+  - al_citations
+  - al_ext_posts
+  - al_img_tools
+  - al_search
+  - al_charts
+  - al_math
+  - al_comments
+  - al_newsletter
+  - al_email_protect
+  - al_marimo
+  - al_rtl
 
 # Sitemap settings
 defaults:
@@ -216,6 +277,7 @@ sass:
 # -----------------------------------------------------------------------------
 
 jekyll-minifier:
+  compress_css: false # Tailwind v4 tokens must not be rewritten by cssminify2
   compress_javascript: false # set to false since we are using terser as the js minifier
   exclude: ["robots.txt", "assets/js/search/*.js"]
 
@@ -603,3 +665,51 @@ third_party_libraries:
       css: "https://cdn.jsdelivr.net/npm/venobox@{{version}}/dist/venobox.min.css"
       js: "https://cdn.jsdelivr.net/npm/venobox@{{version}}/dist/venobox.min.js"
     version: "2.1.8"
+  fontawesome:
+    integrity:
+      css: sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=
+    url:
+      css: https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@{{version}}/css/all.min.css
+    version: 7.2.0
+  academicons:
+    integrity:
+      css: sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=
+    url:
+      css: https://cdn.jsdelivr.net/npm/academicons@{{version}}/css/academicons.min.css
+    version: 1.9.5
+  tikzjax:
+    integrity:
+      css: sha256-p+CQrhSq3dnLHELDcVBFDf4whOor3w8gzLuc/pwRLyQ=
+      js: sha256-7SCmUR11IG4MkSoeLUq0pombv7oeV7yZuu7Z82e4Uy4=
+    url:
+      css: https://cdn.jsdelivr.net/npm/@planktimerr/tikzjax@{{version}}/dist/fonts.css
+      js: https://cdn.jsdelivr.net/npm/@planktimerr/tikzjax@{{version}}/dist/tikzjax.js
+    version: 1.0.8
+  tocbot:
+    integrity:
+      css: sha256-zTN0r+0OKaIv2xqeNNIYxNk0pWJ6+IqPGc1iDgVzWF0=
+      js: sha256-lo/r+jQ81wWrxdIiiiEEd538z4+dTJTt+leOuAS7GCw=
+    url:
+      css: https://cdn.jsdelivr.net/npm/tocbot@{{version}}/dist/tocbot.css
+      js: https://cdn.jsdelivr.net/npm/tocbot@{{version}}/dist/tocbot.min.js
+    version: 4.36.4
+  scholar-icons:
+    integrity:
+      css: sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=
+    url:
+      css: https://cdn.jsdelivr.net/npm/scholar-icons@{{version}}/css/scholar-icons.css
+    version: 1.0.3
+  vanilla-back-to-top:
+    integrity:
+      js: sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=
+    url:
+      js: https://cdn.jsdelivr.net/npm/vanilla-back-to-top@{{version}}/dist/vanilla-back-to-top.min.js
+    version: 7.2.1
+  vanilla-cookieconsent:
+    integrity:
+      css: sha256-ygRrixsQlBByBZiOcJamh7JByO9fP+/l5UPtKNJmRsE=
+      js: sha256-vG4vLmOB/AJbJ6awr7Wg4fxonG+fxAp4cIrbIFTvRXU=
+    url:
+      css: https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@{{version}}/dist/cookieconsent.css
+      js: https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@{{version}}/dist/cookieconsent.umd.js
+    version: 3.1.0
