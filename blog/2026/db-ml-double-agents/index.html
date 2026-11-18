@@ -1,0 +1,495 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> From SIGMOD to NeurIPS: Are Database Researchers Switching Sides? | UTN Data Systems </title> <meta name="author" content=" "> <meta name="description" content="Machine learning is becoming an increasingly important part of database research, but are we simply adopting ML techniques, or are we slowly becoming ML researchers ourselves? We take a look at publication trends across major ML conferences to see how the two communities are evolving and who might be taking over whom."> <meta name="keywords" content="Research, Data-Systems, Databases, Data-Processing, Systems-Research"> <meta property="og:site_name" content="UTN Data Systems"> <meta property="og:type" content="article"> <meta property="og:title" content="UTN Data Systems | From SIGMOD to NeurIPS: Are Database Researchers Switching Sides?"> <meta property="og:url" content="https://utndatasystems.github.io/blog/2026/db-ml-double-agents/"> <meta property="og:description" content="Machine learning is becoming an increasingly important part of database research, but are we simply adopting ML techniques, or are we slowly becoming ML researchers ourselves? We take a look at publication trends across major ML conferences to see how the two communities are evolving and who might be taking over whom."> <meta property="og:locale" content="en"> <meta name="twitter:card" content="summary"> <meta name="twitter:title" content="From SIGMOD to NeurIPS: Are Database Researchers Switching Sides?"> <meta name="twitter:description" content="Machine learning is becoming an increasingly important part of database research, but are we simply adopting ML techniques, or are we slowly becoming ML researchers ourselves? We take a look at publication trends across major ML conferences to see how the two communities are evolving and who might be taking over whom."> <script type="application/ld+json">
+    {
+        "author":
+        {
+            "@type": "Person",
+            "name": " "
+        },
+        "url": "https://utndatasystems.github.io/blog/2026/db-ml-double-agents/",
+        "@type": "BlogPosting",
+        "description": "Machine learning is becoming an increasingly important part of database research, but are we simply adopting ML techniques, or are we slowly becoming ML researchers ourselves? We take a look at publication trends across major ML conferences to see how the two communities are evolving and who might be taking over whom.",
+        "headline": "From SIGMOD to NeurIPS: Are Database Researchers Switching Sides?",
+        
+        "sameAs": ["https://github.com/utndatasystems","https://bsky.app/profile/utndatasystems.bsky.social"],
+        
+        "name": " ",
+        "@context": "https://schema.org"
+    }
+  </script> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link rel="stylesheet" href="/assets/css/bootstrap-compat.css?v=aa8aa1241f76708eaa8c8fad88fe7955"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot@4.36.4/dist/tocbot.css" integrity="sha256-zTN0r+0OKaIv2xqeNNIYxNk0pWJ6+IqPGc1iDgVzWF0=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="/assets/img/260302_datasystems_logo_favicon.svg?v=4d290569fa79a97fcb4987278332406f"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://utndatasystems.github.io/blog/2026/db-ml-double-agents/"> </head> <body class="fixed-top-nav sticky-bottom-footer"> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-md fixed-top" role="navigation"> <div class="container"> <div class="navbar-brand logo"> <a href="https://www.utn.de/" rel="external nofollow noopener" target="_blank"> <img class="logo-utn" src="/assets/img/utn_with_text.png" alt="UTN logo with text"> <img class="logo-new" src="/assets/img/260302_datasystems_logo_color.svg" alt="UTN Data Systems logo"> </a> </div> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">Home </a> </li> <li class="nav-item active"> <a class="nav-link" href="/blog/">Blog </a> </li> <li class="nav-item dropdown "> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-research" role="button" data-nav-dropdown-toggle="true" aria-haspopup="true" aria-expanded="false">Research </a> <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown-research"> <a class="dropdown-item " href="/publications/">Publications</a> <a class="dropdown-item " href="/projects/">Projects</a> </div> </li> <li class="nav-item dropdown "> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown-teaching" role="button" data-nav-dropdown-toggle="true" aria-haspopup="true" aria-expanded="false">Teaching </a> <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown-teaching"> <a class="dropdown-item " href="/teaching/data-engineering/">Data Engineering</a> <a class="dropdown-item " href="/teaching/cloud-databases/">Cloud Databases</a> <a class="dropdown-item " href="/teaching/advanced-programming-1/">Advanced Programming 1</a> <a class="dropdown-item " href="/teaching/advanced-programming-2/">Advanced Programming 2</a> <a class="dropdown-item " href="/teaching/lit-projects/">LiT Projects</a> <div class="dropdown-divider"></div> <a class="dropdown-item " href="/teaching/thesis-supervision/">Thesis Supervision</a> </div> </li> <li class="nav-item "> <a class="nav-link" href="https://github.com/utndatasystems" rel="external nofollow noopener" target="_blank">GitHub<i class="fa fa-external-link small p-1" aria-hidden="true"></i> </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <script>
+  // The header is already parsed; initialize without waiting for other resources.
+  (() => {
+    const navToggles = Array.from(document.querySelectorAll('[data-nav-toggle]'));
+
+    const closeNav = (toggle) => {
+      const targetId = toggle.getAttribute('data-nav-toggle') || toggle.getAttribute('aria-controls');
+      if (!targetId) {
+        return;
+      }
+
+      const panel = document.getElementById(targetId);
+      if (!panel) {
+        return;
+      }
+
+      panel.classList.remove('show');
+      toggle.classList.add('collapsed');
+      toggle.setAttribute('aria-expanded', 'false');
+    };
+
+    navToggles.forEach((toggle) => {
+      const targetId = toggle.getAttribute('data-nav-toggle') || toggle.getAttribute('aria-controls');
+      if (!targetId) {
+        return;
+      }
+
+      const panel = document.getElementById(targetId);
+      if (!panel) {
+        return;
+      }
+
+      toggle.addEventListener('click', (event) => {
+        event.preventDefault();
+        const isOpen = panel.classList.contains('show');
+        panel.classList.toggle('show', !isOpen);
+        toggle.classList.toggle('collapsed', isOpen);
+        toggle.setAttribute('aria-expanded', String(!isOpen));
+      });
+    });
+
+    const navDropdownToggles = Array.from(document.querySelectorAll('[data-nav-dropdown-toggle]'));
+    const closeAllNavDropdowns = (except) => {
+      navDropdownToggles.forEach((toggle) => {
+        if (except && toggle === except) {
+          return;
+        }
+        const item = toggle.closest('.dropdown');
+        const menu = item?.querySelector('.dropdown-menu');
+        if (!menu) {
+          return;
+        }
+
+        item.classList.remove('show');
+        menu.classList.remove('show');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    };
+
+    navDropdownToggles.forEach((toggle) => {
+      toggle.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+
+        const item = toggle.closest('.dropdown');
+        const menu = item?.querySelector('.dropdown-menu');
+        if (!item || !menu) {
+          return;
+        }
+
+        const isOpen = menu.classList.contains('show');
+        closeAllNavDropdowns(toggle);
+
+        item.classList.toggle('show', !isOpen);
+        menu.classList.toggle('show', !isOpen);
+        toggle.setAttribute('aria-expanded', String(!isOpen));
+      });
+    });
+
+    document.addEventListener('click', (event) => {
+      navToggles.forEach((toggle) => {
+        const targetId = toggle.getAttribute('data-nav-toggle') || toggle.getAttribute('aria-controls');
+        const panel = targetId ? document.getElementById(targetId) : null;
+        if (!panel || !panel.classList.contains('show')) {
+          return;
+        }
+
+        const clickedInsidePanel = panel.contains(event.target);
+        const clickedToggle = toggle.contains(event.target);
+        if (!clickedInsidePanel && !clickedToggle) {
+          closeNav(toggle);
+        }
+      });
+
+      closeAllNavDropdowns();
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        navToggles.forEach(closeNav);
+        closeAllNavDropdowns();
+      }
+    });
+  })();
+</script> <div class="container mt-5" role="main"> <div class="row"> <div class="col-sm-9"> <div class="post"> <header class="post-header"> <h1 class="post-title">From SIGMOD to NeurIPS: Are Database Researchers Switching Sides?</h1> <p class="post-meta"> Created on November 18, 2026 by <a href="https://andi-zimmerer.com/" rel="external nofollow noopener" target="_blank">Andi Zimmerer</a>, <a href="https://www.linkedin.com/in/claudius-k%C3%BChn-609b3b418/" rel="external nofollow noopener" target="_blank">Claudius Kühn</a> </p> <p class="post-tags"> <a href="/blog/2026"> <i class="fa-solid fa-calendar fa-sm"></i> 2026 </a> </p> </header> <article class="post-content"> <div id="markdown-content"> <h2 id="introduction">Introduction</h2> <p>Machine learning (ML) is everywhere these days, and database research is no exception. From learned query optimizers and indexes to automated database tuning, text-to-SQL interfaces, and ML-powered semantic query operators, ML has found its way into almost every corner of our field.</p> <p>Unsurprisingly, this is also reflected in the research we publish. ML-related papers have become an increasingly common sight at major database venues such as SIGMOD and VLDB. But this raises a few interesting questions: Are we simply adding ML to our toolbox, or are we slowly becoming ML researchers ourselves? And as ML systems increasingly run into classic data management problems, who is actually moving into whose territory? Are databases becoming part of ML systems, or is ML itself becoming a database problem?</p> <p>As database researchers, we naturally decided to approach these questions the way we know best: by looking at the data. We collected and analyzed publication statistics across major DB and ML venues, tracked how research topics and communities have evolved, and looked for patterns that might tell us where things are heading.</p> <p>And the numbers tell an interesting story. ML is no longer just another technique that database researchers occasionally borrow. It is increasingly becoming a core part of our research toolbox, and we may still be in the middle of this transition. If current trends continue, it might not be long before finding a database researcher who has never worked with ML becomes the exception rather than the rule.</p> <p>But perhaps even more interesting is what happens beyond traditional database venues. We observe that established DB researchers are increasingly publishing at major ML conferences, suggesting that the relationship between the two communities is becoming much more than a one-way exchange of ideas.</p> <p>So, are we witnessing the gradual transformation of database researchers into ML researchers, or are the boundaries between the two fields simply disappearing? Let’s see what the data have to say.</p> <div class="research-links"> <a href="https://utndatasystems.github.io/db-ml-double-agents/"> <img class="research-link-icon" src="/assets/img/posts/db-ml-favicon.svg" alt="" width="48" height="48"> <span> <strong>Explore the interactive findings</strong> See the full results and take an in-depth look at our analysis. </span> </a> <a href="https://github.com/utndatasystems/db-ml-double-agents" rel="external nofollow noopener" target="_blank"> <i class="research-link-icon fa-brands fa-github" aria-hidden="true"></i> <span> <strong>View the source code on GitHub</strong> Browse the code for crawling, cleaning, analysis, and the website. </span> </a> </div> <h2 id="methodology">Methodology</h2> <p>In order to answer those questions, we first need to define who counts as an “established” database researcher. We settled on “people who served on the program committee (PC) of a major DB conference”. We therefore ingested committee rosters from the official websites of SIGMOD/PODS, VLDB, ICDE, EDBT, and CIDR between 2022 and 2025, matched the researchers to their DBLP profiles, and collected their publication histories. For DB publications, we considered full papers from major venues, including the journals PVLDB and PACMMOD, while excluding workshops, non-research contributions, and papers we couldn’t match to a venue. To enhance our entity resolution, we combined affiliation evidence from Crossref, institution matching via ROR, and publication-version evidence from arXiv. For more ambiguous cases, we employed agentic source verification and preserved the supporting evidence and data provenance behind reviewed decisions.</p> <p>But then we noticed something interesting: some DB committee members already had surprisingly high ML publication shares, with up to around 40% of their recorded publications appearing at major ML venues (NeurIPS, ICML, and ICLR). With such a large share of their work appearing at ML venues, calling them established DB researchers just because they had served on a DB committee, potentially only once, seemed like a bit of a stretch. Clearly, our original PC-only approach wasn’t going to cut it.</p> <p>We therefore decided to set the bar higher and introduced a classification heuristic. Besides serving on a qualifying DB committee, researchers needed at least twice as many qualifying DB papers as main-conference ML papers. But that alone wasn’t enough: they also needed to demonstrate an established research track record. For this, we accepted two alternatives: either at least five qualifying DB and ML papers across three distinct publication years, or at least two DB papers published in two different years combined with committee service in two different years. Applying these criteria left us with 907 senior DB researchers, i.e., people who review for major DB conferences and have a good track record of DB publications, and 71,948 distinct works in their publication histories (November 14, 2026).</p> <p>The historical trends below follow this fixed cohort of 907 established DB researchers, selected using committee service from 2022–2025 and the publication records available at the time of analysis. We trace their publication histories backward rather than identify a separate cohort for each year. The curves therefore describe the history of this selected group, not the composition of the entire DB community in each year.</p> <p>The figure below shows our selection and entity resolution process for established DB researchers.</p> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/posts/db-ml-cohort-selection-480.webp 480w,/assets/img/posts/db-ml-cohort-selection-800.webp 800w,/assets/img/posts/db-ml-cohort-selection-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/posts/db-ml-cohort-selection.png" class="img-fluid rounded d-block mx-auto my-5" width="100%" height="auto" alt="Flow diagram tracing database program committee rosters through name matching and publication criteria to the final cohort of 907 researchers." data-zoomable="" loading="lazy" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> <h2 id="results">Results</h2> <p>Have you already published a full paper at a major ML conference? If so, you’re certainly not alone. In fact, 28.2% of established DB researchers have already managed to sneak at least one paper into NeurIPS, ICML, or ICLR. That’s quite a substantial fraction!</p> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/posts/db-ml-author-share-480.webp 480w,/assets/img/posts/db-ml-author-share-800.webp 800w,/assets/img/posts/db-ml-author-share-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/posts/db-ml-author-share.png" class="img-fluid rounded d-block mx-auto my-5" width="50%" height="auto" alt="Share of DB researchers who already had at least one full paper accepted to an ML conference." loading="lazy" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> <p>Some of these are familiar faces, but there are also more and more first-timers every year, as shown in the next plot. As a result, the total number of established DB researchers who have published at least once at a major ML venue has grown roughly exponentially. Have you already jumped on the bandwagon, or are you still a late adopter?</p> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/posts/db-ml-first-time-authors-480.webp 480w,/assets/img/posts/db-ml-first-time-authors-800.webp 800w,/assets/img/posts/db-ml-first-time-authors-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/posts/db-ml-first-time-authors.png" class="img-fluid rounded d-block mx-auto my-5" width="50%" height="auto" alt="The annual number of researchers publishing at NeurIPS, ICML, or ICLR for the first time rose to 57 in 2025." loading="lazy" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> <p>One of the more interesting findings comes from looking at the share of accepted papers at major ML conferences that have at least one established DB researcher as a co-author. In 2025, around 1.4–1.5% of accepted full papers at major ML venues (depending on the conference) fell into this category.</p> <p>What’s interesting is that this share is still growing, even though the total number of accepted papers at these conferences has increased dramatically over the past few years. The figure below shows this trend, plotting the share of papers co-authored by established DB researchers at major ML venues, smoothed using sliding 5-year windows.</p> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/posts/db-ml-publication-share-480.webp 480w,/assets/img/posts/db-ml-publication-share-800.webp 800w,/assets/img/posts/db-ml-publication-share-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/posts/db-ml-publication-share.png" class="img-fluid rounded d-block mx-auto my-5" width="50%" height="auto" alt="Five-year trends show a growing share of NeurIPS, ICML, and ICLR papers co-authored by established database researchers." loading="lazy" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> <p>Of course, we’re still talking about rather small percentages. But if we naively extrapolate the trend, it looks like established DB researchers are slowly but steadily gaining ground at traditional ML venues. Are we eventually going to take over ML conferences? Can we be stopped?</p> <p>We can also reverse the question: Which senior database researchers are most likely to publish at major ML venues? Interestingly, ICDE reviewers lead the way. Among researchers who have served as an ICDE reviewer at least once, 31.3% have also had at least one full paper accepted at a major ML conference. This is a somewhat surprising finding.</p> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/posts/db-ml-review-venue-breakdown-480.webp 480w,/assets/img/posts/db-ml-review-venue-breakdown-800.webp 800w,/assets/img/posts/db-ml-review-venue-breakdown-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/posts/db-ml-review-venue-breakdown.png" class="img-fluid rounded d-block mx-auto my-5" width="90%" height="auto" alt="Breakdown of what share of DB reviewers already have published at ML conferences." loading="lazy" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> <h2 id="takeaway">Takeaway</h2> <p>So, are we switching sides? Our results show that publishing at major ML conferences has become an increasingly common part of the publication histories of the established DB researchers in our cohort. With 28.2% having published at least one full paper at NeurIPS, ICML, or ICLR, this participation extends well beyond a handful of familiar names. Conference participation alone does not tell us whether researchers are changing their research identity or bringing database questions to a broader audience. But it does suggest that, for a growing part of this cohort, the conversation increasingly spans both communities. Perhaps the next step is to look at what they publish there. Are the supposed traitors actually ambassadors?</p> </div> </article> <hr> <br> <hr> <br> <h2 class="text-3xl font-semibold mb-4 mt-12">Enjoy Reading This Article?</h2> <p class="mb-2">Here are some more articles you might like to read next:</p> <ul class="list-disc pl-7 my-3 space-y-2 marker:text-[var(--global-theme-color)]"> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2026/synthesized-compression/">The Case for Synthesized Data Compression</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2026/parachute/">The Case for Single-Pass Instance-Optimal Join Algorithms (When Storage Is Cheap)</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2026/text-compression/">Text Compression Through the Looking Glass</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2026/string-fingerprints/">String Fingerprints</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2026/sembench/">Benchmarking Semantic Query Processing Systems</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2026/dataloom/">Democratizing Data Science</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2025/recap/">Launching Our Blog And Wrapping Up 2025</a> </li> </ul> </div> </div> <div class="col-sm-3"> <nav id="toc-sidebar" class="sticky-top toc-sidebar" aria-label="Table of contents" data-toc-collapse="expanded" data-toc-collapse-depth=""></nav> </div> </div> </div> <footer class="sticky-bottom mt-5" role="contentinfo"> <div class="container"> © Copyright 2026 . <a href="https://utndatasystems.github.io/impressum.html">Impressum</a>. Last updated: November 18, 2026. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: true
+  };
+</script> <script src="/assets/js/bootstrap-compat.js?v=b5579a3408e7c44d505c6a9755578409"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script defer src="https://cdn.jsdelivr.net/npm/tocbot@4.36.4/dist/tocbot.min.js" integrity="sha256-lo/r+jQ81wWrxdIiiiEEd538z4+dTJTt+leOuAS7GCw=" crossorigin="anonymous"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script src="/assets/js/google-analytics-setup.js"></script> <script async src="https://www.googletagmanager.com/gtag/js?id=G-01T0SBSGBC"></script> <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    window.dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+  gtag("config", "G-01T0SBSGBC");
+</script> <div id="ga-consent-banner" class="ga-consent-banner" role="dialog" aria-label="Cookie consent" aria-live="polite" hidden> <img class="ga-consent-banner__image" src="/assets/img/cookie-cow.png" alt="Cookie cow" loading="lazy"> <p class="ga-consent-banner__text">We use analytics cookies to understand site usage.</p> <div class="ga-consent-banner__actions"> <button type="button" class="ga-consent-banner__btn ga-consent-banner__btn--ghost" data-ga-consent-action="deny">Decline</button> <button type="button" class="ga-consent-banner__btn ga-consent-banner__btn--primary" data-ga-consent-action="accept">Accept</button> </div> </div> <style>
+  .ga-consent-banner {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 1080;
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    max-width: 28rem;
+    padding: 0.75rem 0.9rem;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 0.6rem;
+    background: #ffffff;
+    color: #212529;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  .ga-consent-banner[hidden] {
+    display: none;
+  }
+
+  .ga-consent-banner__text {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
+
+  .ga-consent-banner__image {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.45rem;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .ga-consent-banner__actions {
+    display: flex;
+    gap: 0.45rem;
+    margin-left: auto;
+  }
+
+  .ga-consent-banner__btn {
+    border: 1px solid transparent;
+    border-radius: 0.45rem;
+    padding: 0.35rem 0.65rem;
+    font-size: 0.85rem;
+    line-height: 1.2;
+    cursor: pointer;
+    white-space: nowrap;
+    transition:
+      background-color 120ms ease,
+      border-color 120ms ease;
+  }
+
+  .ga-consent-banner__btn--ghost {
+    border-color: rgba(0, 0, 0, 0.2);
+    background: #ffffff;
+    color: #212529;
+  }
+
+  .ga-consent-banner__btn--ghost:hover {
+    background: #f8f9fa;
+  }
+
+  .ga-consent-banner__btn--primary {
+    border-color: #212529;
+    background: #212529;
+    color: #ffffff;
+  }
+
+  .ga-consent-banner__btn--primary:hover {
+    background: #343a40;
+    border-color: #343a40;
+  }
+
+  @media (max-width: 640px) {
+    .ga-consent-banner {
+      left: 0.75rem;
+      right: 0.75rem;
+      bottom: 0.75rem;
+      max-width: none;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .ga-consent-banner__actions {
+      margin-left: 0;
+      justify-content: flex-end;
+    }
+
+    .ga-consent-banner__image {
+      width: 4rem;
+      height: 4rem;
+      align-self: center;
+    }
+  }
+</style> <script defer src="/assets/js/google-analytics-consent-banner.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-home",
+    title: "Home",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-blog",
+          title: "Blog",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/blog/";
+          },
+        },{id: "dropdown-publications",
+              title: "Publications",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/publications/";
+              },
+            },{id: "dropdown-projects",
+              title: "Projects",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/projects/";
+              },
+            },{id: "dropdown-data-engineering",
+              title: "Data Engineering",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/teaching/data-engineering/";
+              },
+            },{id: "dropdown-cloud-databases",
+              title: "Cloud Databases",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/teaching/cloud-databases/";
+              },
+            },{id: "dropdown-advanced-programming-1",
+              title: "Advanced Programming 1",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/teaching/advanced-programming-1/";
+              },
+            },{id: "dropdown-advanced-programming-2",
+              title: "Advanced Programming 2",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/teaching/advanced-programming-2/";
+              },
+            },{id: "dropdown-lit-projects",
+              title: "LiT Projects",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/teaching/lit-projects/";
+              },
+            },{id: "dropdown-thesis-supervision",
+              title: "Thesis Supervision",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/teaching/thesis-supervision/";
+              },
+            },{id: "nav-github-lt-i-class-quot-fa-fa-external-link-small-p-1-quot-aria-hidden-quot-true-quot-gt-lt-i-gt",
+          title: "GitHub&lt;i class=&quot;fa fa-external-link small p-1&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/https:/github.com/utndatasystems";
+          },
+        },{id: "post-from-sigmod-to-neurips-are-database-researchers-switching-sides",
+        
+          title: "From SIGMOD to NeurIPS: Are Database Researchers Switching Sides?",
+        
+        description: "Machine learning is becoming an increasingly important part of database research, but are we simply adopting ML techniques, or are we slowly becoming ML researchers ourselves? We take a look at publication trends across major ML conferences to see how the two communities are evolving and who might be taking over whom.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/db-ml-double-agents/";
+          
+        },
+      },{id: "post-the-case-for-synthesized-data-compression",
+        
+          title: "The Case for Synthesized Data Compression",
+        
+        description: "Today&#39;s compression schemes are generally designed by hand to apply to many different types of data, leading to a zoo of general-purpose algorithms which work well for many datasets, but may not be optimal for any specific dataset. Inspired by recent advancements in agentic coding, we propose synthesizing custom-tailored data compression algorithms on a per-dataset basis. We show that our synthesis agent can expand the compression-factor/decompression-speed Pareto front, outperforming general-purpose methods by nearly 2× in compression factor.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/synthesized-compression/";
+          
+        },
+      },{id: "post-the-case-for-single-pass-instance-optimal-join-algorithms-when-storage-is-cheap",
+        
+          title: "The Case for Single-Pass Instance-Optimal Join Algorithms (When Storage Is Cheap)",
+        
+        description: "With the rise of worst-case optimal joins, the database community has witnessed an increasing (re-)interest in optimizing the execution of join queries, both from research and industry, with a special attention to instance-optimal join algorithms, which require multiple passes over the data. In 🪂 Parachute, we show that it&#39;s possible to offload one such pass to data loading time by statically analyzing between which tables the information flow is blocked and leveraging precomputed join-induced fingerprint columns on FK-tables.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/parachute/";
+          
+        },
+      },{id: "post-text-compression-through-the-looking-glass",
+        
+          title: "Text Compression Through the Looking Glass",
+        
+        description: "Cold and unstructured text has long been a storage burden, driving costs for data that is unlikely to ever be accessed again. The rise of accessible large language models (LLMs) has intensified this challenge by dramatically increasing the volume of generated content that still needs to be retained, e.g. for compliance reasons. This post explores a new class of LLM-based compression methods that can significantly reduce the storage footprint of text-heavy data, and explains why LLMs are particularly well-suited to text compression.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/text-compression/";
+          
+        },
+      },{id: "post-string-fingerprints",
+        
+          title: "String Fingerprints",
+        
+        description: "Cloud data warehouses are text-heavy. As the amount of text data to scan increases, queries become slower, therefore query engines require fast pre-filters to accelerate them. We present string fingerprints, a lightweight secondary index structure designed to approximate LIKE predicates, albeit with false positives. Fingerprints can be optimized for specific workloads using mixed-integer optimization and even generalize to unseen table filters.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/string-fingerprints/";
+          
+        },
+      },{id: "post-benchmarking-semantic-query-processing-systems",
+        
+          title: "Benchmarking Semantic Query Processing Systems",
+        
+        description: "Semantic query processing is emerging as a new layer atop relational engines, elevating LLM-backed semantic operators to first-class SQL primitives for multimodal data. We present SemBench, the first benchmark to rigorously evaluate these systems end-to-end, and outline our roadmap towards our own system, Spectra, to make semantic operators affordable at scale.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/sembench/";
+          
+        },
+      },{id: "post-democratizing-data-science",
+        
+          title: "Democratizing Data Science",
+        
+        description: "Our vision is to build an end-to-end agentic data platform, enabling domain experts to acquire, clean, analyze, and visualize data in a principled manner by combining the benefits of LLMs with decades of database research.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/dataloom/";
+          
+        },
+      },{id: "post-launching-our-blog-and-wrapping-up-2025",
+        
+          title: "Launching Our Blog And Wrapping Up 2025",
+        
+        description: "I&#39;m super excited to launch our blog! We&#39;ll use this space to share what&#39;s happening in our lab, from research papers and systems to the day-to-day life of our team. To kick things off, let&#39;s look back at 2025.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/recap/";
+          
+        },
+      },{id: "news-hello-world-andreas-kipf-https-www-linkedin-com-in-andreaskipf-has-been-appointed-professor-of-data-systems-at-the-university-of-technology-nuremberg-read-the-announcement-https-www-utn-de-en-2023-06-26-prof-data-systems",
+          title: 'Hello, world! [**Andreas Kipf**](https://www.linkedin.com/in/andreaskipf/) has been appointed **Professor of Data Systems** at the...',
+          description: "",
+          section: "News",},{id: "news-a-warm-welcome-to-mihail-stoian-https-stoianmihail-github-io-who-joins-the-data-systems-lab-as-a-doctoral-researcher",
+          title: 'A warm welcome to [**Mihail Stoian**](https://stoianmihail.github.io/), who joins the Data Systems Lab as...',
+          description: "",
+          section: "News",},{id: "news-we-are-excited-to-welcome-alexander-van-renen-https-www-linkedin-com-in-alexander-van-renen-5133a280-to-the-data-systems-lab-as-our-first-postdoctoral-researcher",
+          title: 'We are excited to welcome [**Alexander van Renen**](https://www.linkedin.com/in/alexander-van-renen-5133a280/) to the Data Systems Lab...',
+          description: "",
+          section: "News",},{id: "news-our-doctoral-researcher-andi-zimmerer-has-been-accepted-into-the-software-campus-https-softwarecampus-de-en-program-securing-115-000-in-funding-to-explore-new-research-directions",
+          title: 'Our doctoral researcher **Andi Zimmerer** has been accepted into the **[Software Campus](https://softwarecampus.de/en/)** program,...',
+          description: "",
+          section: "News",},{id: "news-after-contributing-part-time-since-the-lab-39-s-inception-andi-zimmerer-https-andi-zimmerer-com-is-now-officially-joining-us-full-time-as-a-doctoral-researcher-welcome-aboard-andi",
+          title: 'After contributing part-time since the lab&amp;#39;s inception, [**Andi Zimmerer**](https://andi-zimmerer.com/) is now officially joining...',
+          description: "",
+          section: "News",},{id: "news-our-paper-quot-virtual-compressing-data-lake-files-quot-https-www-openproceedings-org-2025-conf-edbt-paper-298-pdf-by-mihail-stoian-et-al-received-a-best-demo-award-at-edbt-in-barcelona",
+          title: 'Our paper [&amp;quot;Virtual: Compressing Data Lake Files&amp;quot;](https://www.openproceedings.org/2025/conf/edbt/paper-298.pdf) by **Mihail Stoian et al.** received...',
+          description: "",
+          section: "News",},{id: "news-our-lab-will-present-three-paper-at-this-year-39-s-sigmod-in-berlin-quot-dpconv-super-polynomially-faster-join-ordering-quot-https-dl-acm-org-doi-10-1145-3698809-by-mihail-stoian-and-andreas-kipf-quot-pruning-in-snowflake-working-smarter-not-harder-quot-https-arxiv-org-pdf-2504-11540-by-andreas-zimmerer-et-al-and-quot-redbench-a-benchmark-reflecting-real-workloads-quot-https-arxiv-org-pdf-2506-12488-by-skander-krid-et-al",
+          title: 'Our lab will present three paper at this year&amp;#39;s **SIGMOD** in Berlin: [&amp;quot;DPconv:...',
+          description: "",
+          section: "News",},{id: "news-our-lab-received-an-honorable-mention-at-sigmod-for-the-paper-quot-dpconv-super-polynomially-faster-join-ordering-quot-https-dl-acm-org-doi-10-1145-3698809-by-mihail-stoian-and-andreas-kipf",
+          title: 'Our lab received an **Honorable Mention at SIGMOD** for the paper [&amp;quot;DPconv: Super-Polynomially...',
+          description: "",
+          section: "News",},{id: "news-our-lab-presented-two-paper-at-this-year-39-s-vldb-in-london-quot-instance-optimized-string-fingerprints-quot-https-arxiv-org-pdf-2507-10391-and-quot-parachute-single-pass-bi-directional-information-passing-quot-https-arxiv-org-pdf-2506-13670-both-by-mihail-stoian-et-al",
+          title: 'Our lab presented two paper at this year&amp;#39;s **VLDB** in London: [&amp;quot;Instance-Optimized String...',
+          description: "",
+          section: "News",},{id: "news-we-launched-our-blog-today-go-check-out-our-first-post-https-utndatasystems-github-io-blog-2025-recap",
+          title: 'We launched our blog today. Go check out our [first post](https://utndatasystems.github.io/blog/2025/recap/)!',
+          description: "",
+          section: "News",},{id: "news-luisa-neubauer-https-www-linkedin-com-in-luisa-neubauer-joins-our-team-as-a-doctoral-researcher-welcome-luisa",
+          title: '[**Luisa Neubauer**](https://www.linkedin.com/in/luisa-neubauer/) joins our team as a doctoral researcher. Welcome, Luisa!',
+          description: "",
+          section: "News",},{id: "news-xbound-the-first-framework-for-join-size-lower-bounds-is-now-on-arxiv-https-arxiv-org-abs-2601-13117-this-is-a-collaboration-with-microsoft-gsl-https-www-microsoft-com-en-us-research-group-gray-systems-lab",
+          title: '**xBound**, the first framework for join size lower bounds is now on [arXiv](https://arxiv.org/abs/2601.13117)!...',
+          description: "",
+          section: "News",},{id: "news-mihail-stoian-presented-his-paper-https-arxiv-org-pdf-2601-00768-on-weighted-combinatorial-problems-at-stacs-symposium-on-theoretical-aspects-of-computer-science-check-out-the-blog-post-https-stoianmihail-github-io-mind-the-gap-html",
+          title: '**Mihail Stoian** presented his [paper](https://arxiv.org/pdf/2601.00768) on weighted combinatorial problems at _STACS: Symposium on...',
+          description: "",
+          section: "News",},{id: "projects-dataloom",
+          title: 'Dataloom',
+          description: "Using the Power of AI to Democratize Data Science through Agentic Data Pipelines.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/dataloom/";
+            },},{id: "projects-ilike-data-skipping",
+          title: 'ILIKE Data Skipping',
+          description: "Data Skipping for Expensive Operators.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ilike-data-skipping/";
+            },},{id: "projects-llm-based-compression",
+          title: 'LLM-Based Compression',
+          description: "Making ML-powered compression fast, robust, and practical for data systems.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/llm-based-compression/";
+            },},{id: "projects-spectra",
+          title: 'Spectra',
+          description: "Taking LLM-Based Semantic SQL Operators to the Limit With Our Own Multi-Modal Data Engine.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/spectra/";
+            },},{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%64%61%74%61-%73%79%73%74%65%6D%73@%75%74%6E.%64%65", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/utndatasystems", "_blank");
+        },
+      },{
+        id: 'social-bluesky',
+        title: 'Bluesky',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://bsky.app/profile/utndatasystems.bsky.social", "_blank");
+        },
+      },{
+        id: 'social-rss',
+        title: 'RSS Feed',
+        section: 'Socials',
+        handler: () => {
+          window.open("/feed.xml", "_blank");
+        },
+      },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>
