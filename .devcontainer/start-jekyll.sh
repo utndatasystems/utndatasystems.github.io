@@ -12,7 +12,7 @@ mkdir -p "$state_dir"
 # Repeated or concurrent starts exit successfully without launching another server.
 # Detach from the lifecycle command's session so its cleanup cannot stop Jekyll.
 nohup setsid flock --nonblock --conflict-exit-code 0 "$state_dir/server.lock" \
-    bundle exec jekyll serve --host=0.0.0.0 --port=8080 --livereload --force_polling \
+    bundle exec jekyll serve --host=0.0.0.0 --port=8080 --future --livereload --force_polling \
     >> "$state_dir/server.log" 2>&1 < /dev/null &
 launcher_pid=$!
 

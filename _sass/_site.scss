@@ -132,7 +132,48 @@ table.table a {
     text-decoration: none;
   }
 }
+#toc-sidebar .toc-link {
+  text-decoration: none;
+}
 .post {
+  .research-links {
+    display: grid;
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.875rem 1rem;
+      border: 1px solid var(--global-divider-color);
+      border-radius: 0.5rem;
+      color: var(--global-text-color);
+      text-decoration: none;
+
+      &:hover,
+      &:focus-visible {
+        border-color: var(--global-text-color);
+      }
+    }
+
+    .research-link-icon {
+      flex: 0 0 3rem;
+      width: 3rem;
+      height: 3rem;
+      font-size: 3rem;
+      line-height: 1;
+      text-align: center;
+    }
+
+    strong {
+      display: block;
+      text-decoration: underline;
+      text-decoration-color: var(--global-theme-color);
+      text-underline-offset: 0.15em;
+    }
+  }
+
   .project-mascot-caption {
     max-width: 36rem;
     margin: 0.5rem auto 2.5rem;
